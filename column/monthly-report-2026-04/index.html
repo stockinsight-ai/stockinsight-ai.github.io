@@ -104,7 +104,10 @@
         <img src="/assets/img/col_default.png" alt="2026年4月の推奨銘柄成績レポート" style="width:100%;height:200px;object-fit:cover;border-radius:12px;margin-bottom:20px;">
         <div class="column-cat" style="margin-bottom:8px;">月次レポート</div>
         <h1 style="font-size:clamp(1.3rem,3vw,1.7rem);font-weight:800;color:var(--primary);line-height:1.4;margin-bottom:12px;">2026年4月の推奨銘柄成績レポート</h1>
-        <p style="font-size:.85rem;color:var(--muted);">公開日: 2026年4月30日</p>
+        <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+          <p style="font-size:.85rem;color:var(--muted);">公開日: 2026年4月30日</p>
+          <span class="reading-time">📖 約3分で読めます</span>
+        </div>
       </div>
 
       <div class="card" style="padding:28px 32px;">
@@ -178,7 +181,33 @@
         </div>
       </div>
 
-      <!-- シェア・ナビ -->
+      <!-- SNSシェア -->
+      <div class="share-section">
+        <div class="share-label">この記事をシェア</div>
+        <div class="share-buttons">
+          <a class="share-btn share-x" href="https://twitter.com/intent/tweet?text=2026%E5%B9%B44%E6%9C%88%E3%81%AE%E6%8E%A8%E5%A5%A8%E9%8A%98%E6%9F%84%E6%88%90%E7%B8%BE%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88&url=https://stockinsight-ai.github.io/column/monthly-report-2026-04/&hashtags=StockInsightAI,日本株" target="_blank" rel="noopener">
+            𝕏 ポスト
+          </a>
+          <a class="share-btn share-line" href="https://social-plugins.line.me/lineit/share?url=https://stockinsight-ai.github.io/column/monthly-report-2026-04/" target="_blank" rel="noopener">
+            LINE
+          </a>
+          <button class="share-btn share-copy" onclick="navigator.clipboard.writeText(location.href);this.textContent='✓ コピー済み';setTimeout(()=>this.textContent='🔗 URLコピー',2000)">
+            🔗 URLコピー
+          </button>
+        </div>
+      </div>
+
+      <!-- ニュースレターCTA -->
+      <div class="newsletter-cta">
+        <div class="newsletter-cta-icon">📬</div>
+        <div class="newsletter-cta-body">
+          <div class="newsletter-cta-title">毎週日曜、推奨銘柄が自動更新されます</div>
+          <p class="newsletter-cta-desc">登録不要・完全無料。月曜朝に「今週の推奨銘柄」をチェックするのが習慣になります。</p>
+          <a href="/picks/" class="newsletter-cta-btn">今週の推奨銘柄を見る →</a>
+        </div>
+      </div>
+
+      <!-- ナビ -->
       <div style="margin-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;">
         <a href="/column/" style="font-size:.84rem;color:var(--muted);">← コラム一覧へ</a>
         <a href="/picks/" style="font-size:.84rem;color:var(--accent-dark);font-weight:700;">今週の推奨銘柄を見る →</a>
@@ -194,6 +223,13 @@
         <div style="display:flex;flex-direction:column;gap:10px;">
           
           
+          <a href="/column/failure-autopsy-2026-04/" style="display:block;text-decoration:none;">
+            <div style="font-size:.82rem;font-weight:600;color:var(--primary);line-height:1.4;margin-bottom:2px;">AIが外した推奨を解剖する【2026年4月版】</div>
+            <div style="font-size:.72rem;color:var(--muted);">成績レビュー</div>
+          </a>
+          
+          
+          
           
           
           <a href="/column/claude-code-auto-implementation/" style="display:block;text-decoration:none;">
@@ -204,7 +240,7 @@
           
           
           <a href="/column/ai-stock-screening-logic/" style="display:block;text-decoration:none;">
-            <div style="font-size:.82rem;font-weight:600;color:var(--primary);line-height:1.4;margin-bottom:2px;">AIが仮想投資家3名と設計した銘柄選定ロジック｜スコアリング100点満点の仕組みを公開</div>
+            <div style="font-size:.82rem;font-weight:600;color:var(--primary);line-height:1.4;margin-bottom:2px;">3人の仮想投資家が激論：このロジックで本当に勝てるのか？</div>
             <div style="font-size:.72rem;color:var(--muted);">StockInsight AIの仕組み</div>
           </a>
           
@@ -213,13 +249,6 @@
           <a href="/column/peg-ratio-explained/" style="display:block;text-decoration:none;">
             <div style="font-size:.82rem;font-weight:600;color:var(--primary);line-height:1.4;margin-bottom:2px;">PEG比率とは？PERだけでは見えない「成長を考慮した割安感」を測る方法</div>
             <div style="font-size:.72rem;color:var(--muted);">ファンダメンタル分析</div>
-          </a>
-          
-          
-          
-          <a href="/column/best-online-brokerage-2026/" style="display:block;text-decoration:none;">
-            <div style="font-size:.82rem;font-weight:600;color:var(--primary);line-height:1.4;margin-bottom:2px;">【2026年版】ネット証券おすすめ比較｜中長期投資家向けに徹底解説</div>
-            <div style="font-size:.72rem;color:var(--muted);">証券口座</div>
           </a>
           
           
@@ -284,7 +313,7 @@
     </div>
     <div class="footer-bottom">
       <p>&copy; 2026 StockInsight AI</p>
-      <p style="font-size:.72rem;">最終更新: 2026-04-30</p>
+      <p style="font-size:.72rem;">最終更新: 2026-05-01</p>
     </div>
   </div>
 </footer>

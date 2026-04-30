@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AIが仮想投資家3名と設計した銘柄選定ロジック｜スコアリング100点満点の仕組みを公開 | AI銘柄選定サービス</title>
-  <meta name="description" content="StockInsight AIの銘柄選定ロジックをどう設計したか、仮想の投資家3名によるディスカッション形式で解説。テクニカル40点・ファンダ40点・センチメント20点の根拠とは。">
+  <title>3人の仮想投資家が激論：このロジックで本当に勝てるのか？ | AI銘柄選定サービス</title>
+  <meta name="description" content="StockInsight AIのスコアリング設計の舞台裏。バリュー・グロース・テクニカルの3つの視点が衝突し、テクニカル40点・ファンダ40点・センチメント20点という設計に落ち着くまでの議論。">
 
   <!-- OGP -->
   <meta property="og:title" content="StockInsight AI | AI銘柄選定">
@@ -93,7 +93,7 @@
     <span>›</span>
     <a href="/column/">コラム</a>
     <span>›</span>
-    AIが仮想投資家3名と設計した銘柄選定ロジック｜スコアリング100点満点の仕組みを公開
+    3人の仮想投資家が激論：このロジックで本当に勝てるのか？
   </div>
 
   <div style="display:grid;gap:32px;grid-template-columns:1fr 280px;align-items:start;">
@@ -101,43 +101,65 @@
     <!-- 記事本文 -->
     <article>
       <div style="margin-bottom:20px;">
-        <img src="/assets/img/col_default.png" alt="AIが仮想投資家3名と設計した銘柄選定ロジック｜スコアリング100点満点の仕組みを公開" style="width:100%;height:200px;object-fit:cover;border-radius:12px;margin-bottom:20px;">
+        <img src="/assets/img/col_default.png" alt="3人の仮想投資家が激論：このロジックで本当に勝てるのか？" style="width:100%;height:200px;object-fit:cover;border-radius:12px;margin-bottom:20px;">
         <div class="column-cat" style="margin-bottom:8px;">StockInsight AIの仕組み</div>
-        <h1 style="font-size:clamp(1.3rem,3vw,1.7rem);font-weight:800;color:var(--primary);line-height:1.4;margin-bottom:12px;">AIが仮想投資家3名と設計した銘柄選定ロジック｜スコアリング100点満点の仕組みを公開</h1>
-        <p style="font-size:.85rem;color:var(--muted);">公開日: 2026年4月28日</p>
+        <h1 style="font-size:clamp(1.3rem,3vw,1.7rem);font-weight:800;color:var(--primary);line-height:1.4;margin-bottom:12px;">3人の仮想投資家が激論：このロジックで本当に勝てるのか？</h1>
+        <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+          <p style="font-size:.85rem;color:var(--muted);">公開日: 2026年4月28日</p>
+          <span class="reading-time">📖 約6分で読めます</span>
+        </div>
       </div>
 
       <div class="card" style="padding:28px 32px;">
         <div class="article-body">
-          <h2>なぜ「仮想投資家3名のレビュー」なのか</h2>
-<p>StockInsight AIを開発する際、「どんな条件で銘柄を選べばよいか」という問いに答えるため、実績ある投資家3名の視点を借りて仕様を設計しました。</p>
-<ul>
-<li><strong>バリュー投資家A</strong>（バリュー投資・ROE・財務健全性観点）</li>
-<li><strong>グロース投資家B</strong>（グロース投資・成長率・PEG比率観点）</li>
-<li><strong>テクニカル分析家C</strong>（テクニカル分析・出来高・スコアリング設計観点）</li>
-</ul>
-<p>3者の視点が合流した結果、「テクニカル・ファンダメンタル・センチメント」の3軸評価という設計に落ち着きました。</p>
+          <p>このサービスのスコアリングロジックを設計するとき、「誰か反論してくれる人間が必要だ」と思いました。</p>
+<p>一人で設計すると、自分の投資スタイルに引っ張られる。そこで、3人の仮想投資家にそれぞれ別の立場で議論してもらいました。</p>
 <hr />
-<h2>スコアリングの全体設計</h2>
-<p>100点満点のスコアは3つのカテゴリで構成されます。</p>
+<h2>登場人物</h2>
+<ul>
+<li><strong>バリュー投資家A</strong> ─ ROEと財務健全性の鬼。「借金まみれの成長企業は信じない」タイプ</li>
+<li><strong>グロース投資家B</strong> ─ 成長率とPEGレシオが命。「財務が良くても成長しない会社は買わない」タイプ</li>
+<li><strong>テクニカル分析家C</strong> ─ チャートと出来高しか信じない。「業績は良くても下落トレンドなら絶対買わない」タイプ</li>
+</ul>
+<hr />
+<h2>第一の論点：テクニカルとファンダ、どっちを重く見るか</h2>
+<p><strong>C（テクニカル）：</strong> 「ファンダが40点もあるのは重すぎる。会社の業績がいくら良くても、チャートが崩れているとき買ったら損をする。テクニカルを60点、ファンダを40点にすべきだ」</p>
+<p><strong>A（バリュー）：</strong> 「逆に言えば、チャートだけを見て買うのも危険です。業績が悪い会社が一時的に上昇することはある。でもそういう銘柄は長続きしない。ファンダがないと中長期では勝てません」</p>
+<p><strong>B（グロース）：</strong> 「2人の言っていることは矛盾していない。良い会社でも、今が買い時でなければ意味がない。同じ40点ずつというのは、実はそういう考え方を反映している」</p>
+<p>→ <strong>結論：テクニカル40点・ファンダメンタル40点の等配分</strong></p>
+<hr />
+<h2>第二の論点：ROEのしきい値は何%が適切か</h2>
+<p><strong>A：</strong> 「ROE 10%以上を必須にすべきです。日本企業の平均が7〜9%程度。10%を超えていてこそ、コーポレートガバナンス改革の恩恵を受けている会社と言える」</p>
+<p><strong>B：</strong> 「ROEより成長率の方が大事だと思いますが、最低ラインとしてなら10%は妥当。ただし、借金でROEを水増ししている会社を除外するために自己資本比率も見るべきでしょう」</p>
+<p><strong>C：</strong> 「数字は何でもいい。チャートが良ければ買うだけです（苦笑）。でも10%という数字は市場に対して明確なメッセージを出せるので賛成します」</p>
+<p>→ <strong>結論：ROE 10%以上。自己資本比率30%以上で水増しを除外</strong></p>
+<hr />
+<h2>第三の論点：センチメント20点は多すぎないか</h2>
+<p><strong>A：</strong> 「ニュースは一時的な情報です。業績の実態を反映していないことも多い。センチメントを20点も与えるのは過大評価だと思います」</p>
+<p><strong>B：</strong> 「でも上方修正は強いシグナルです。業績が実際に上振れているということ。それをスコアに反映させないのはもったいない」</p>
+<p><strong>C：</strong> 「出来高がセンチメントの代わりになることが多い。機関投資家が動くと出来高が増える。ニュースを直接見るよりも、出来高の変化を見た方が客観的かもしれません」</p>
+<p><strong>B：</strong> 「両方見ればいい。センチメント20点の中でニュース10点・業績修正10点というのは合理的じゃないでしょうか」</p>
+<p>→ <strong>結論：センチメント20点（ニュース評価10点・業績修正10点）</strong></p>
+<hr />
+<h2>合意に至ったスコアリング構成</h2>
 <table>
 <thead>
 <tr>
 <th>カテゴリ</th>
 <th>配点</th>
-<th>評価の軸</th>
+<th>主な指標</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>テクニカル</td>
 <td>40点</td>
-<td>株価トレンド・出来高・モメンタム</td>
+<td>25週MA乖離率・MACDヒストグラム・出来高比率・RSI</td>
 </tr>
 <tr>
 <td>ファンダメンタル</td>
 <td>40点</td>
-<td>収益力・成長性・財務健全性</td>
+<td>ROE・売上成長率・PEGレシオ・自己資本比率・営業利益率</td>
 </tr>
 <tr>
 <td>センチメント</td>
@@ -146,70 +168,60 @@
 </tr>
 </tbody>
 </table>
-<p>テクニカルとファンダをそれぞれ40点として等重にしたのは、「良い会社でも今が買い時でなければ意味がない」という考え方に基づきます。センチメントを20点にしたのは、補完的な情報として位置づけるためです。</p>
 <hr />
-<h2>テクニカル指標の選定理由（40点）</h2>
-<h3>25週移動平均線の上抜け</h3>
-<p>25週（約半年）の移動平均線は、機関投資家が意識するトレンド転換ラインです。この線を株価が上抜け、かつ上向きに傾いているときは「上昇トレンドへの移行」を示しています。</p>
-<h3>週足MACDゴールデンクロス</h3>
-<p>日足ではなく<strong>週足</strong>のMACDを採用しました。週足は中長期（1〜3ヶ月）の投資には適切な時間軸です。MACD線がシグナル線を下から上に突き抜けるゴールデンクロスは、モメンタムの方向転換を示す信頼性の高い指標です。</p>
-<h3>出来高比率 1.3倍以上</h3>
-<p>直近4週の平均出来高 ÷ 13週平均出来高が1.3倍以上であることを条件としています。</p>
-<blockquote>
-<p>「出来高は株価に先行する」と言われます。機関投資家が動き始めると、株価が大きく動く前に出来高が増加します。この動きを事前に察知するための条件です。</p>
-</blockquote>
-<h3>RSI（相対力指数）</h3>
-<p>買われすぎ（70超）を避け、適切なエントリーポイントを判断します。</p>
-<hr />
-<h2>ファンダメンタル指標の選定理由（40点）</h2>
-<h3>ROE 10%以上</h3>
-<p>自己資本利益率（ROE）は「株主から預かったお金をどれだけ効率よく使って利益を上げているか」を示します。10%というしきい値は、日本企業の平均的な水準（7〜9%程度）を明確に上回ることを求めています。</p>
-<h3>売上成長率 +10%以上・営業利益成長率 +15%以上</h3>
-<p>企業の実力は「今稼いでいる額」より「稼ぐ力が伸びているか」に表れます。売上が伸びているだけでなく、利益がより速いペースで伸びている（利益率が改善している）ことを求めています。</p>
-<h3>PEG比率 ≦ 1.5</h3>
-<p>PEG比率とは「PER ÷ 利益成長率」で計算される指標です。PERだけでは「割安・割高」を判断できないため、成長率を考慮した相対的な割安感を測ります。</p>
-<ul>
-<li>PEG &lt; 1.0：成長に対して割安</li>
-<li>PEG 1.0〜1.5：適正水準</li>
-<li>PEG &gt; 1.5：成長を織り込み済みで割高の可能性</li>
-</ul>
-<h3>自己資本比率 30%以上</h3>
-<p>財務健全性の最低基準として設定しました。30%未満の企業は金利上昇局面でのリスクが高まります。</p>
-<hr />
-<h2>センチメント評価の仕組み（20点）</h2>
-<h3>ニュース好感度スコア</h3>
-<p>直近4週のニュースヘッドラインを分析し、「ポジティブ／ネガティブ／中立」に分類します。ポジティブニュースの比率が高いほどスコアが上がります。</p>
-<h3>業績修正の方向性</h3>
-<p>直近の決算発表や業績修正プレスリリースをチェックし、「上方修正」「維持」「下方修正」を評価します。上方修正は強いポジティブシグナルです。</p>
-<hr />
-<h2>スクリーニングの前処理（除外フィルタ）</h2>
-<p>スコアリングの前に、以下の銘柄は自動除外されます。</p>
+<h2>除外フィルタ（採点前の足切り）</h2>
+<p>スコアリング前に、以下の銘柄は自動で除外します。</p>
 <ul>
 <li>赤字企業（営業利益 &lt; 0）</li>
 <li>債務超過（純資産 &lt; 0）</li>
 <li>上場廃止・監理銘柄</li>
-<li>時価総額300億円未満（流動性不足）</li>
+<li>時価総額300億円未満</li>
 <li>1日平均売買代金5,000万円未満</li>
+<li>52週高値から50%以上の下落</li>
 </ul>
-<p>これらの除外条件は、投資リスクの高い銘柄をスクリーニング段階で取り除くために設けています。</p>
+<p>特に最後の「52週-50%フィルタ」は議論になりました。</p>
+<p><strong>C：</strong> 「下落中の銘柄を拾う逆張りは有効なケースもある。一概に除外するのは機会損失では？」</p>
+<p><strong>A：</strong> 「50%以上の下落は、単なる調整ではなく構造的な問題がある可能性が高い。中長期投資ではリスクが高すぎる」</p>
+<p><strong>B：</strong> 「バックテストで確認しましょう。フィルタあり・なしで勝率がどう変わるかを見れば答えが出ます」</p>
+<p>→ バックテストの結果、フィルタありの方が有意に成績が改善。除外条件として採用。</p>
 <hr />
-<h2>最終選定ルール</h2>
-<ul>
-<li>上位10銘柄を選定（スコア60点以上）</li>
-<li>同一セクターから最大3銘柄まで（過度な集中を防ぐ）</li>
-<li>毎週日曜日に自動実行</li>
-</ul>
-<hr />
-<h2>まとめ：スコアを「参考情報」として使う</h2>
-<p>StockInsight AIのスコアは、投資判断の補助ツールです。スコアが高い銘柄が必ず値上がりするわけではなく、市場環境・個別リスクを自分自身でも確認することが大切です。</p>
-<p>毎週公開しているスコア詳細（テクニカル・ファンダ・センチメント各スコア）を参考にしながら、最終的な投資判断はご自身の責任で行ってください。</p>
+<h2>スコアは「補助ツール」と割り切る</h2>
+<p>3人の議論を通じて出た最も重要な合意は、「スコアは入口であって答えではない」という点でした。</p>
+<p>スコアが高い銘柄が必ず上がるわけではない。でも、複数の観点から見て「今、良い状態」の銘柄を機械的に選び出す仕組みとしては、これで十分に機能すると判断しています。</p>
+<p>採点の詳細は<a href="/about/">選定ロジック</a>ページで全公開しています。</p>
 <blockquote>
 <p>※ 本サービスは投資助言業の登録を受けておりません。掲載情報は情報提供を目的とし、特定銘柄の売買を推奨するものではありません。</p>
 </blockquote>
         </div>
       </div>
 
-      <!-- シェア・ナビ -->
+      <!-- SNSシェア -->
+      <div class="share-section">
+        <div class="share-label">この記事をシェア</div>
+        <div class="share-buttons">
+          <a class="share-btn share-x" href="https://twitter.com/intent/tweet?text=3%E4%BA%BA%E3%81%AE%E4%BB%AE%E6%83%B3%E6%8A%95%E8%B3%87%E5%AE%B6%E3%81%8C%E6%BF%80%E8%AB%96%EF%BC%9A%E3%81%93%E3%81%AE%E3%83%AD%E3%82%B8%E3%83%83%E3%82%AF%E3%81%A7%E6%9C%AC%E5%BD%93%E3%81%AB%E5%8B%9D%E3%81%A6%E3%82%8B%E3%81%AE%E3%81%8B%EF%BC%9F&url=https://stockinsight-ai.github.io/column/ai-stock-screening-logic/&hashtags=StockInsightAI,日本株" target="_blank" rel="noopener">
+            𝕏 ポスト
+          </a>
+          <a class="share-btn share-line" href="https://social-plugins.line.me/lineit/share?url=https://stockinsight-ai.github.io/column/ai-stock-screening-logic/" target="_blank" rel="noopener">
+            LINE
+          </a>
+          <button class="share-btn share-copy" onclick="navigator.clipboard.writeText(location.href);this.textContent='✓ コピー済み';setTimeout(()=>this.textContent='🔗 URLコピー',2000)">
+            🔗 URLコピー
+          </button>
+        </div>
+      </div>
+
+      <!-- ニュースレターCTA -->
+      <div class="newsletter-cta">
+        <div class="newsletter-cta-icon">📬</div>
+        <div class="newsletter-cta-body">
+          <div class="newsletter-cta-title">毎週日曜、推奨銘柄が自動更新されます</div>
+          <p class="newsletter-cta-desc">登録不要・完全無料。月曜朝に「今週の推奨銘柄」をチェックするのが習慣になります。</p>
+          <a href="/picks/" class="newsletter-cta-btn">今週の推奨銘柄を見る →</a>
+        </div>
+      </div>
+
+      <!-- ナビ -->
       <div style="margin-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;">
         <a href="/column/" style="font-size:.84rem;color:var(--muted);">← コラム一覧へ</a>
         <a href="/picks/" style="font-size:.84rem;color:var(--accent-dark);font-weight:700;">今週の推奨銘柄を見る →</a>
@@ -223,6 +235,13 @@
       <div class="card" style="padding:20px;">
         <div style="font-size:.88rem;font-weight:700;color:var(--primary);margin-bottom:14px;">関連コラム</div>
         <div style="display:flex;flex-direction:column;gap:10px;">
+          
+          
+          <a href="/column/failure-autopsy-2026-04/" style="display:block;text-decoration:none;">
+            <div style="font-size:.82rem;font-weight:600;color:var(--primary);line-height:1.4;margin-bottom:2px;">AIが外した推奨を解剖する【2026年4月版】</div>
+            <div style="font-size:.72rem;color:var(--muted);">成績レビュー</div>
+          </a>
+          
           
           
           <a href="/column/monthly-report-2026-04/" style="display:block;text-decoration:none;">
@@ -244,13 +263,6 @@
           <a href="/column/peg-ratio-explained/" style="display:block;text-decoration:none;">
             <div style="font-size:.82rem;font-weight:600;color:var(--primary);line-height:1.4;margin-bottom:2px;">PEG比率とは？PERだけでは見えない「成長を考慮した割安感」を測る方法</div>
             <div style="font-size:.72rem;color:var(--muted);">ファンダメンタル分析</div>
-          </a>
-          
-          
-          
-          <a href="/column/best-online-brokerage-2026/" style="display:block;text-decoration:none;">
-            <div style="font-size:.82rem;font-weight:600;color:var(--primary);line-height:1.4;margin-bottom:2px;">【2026年版】ネット証券おすすめ比較｜中長期投資家向けに徹底解説</div>
-            <div style="font-size:.72rem;color:var(--muted);">証券口座</div>
           </a>
           
           
@@ -315,7 +327,7 @@
     </div>
     <div class="footer-bottom">
       <p>&copy; 2026 StockInsight AI</p>
-      <p style="font-size:.72rem;">最終更新: 2026-04-30</p>
+      <p style="font-size:.72rem;">最終更新: 2026-05-01</p>
     </div>
   </div>
 </footer>

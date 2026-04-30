@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>テクニカル分析入門：MACDと移動平均線の使い方 | AI銘柄選定サービス</title>
-  <meta name="description" content="株式投資のテクニカル分析の基本、MACD（マックディー）と移動平均線の仕組みと読み方をわかりやすく解説します。">
+  <title>AIが外した推奨を解剖する【2026年4月版】 | AI銘柄選定サービス</title>
+  <meta name="description" content="期待通りに動かなかった推奨銘柄について、なぜスコアが高かったのに外れたのかを率直に分析。スコアの限界と改善点も正直に書きます。">
 
   <!-- OGP -->
   <meta property="og:title" content="StockInsight AI | AI銘柄選定">
@@ -34,7 +34,7 @@
   }
   </script>
 
-  <link rel="canonical" href="https://stockinsight-ai.github.io/column/technical-macd-ma-basics/">
+  <link rel="canonical" href="https://stockinsight-ai.github.io/column/failure-autopsy-2026-04/">
   <link rel="stylesheet" href="/assets/css/style.css">
   
 
@@ -93,7 +93,7 @@
     <span>›</span>
     <a href="/column/">コラム</a>
     <span>›</span>
-    テクニカル分析入門：MACDと移動平均線の使い方
+    AIが外した推奨を解剖する【2026年4月版】
   </div>
 
   <div style="display:grid;gap:32px;grid-template-columns:1fr 280px;align-items:start;">
@@ -101,67 +101,68 @@
     <!-- 記事本文 -->
     <article>
       <div style="margin-bottom:20px;">
-        <img src="/assets/img/col_default.png" alt="テクニカル分析入門：MACDと移動平均線の使い方" style="width:100%;height:200px;object-fit:cover;border-radius:12px;margin-bottom:20px;">
-        <div class="column-cat" style="margin-bottom:8px;">テクニカル</div>
-        <h1 style="font-size:clamp(1.3rem,3vw,1.7rem);font-weight:800;color:var(--primary);line-height:1.4;margin-bottom:12px;">テクニカル分析入門：MACDと移動平均線の使い方</h1>
+        <img src="/assets/img/col_default.png" alt="AIが外した推奨を解剖する【2026年4月版】" style="width:100%;height:200px;object-fit:cover;border-radius:12px;margin-bottom:20px;">
+        <div class="column-cat" style="margin-bottom:8px;">成績レビュー</div>
+        <h1 style="font-size:clamp(1.3rem,3vw,1.7rem);font-weight:800;color:var(--primary);line-height:1.4;margin-bottom:12px;">AIが外した推奨を解剖する【2026年4月版】</h1>
         <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
-          <p style="font-size:.85rem;color:var(--muted);">公開日: 2026年4月3日</p>
+          <p style="font-size:.85rem;color:var(--muted);">公開日: 2026年5月1日</p>
           <span class="reading-time">📖 約4分で読めます</span>
         </div>
       </div>
 
       <div class="card" style="padding:28px 32px;">
         <div class="article-body">
-          <h2>テクニカル分析とは何か</h2>
-<p>株価の値動き（チャート）を分析して、将来の方向性を読もうとする手法を「テクニカル分析」と呼びます。</p>
-<p>StockInsight AIでは、テクニカル指標として<strong>25週移動平均線</strong>・<strong>週足MACD</strong>・<strong>RSI</strong>・<strong>出来高比率</strong>の4軸を使用しています。これらを組み合わせることで、銘柄の中長期トレンドを多角的に把握することができます。</p>
-<h2>移動平均線とは</h2>
-<p>移動平均線（MA：Moving Average）は、一定期間の終値の平均を線で繋いだものです。</p>
-<p>たとえば「25週移動平均線」なら、直近25週間の終値の平均値を計算し続けます。</p>
-<h3>なぜ25週MAを使うのか</h3>
-<p>本サービスでは週足チャートをベースにしているため、25週MAを採用しています。</p>
+          <p>成績を全公開している以上、外れた推奨についても正面から向き合うのがルールです。</p>
+<p>2026年4月はサービス開始初月でした。12週後の最終評価はまだ先ですが、選定から数週間が経過した時点での中間観察を記録しておきます。</p>
+<h2>外れ解剖の前に：評価の前提</h2>
+<p>このサービスの「勝ち」の定義は <strong>推奨から12週後に+10%以上</strong> です。</p>
+<p>4月に推奨した銘柄の最終評価は7月下旬になります。ここで書くのはあくまで「中間の動き」と「そこから読める教訓」です。</p>
+<h2>気になった動き：センチメント高スコアの落とし穴</h2>
+<p>スコアリング上はセンチメントが高かったにもかかわらず、推奨後すぐに株価が軟調になった銘柄がいくつかありました。</p>
+<p>振り返ると、共通しているのは「ニュースのトーンが良かっただけで、業績の実態が見えていなかった」ことです。</p>
+<p>具体的には：</p>
 <ul>
-<li>25週 ≒ 約半年</li>
-<li>株価が25週MAを上回っている → 半年間の平均より高い位置にある → 中長期的な上昇トレンドの可能性が高い</li>
+<li>IR情報やプレスリリースは前向きな表現が多い</li>
+<li>でもそれは「計画」の話であって「実績」ではない</li>
+<li>市場は「計画」より「実績の上方修正」に反応する</li>
 </ul>
-<p>逆に、株価が25週MAを大きく下回っている場合は下降トレンドが続いている可能性があります。</p>
-<h3>具体的な見方</h3>
-<p><strong>買いサイン（上昇トレンド）</strong><br />
-- 株価が25週MAの上側にある<br />
-- 25週MAが上向きに傾いている</p>
-<p><strong>売りサイン（下降トレンド）</strong><br />
-- 株価が25週MAの下側にある<br />
-- 25週MAが下向きに傾いている</p>
-<h2>MACDとは</h2>
-<p>MACD（マックディー：Moving Average Convergence Divergence）は、短期移動平均線と長期移動平均線の差を利用したテクニカル指標です。</p>
-<h3>MACDの構成要素</h3>
-<ul>
-<li><strong>MACDライン</strong>：短期EMA（指数平滑移動平均）－長期EMA の差</li>
-<li><strong>シグナルライン</strong>：MACDラインの移動平均（9期間）</li>
-<li><strong>ヒストグラム</strong>：MACDライン－シグナルラインの差</li>
-</ul>
-<h3>ゴールデンクロスとデッドクロス</h3>
-<p>MACDで最もよく使われるシグナルが「クロス」です。</p>
-<p><strong>ゴールデンクロス（買いサイン）</strong><br />
-- MACDラインがシグナルラインを下から上に突き抜ける<br />
-- 上昇トレンドの始まりを示すことが多い</p>
-<p><strong>デッドクロス（売りサイン）</strong><br />
-- MACDラインがシグナルラインを上から下に突き抜ける<br />
-- 下降トレンドの始まりを示すことが多い</p>
-<h2>StockInsight AIでの活用方法</h2>
-<p>本サービスでは、テクニカルスコア40点のうち、</p>
-<ul>
-<li><strong>25週MA乖離率</strong>：10点（5〜15%乖離を最高評価。適度な上昇トレンドを重視）</li>
-<li><strong>MACDヒストグラム</strong>：10点（プラス圏で上昇モメンタムあり）</li>
-<li><strong>出来高比率</strong>：10点（直近4週の出来高が13週平均の1.3倍以上）</li>
-<li><strong>RSI</strong>：10点（40〜60の適正ゾーンを最高評価。買われすぎ回避）</li>
-</ul>
-<p>の配点で評価しています。</p>
-<p>4軸が揃っている銘柄は複数のシグナルが同時に好転しており、スコアが高くなります。</p>
-<h2>まとめ</h2>
-<p>テクニカル分析は決して難しくありません。</p>
-<p>「株価が適度にMAより上にあるか」「勢いが加速しているか」「出来高が増えているか」「買われすぎていないか」という4つの問いに答えることで、中長期トレードの入口を多角的に見極めることができます。</p>
-<p>本サービスの推奨銘柄ページでは、これらの指標の具体的な数値をすべて公開していますので、ぜひ参考にしてみてください。</p>
+<p><strong>センチメント評価においては、ニュースの量よりも業績修正の方向性の方が重要</strong> という傾向がデータに表れ始めています。</p>
+<h2>もう一つのパターン：テクニカル良好→地合い悪化</h2>
+<p>テクニカルスコアが高かった銘柄でも、推奨翌週から日経平均全体が調整に入ったケースでは、個別の優位性が消えてしまいました。</p>
+<p>これはスクリーニングの構造的な限界です。</p>
+<p>テクニカル指標は「過去の動き」を見ています。急な地合い変化（金利動向、地政学リスクなど）には反応できません。個別銘柄がどれだけ良い状態でも、相場全体が売られる局面では道連れになります。</p>
+<p>この問題への現実的な対応策は「市場環境を加味して推奨銘柄数を減らす」か「止まる勇気を持つ」しかないと考えています。</p>
+<h2>逆に機能した指標：出来高比率</h2>
+<p>出来高比率が高かった銘柄（直近4週平均が13週平均の1.5倍以上）は、推奨後も比較的堅調な動きをしているケースが多い傾向があります。</p>
+<p>「誰かが買っている」という事実は、チャートや財務数字よりも素直なシグナルかもしれません。</p>
+<h2>4月を振り返っての改善点</h2>
+<table>
+<thead>
+<tr>
+<th>課題</th>
+<th>方向性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>センチメントの精度</td>
+<td>ニュース評価より業績修正への重み付けを強化</td>
+</tr>
+<tr>
+<td>地合い対応</td>
+<td>市場全体のトレンドをフィルタ条件に追加を検討</td>
+</tr>
+<tr>
+<td>出来高評価</td>
+<td>現行ロジックが有効。継続</td>
+</tr>
+</tbody>
+</table>
+<p>これらは今後のロジック改善に反映していきます。変更した場合はこのコラムでお知らせします。</p>
+<h2>まとめ：外れと向き合うことで、サービスは良くなる</h2>
+<p>外れた推奨を隠すのは簡単です。でも、それをやった瞬間にこのサービスの価値は消えます。</p>
+<p>当たった推奨も外れた推奨も記録して、外れから学び続ける。それがStockInsight AIのやり方です。</p>
+<p>12週後の最終評価が出たら、改めて「4月成績レポート」として詳しくまとめます。</p>
 <hr />
 <p>※本記事は参考情報です。投資判断は必ず自己責任で行ってください。</p>
         </div>
@@ -171,10 +172,10 @@
       <div class="share-section">
         <div class="share-label">この記事をシェア</div>
         <div class="share-buttons">
-          <a class="share-btn share-x" href="https://twitter.com/intent/tweet?text=%E3%83%86%E3%82%AF%E3%83%8B%E3%82%AB%E3%83%AB%E5%88%86%E6%9E%90%E5%85%A5%E9%96%80%EF%BC%9AMACD%E3%81%A8%E7%A7%BB%E5%8B%95%E5%B9%B3%E5%9D%87%E7%B7%9A%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9&url=https://stockinsight-ai.github.io/column/technical-macd-ma-basics/&hashtags=StockInsightAI,日本株" target="_blank" rel="noopener">
+          <a class="share-btn share-x" href="https://twitter.com/intent/tweet?text=AI%E3%81%8C%E5%A4%96%E3%81%97%E3%81%9F%E6%8E%A8%E5%A5%A8%E3%82%92%E8%A7%A3%E5%89%96%E3%81%99%E3%82%8B%E3%80%902026%E5%B9%B44%E6%9C%88%E7%89%88%E3%80%91&url=https://stockinsight-ai.github.io/column/failure-autopsy-2026-04/&hashtags=StockInsightAI,日本株" target="_blank" rel="noopener">
             𝕏 ポスト
           </a>
-          <a class="share-btn share-line" href="https://social-plugins.line.me/lineit/share?url=https://stockinsight-ai.github.io/column/technical-macd-ma-basics/" target="_blank" rel="noopener">
+          <a class="share-btn share-line" href="https://social-plugins.line.me/lineit/share?url=https://stockinsight-ai.github.io/column/failure-autopsy-2026-04/" target="_blank" rel="noopener">
             LINE
           </a>
           <button class="share-btn share-copy" onclick="navigator.clipboard.writeText(location.href);this.textContent='✓ コピー済み';setTimeout(()=>this.textContent='🔗 URLコピー',2000)">
@@ -208,11 +209,6 @@
         <div style="font-size:.88rem;font-weight:700;color:var(--primary);margin-bottom:14px;">関連コラム</div>
         <div style="display:flex;flex-direction:column;gap:10px;">
           
-          
-          <a href="/column/failure-autopsy-2026-04/" style="display:block;text-decoration:none;">
-            <div style="font-size:.82rem;font-weight:600;color:var(--primary);line-height:1.4;margin-bottom:2px;">AIが外した推奨を解剖する【2026年4月版】</div>
-            <div style="font-size:.72rem;color:var(--muted);">成績レビュー</div>
-          </a>
           
           
           

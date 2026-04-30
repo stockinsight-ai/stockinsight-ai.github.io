@@ -379,3 +379,60 @@ footer {
   .bt-summary { grid-template-columns: 1fr 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
 }
+
+/* ===== FAQ（改善版） ===== */
+.faq-item { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 20px; }
+.faq-q { font-weight: 700; color: var(--primary); margin-bottom: 8px; font-size: .92rem; }
+.faq-a { font-size: .87rem; color: var(--text); line-height: 1.75; }
+
+/* ===== 先週の追跡 ===== */
+.tracking-grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); margin-top: 16px; }
+.tracking-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 16px; text-align: center; }
+.tracking-name { font-size: .85rem; font-weight: 700; color: var(--primary); margin-bottom: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tracking-code { font-size: .74rem; color: var(--muted); margin-bottom: 10px; }
+.tracking-return { font-size: 1.2rem; font-weight: 800; margin-bottom: 6px; }
+.tracking-return.pos { color: var(--hit); }
+.tracking-return.neg { color: var(--miss); }
+.tracking-return.neutral { color: var(--muted); font-size: .85rem; }
+.tracking-period { font-size: .68rem; color: var(--muted); font-weight: 400; display: block; margin-top: 2px; }
+.tracking-status { display: inline-block; font-size: .72rem; padding: 2px 8px; border-radius: 20px; font-weight: 700; margin-top: 4px; }
+
+/* ===== 今週のひとこと ===== */
+.weekly-comment { background: linear-gradient(135deg, #f0f7ff 0%, #e8f4fd 100%); border: 1px solid #b8d9f5; border-left: 4px solid var(--primary); border-radius: var(--radius); padding: 16px 20px; margin-bottom: 28px; }
+.weekly-comment-label { font-size: .74rem; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 8px; }
+.weekly-comment p { font-size: .9rem; color: var(--text); line-height: 1.8; margin: 0; }
+
+/* ===== NEWバッジ ===== */
+.column-thumb { position: relative; overflow: hidden; }
+.new-badge { position: absolute; top: 10px; left: 10px; background: #e74c3c; color: #fff; font-size: .68rem; font-weight: 800; padding: 3px 8px; border-radius: 4px; letter-spacing: .05em; z-index: 1; }
+
+/* ===== 読了時間 ===== */
+.reading-time { font-size: .78rem; color: var(--muted); background: var(--bg); padding: 3px 10px; border-radius: 20px; }
+
+/* ===== SNSシェア ===== */
+.share-section { margin-top: 28px; padding: 20px; background: var(--bg); border-radius: var(--radius); }
+.share-label { font-size: .8rem; font-weight: 700; color: var(--muted); margin-bottom: 12px; }
+.share-buttons { display: flex; gap: 10px; flex-wrap: wrap; }
+.share-btn { display: inline-block; padding: 8px 18px; border-radius: 6px; font-size: .84rem; font-weight: 700; text-decoration: none; cursor: pointer; border: none; transition: opacity .15s; }
+.share-btn:hover { opacity: .82; }
+.share-x { background: #000; color: #fff; }
+.share-line { background: #06c755; color: #fff; }
+.share-copy { background: var(--card); color: var(--primary); border: 1px solid var(--border); }
+
+/* ===== ニュースレターCTA ===== */
+.newsletter-cta { display: flex; gap: 16px; align-items: flex-start; background: var(--primary); color: #fff; border-radius: var(--radius); padding: 24px; margin-top: 24px; }
+.newsletter-cta-icon { font-size: 1.8rem; flex-shrink: 0; }
+.newsletter-cta-title { font-size: 1rem; font-weight: 800; margin-bottom: 6px; }
+.newsletter-cta-desc { font-size: .84rem; color: rgba(255,255,255,.75); line-height: 1.7; margin-bottom: 14px; }
+.newsletter-cta-btn { display: inline-block; background: var(--accent); color: #fff; font-weight: 700; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-size: .88rem; }
+.newsletter-cta-btn:hover { opacity: .88; }
+
+/* ===== レスポンシブ追加 ===== */
+@media (max-width: 768px) {
+  .tracking-grid { grid-template-columns: repeat(3, 1fr); }
+  .newsletter-cta { flex-direction: column; gap: 12px; }
+}
+@media (max-width: 480px) {
+  .tracking-grid { grid-template-columns: repeat(2, 1fr); }
+  .share-buttons { flex-direction: column; }
+}
