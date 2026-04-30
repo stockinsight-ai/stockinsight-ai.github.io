@@ -127,7 +127,9 @@
       
       <li><span class="check-mark">✓</span><span>1日平均売買代金 5,000万円以上</span></li>
       
-      <li><span class="check-mark">✓</span><span>新興・小型・テーマ株は除外（安定性重視）</span></li>
+      <li><span class="check-mark">✓</span><span>金融セクター（銀行・証券・保険）除外</span></li>
+      
+      <li><span class="check-mark">✓</span><span>赤字企業・債務超過銘柄除外</span></li>
       
     </ul>
   </div>
@@ -143,19 +145,25 @@
           
           <tr>
             <td><strong>25週移動平均線</strong></td>
-            <td style="color:var(--muted);">現在株価が25週MAを上回っている</td>
-            <td style="color:var(--primary);font-weight:700;">15点</td>
+            <td style="color:var(--muted);">MA乖離率5〜15%を最高評価（適度な上昇トレンド）</td>
+            <td style="color:var(--primary);font-weight:700;">10点</td>
           </tr>
           
           <tr>
             <td><strong>週足MACD</strong></td>
-            <td style="color:var(--muted);">MACDがゴールデンクロスまたは上昇トレンド</td>
-            <td style="color:var(--primary);font-weight:700;">15点</td>
+            <td style="color:var(--muted);">MACDヒストグラムがプラス（上昇モメンタム）</td>
+            <td style="color:var(--primary);font-weight:700;">10点</td>
           </tr>
           
           <tr>
             <td><strong>出来高比率</strong></td>
             <td style="color:var(--muted);">直近4週の出来高が13週平均の1.3倍以上</td>
+            <td style="color:var(--primary);font-weight:700;">10点</td>
+          </tr>
+          
+          <tr>
+            <td><strong>RSI</strong></td>
+            <td style="color:var(--muted);">40〜60の適正ゾーンを最高評価（買われすぎ回避）</td>
             <td style="color:var(--primary);font-weight:700;">10点</td>
           </tr>
           
@@ -175,7 +183,7 @@
           
           <tr>
             <td><strong>ROE</strong></td>
-            <td style="color:var(--muted);">10%以上</td>
+            <td style="color:var(--muted);">10%以上（日本企業平均を上回ること）</td>
             <td style="color:var(--primary);font-weight:700;">10点</td>
           </tr>
           
@@ -193,13 +201,13 @@
           
           <tr>
             <td><strong>PEGレシオ</strong></td>
-            <td style="color:var(--muted);">1.5以下</td>
+            <td style="color:var(--muted);">1.5以下（成長に見合った株価）</td>
             <td style="color:var(--primary);font-weight:700;">5点</td>
           </tr>
           
           <tr>
-            <td><strong>自己資本比率</strong></td>
-            <td style="color:var(--muted);">30%以上</td>
+            <td><strong>財務健全性</strong></td>
+            <td style="color:var(--muted);">自己資本比率30%以上・負債EBITDA倍率5倍以下</td>
             <td style="color:var(--primary);font-weight:700;">5点</td>
           </tr>
           
@@ -229,13 +237,15 @@
     <p style="font-size:.87rem;color:var(--muted);margin-bottom:12px;">以下に該当する銘柄はスクリーニング対象外です。</p>
     <ul class="check-list">
       
-      <li><span class="check-mark" style="color:var(--miss);">✗</span><span>直近52週で株価が50%以上下落</span></li>
+      <li><span class="check-mark" style="color:var(--miss);">✗</span><span>直近52週で株価が50%以上下落した銘柄</span></li>
       
-      <li><span class="check-mark" style="color:var(--miss);">✗</span><span>上場廃止・合併予定</span></li>
+      <li><span class="check-mark" style="color:var(--miss);">✗</span><span>上場廃止・監理銘柄</span></li>
       
-      <li><span class="check-mark" style="color:var(--miss);">✗</span><span>1単元株価 5,000円以上（流動性懸念）</span></li>
+      <li><span class="check-mark" style="color:var(--miss);">✗</span><span>赤字企業（営業利益マイナス）</span></li>
       
-      <li><span class="check-mark" style="color:var(--miss);">✗</span><span>時価総額 100億円未満</span></li>
+      <li><span class="check-mark" style="color:var(--miss);">✗</span><span>債務超過（純資産マイナス）</span></li>
+      
+      <li><span class="check-mark" style="color:var(--miss);">✗</span><span>時価総額 300億円未満</span></li>
       
     </ul>
   </div>
