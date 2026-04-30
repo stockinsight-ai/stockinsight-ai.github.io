@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>日本株のスクリーニングとは何か？AIが銘柄を選ぶ仕組みを解説 | AI銘柄選定サービス</title>
+  <meta name="description" content="株式スクリーニングの意味と仕組み、AIがどのように日本株の推奨銘柄を絞り込むかをわかりやすく解説します。">
+
+  <!-- OGP -->
+  <meta property="og:title" content="StockInsight AI | AI銘柄選定">
+  <meta property="og:description" content="AIが毎週選ぶ中長期有望日本株。成績を完全公開。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://stockinsight-ai.github.io/">
+  <meta property="og:image" content="https://stockinsight-ai.github.io/assets/img/col_default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="StockInsight AI">
+  <meta property="og:locale" content="ja_JP">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="StockInsight AI">
+  <meta name="twitter:description" content="AIが毎週選ぶ中長期有望日本株">
+  <meta name="twitter:image" content="https://stockinsight-ai.github.io/assets/img/col_default.png">
+
+  <!-- 構造化データ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "StockInsight AI",
+    "url": "https://stockinsight-ai.github.io/",
+    "description": "AIによる中長期日本株銘柄選定サービス"
+  }
+  </script>
+
+  <link rel="canonical" href="https://stockinsight-ai.github.io/column/what-is-screening/">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  
+</head>
+<body>
+
+<a href="#main-content" style="position:absolute;left:-9999px;top:0;z-index:999;background:#fff;padding:8px 16px;color:var(--primary);font-weight:700;border-radius:0 0 8px 0;" onfocus="this.style.left='0'">本文へスキップ</a>
+
+<!-- ヘッダー -->
+<header>
+  <div class="header-inner">
+    <a class="logo" href="/">Stock<span>Insight</span> AI</a>
+    <nav>
+      <a href="/picks/">今週の推奨</a>
+      <a href="/results/">成績</a>
+      <a href="/backtest/">バックテスト</a>
+      <a href="/about/">選定ロジック</a>
+      <a href="/column/">コラム</a>
+    </nav>
+    <button class="hamburger" id="hamburger-btn" aria-label="メニューを開く">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="/">トップ</a>
+    <a href="/picks/">今週の推奨</a>
+    <a href="/results/">成績</a>
+    <a href="/backtest/">バックテスト</a>
+    <a href="/about/">選定ロジック</a>
+    <a href="/column/">コラム</a>
+    <a href="/contact/">お問い合わせ</a>
+  </div>
+</header>
+
+<!-- 信頼バー -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    
+    <div class="trust-item"><span>📊</span><span><strong>毎週日曜</strong>自動更新</span></div>
+    <div class="trust-item"><span>🤖</span><span>テクニカル・ファンダ・センチメント <strong>3軸スコアリング</strong></span></div>
+    <div class="trust-item"><span>📈</span><span>成績を<strong>全件公開</strong>（勝ち負け含む）</span></div>
+    <div class="trust-item"><span>🆓</span><span><strong>完全無料</strong>・登録不要</span></div>
+    
+  </div>
+</div>
+
+<main id="main-content">
+  
+<div class="container page-wrap">
+
+  <div class="breadcrumb">
+    <a href="/">トップ</a>
+    <span>›</span>
+    <a href="/column/">コラム</a>
+    <span>›</span>
+    日本株のスクリーニングとは何か？AIが銘柄を選ぶ仕組みを解説
+  </div>
+
+  <div style="display:grid;gap:32px;grid-template-columns:1fr 280px;align-items:start;">
+
+    <!-- 記事本文 -->
+    <article>
+      <div style="margin-bottom:20px;">
+        <img src="/assets/img/col_default.png" alt="日本株のスクリーニングとは何か？AIが銘柄を選ぶ仕組みを解説" style="width:100%;height:200px;object-fit:cover;border-radius:12px;margin-bottom:20px;">
+        <div class="column-cat" style="margin-bottom:8px;">入門</div>
+        <h1 style="font-size:clamp(1.3rem,3vw,1.7rem);font-weight:800;color:var(--primary);line-height:1.4;margin-bottom:12px;">日本株のスクリーニングとは何か？AIが銘柄を選ぶ仕組みを解説</h1>
+        <p style="font-size:.85rem;color:var(--muted);">公開日: 2026年4月5日</p>
+      </div>
+
+      <div class="card" style="padding:28px 32px;">
+        <div class="article-body">
+          <h2>スクリーニングとは</h2>
+<p>日本の上場銘柄数は4,000社を超えます。その中から「今週買うべき銘柄」を手作業で探すのは、個人投資家にとって現実的ではありません。</p>
+<p><strong>スクリーニング（screening）</strong>とは、一定の条件を設定してその条件を満たす銘柄だけに絞り込む作業のことです。ちょうど、採用試験で履歴書をまず書類審査するようなイメージです。</p>
+<h2>なぜスクリーニングが重要なのか</h2>
+<p>スクリーニングには3つのメリットがあります。</p>
+<h3>1. 大量の銘柄を効率よく処理できる</h3>
+<p>人間が4,000銘柄すべてのチャートや財務諸表を確認するのは不可能です。スクリーニングで条件を満たす銘柄を100〜200銘柄程度に絞り込んでから詳細分析を行うことで、作業を現実的な量に減らせます。</p>
+<h3>2. 感情を排除できる</h3>
+<p>「この会社、なんとなく好き」「有名だから大丈夫」といった感情的な判断をなくし、<strong>数字とルールだけで判断</strong>できます。</p>
+<h3>3. 一貫性を保てる</h3>
+<p>毎週同じ条件でスクリーニングすることで、市場環境が変わっても判断基準がブレません。</p>
+<h2>StockInsight AIのスクリーニング3ステップ</h2>
+<h3>ステップ1：ユニバース絞り込み</h3>
+<p>まず、分析対象を以下の条件で絞り込みます。</p>
+<ul>
+<li>東証プライム・スタンダード上場</li>
+<li>時価総額 300億円以上</li>
+<li>1日平均売買代金 5,000万円以上</li>
+</ul>
+<p>これにより、流動性が低すぎる銘柄や超小型株を除外します。残るのが本サービスの「ユニバース」です。</p>
+<h3>ステップ2：3軸スコアリング</h3>
+<p>ユニバースに入った各銘柄を、以下の3軸で評価します。</p>
+<ul>
+<li><strong>テクニカル</strong>（40点）：トレンドの方向性と勢い</li>
+<li><strong>ファンダメンタル</strong>（40点）：企業の稼ぐ力と成長性</li>
+<li><strong>センチメント</strong>（20点）：ニュースや業績修正の方向性</li>
+</ul>
+<p>100点満点でスコアを算出し、これが「AIの判断」の正体です。</p>
+<h3>ステップ3：最終選定</h3>
+<p>スコアの高い順に最大10銘柄を選定します。ただし、同一セクターからは最大3銘柄までという分散制約も設けています。</p>
+<h2>AIが行っていることの実態</h2>
+<p>「AIが選ぶ」というと難しそうに聞こえますが、実態はシンプルです。</p>
+<p>本サービスのAIは、あらかじめ人間が設計したルール（スコアリングロジック）を、機械が高速・正確に実行しているものです。</p>
+<ul>
+<li>25週MAを上回っているか → Yes/Noを自動判定</li>
+<li>ROEが8%以上か → Yes/Noを自動判定</li>
+<li>ニュースがポジティブか → Yes/Noを自動判定</li>
+</ul>
+<p>これらを合計して点数を出しているのがAIの正体です。「ブラックボックスのAI」ではなく、<strong>ロジックを完全に公開した定量スクリーニング</strong>と呼ぶ方が正確かもしれません。</p>
+<h2>スクリーニングは万能ではない</h2>
+<p>スクリーニングはあくまで候補を絞り込むツールです。</p>
+<ul>
+<li>過去のデータに基づいているため、突発的な事象（地政学リスク・企業不祥事など）は反映されません</li>
+<li>スコアが高くても必ず上昇するわけではありません</li>
+<li>市場全体が下落する局面では、スクリーニング結果に関わらず下落する銘柄が増えます</li>
+</ul>
+<p>本サービスの成績公開ページでは、こうした外れも含めて正直に公開しています。</p>
+<h2>まとめ</h2>
+<p>スクリーニングは「4,000銘柄の中から可能性の高い候補を絞り込む」ための重要なプロセスです。</p>
+<p>本サービスは毎週日曜夜に自動でスクリーニングを実行し、上位10銘柄を公開しています。選定基準はすべて公開されているため、ぜひ「選定ロジック」ページもあわせてご覧ください。</p>
+<hr />
+<p>※本記事は参考情報です。投資判断は必ず自己責任で行ってください。</p>
+        </div>
+      </div>
+
+      <!-- シェア・ナビ -->
+      <div style="margin-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+        <a href="/column/" style="font-size:.84rem;color:var(--muted);">← コラム一覧へ</a>
+        <a href="/picks/" style="font-size:.84rem;color:var(--accent-dark);font-weight:700;">今週の推奨銘柄を見る →</a>
+      </div>
+    </article>
+
+    <!-- サイドバー -->
+    <aside>
+      <!-- 関連コラム -->
+      
+      <div class="card" style="padding:20px;">
+        <div style="font-size:.88rem;font-weight:700;color:var(--primary);margin-bottom:14px;">関連コラム</div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          
+          
+          <a href="/column/monthly-report-2026-04/" style="display:block;text-decoration:none;">
+            <div style="font-size:.82rem;font-weight:600;color:var(--primary);line-height:1.4;margin-bottom:2px;">2026年4月の推奨銘柄成績レポート</div>
+            <div style="font-size:.72rem;color:var(--muted);">月次レポート</div>
+          </a>
+          
+          
+          
+          <a href="/column/claude-code-auto-implementation/" style="display:block;text-decoration:none;">
+            <div style="font-size:.82rem;font-weight:600;color:var(--primary);line-height:1.4;margin-bottom:2px;">Claude Codeで株式分析システムを完全自動実装｜AIとペアプログラミングした開発体験記</div>
+            <div style="font-size:.72rem;color:var(--muted);">StockInsight AIの仕組み</div>
+          </a>
+          
+          
+          
+          <a href="/column/ai-stock-screening-logic/" style="display:block;text-decoration:none;">
+            <div style="font-size:.82rem;font-weight:600;color:var(--primary);line-height:1.4;margin-bottom:2px;">AIが仮想投資家3名と設計した銘柄選定ロジック｜スコアリング100点満点の仕組みを公開</div>
+            <div style="font-size:.72rem;color:var(--muted);">StockInsight AIの仕組み</div>
+          </a>
+          
+          
+          
+          <a href="/column/peg-ratio-explained/" style="display:block;text-decoration:none;">
+            <div style="font-size:.82rem;font-weight:600;color:var(--primary);line-height:1.4;margin-bottom:2px;">PEG比率とは？PERだけでは見えない「成長を考慮した割安感」を測る方法</div>
+            <div style="font-size:.72rem;color:var(--muted);">ファンダメンタル分析</div>
+          </a>
+          
+          
+          
+          <a href="/column/best-online-brokerage-2026/" style="display:block;text-decoration:none;">
+            <div style="font-size:.82rem;font-weight:600;color:var(--primary);line-height:1.4;margin-bottom:2px;">【2026年版】ネット証券おすすめ比較｜中長期投資家向けに徹底解説</div>
+            <div style="font-size:.72rem;color:var(--muted);">証券口座</div>
+          </a>
+          
+          
+        </div>
+      </div>
+      
+
+      <!-- 今週の推奨 -->
+      <div class="card" style="margin-top:16px;padding:20px;background:var(--primary);border:none;">
+        <div style="font-size:.88rem;font-weight:700;color:#fff;margin-bottom:8px;">今週の推奨銘柄</div>
+        <p style="font-size:.78rem;color:rgba(255,255,255,.7);margin-bottom:14px;line-height:1.6;">AIが選んだ今週の有望銘柄を無料公開中</p>
+        <a href="/picks/" style="display:block;background:var(--accent);color:#fff;font-weight:700;text-align:center;padding:10px;border-radius:8px;font-size:.84rem;text-decoration:none;">銘柄を見る</a>
+      </div>
+    </aside>
+
+  </div>
+</div>
+
+<style>
+@media (max-width: 768px) {
+  .container.page-wrap > div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+</style>
+
+</main>
+
+<!-- フッター -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>StockInsight AI</h4>
+        <p style="font-size:.8rem;color:rgba(255,255,255,.55);line-height:1.7;">
+          AIが毎週選ぶ中長期有望日本株。<br>
+          選定根拠・成績を完全公開。
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>メニュー</h4>
+        <a href="/picks/">今週の推奨銘柄</a>
+        <a href="/results/">過去の成績</a>
+        <a href="/backtest/">バックテスト</a>
+        <a href="/about/">選定ロジック</a>
+      </div>
+      <div class="footer-col">
+        <h4>コンテンツ</h4>
+        <a href="/column/">コラム一覧</a>
+        <a href="/contact/">お問い合わせ</a>
+        <a href="/about-site/">運営者情報</a>
+      </div>
+      <div class="footer-col">
+        <h4>ポリシー</h4>
+        <a href="/disclaimer/">免責事項</a>
+        <a href="/privacy/">プライバシーポリシー</a>
+      </div>
+    </div>
+    <div class="footer-disclaimer">
+      本サービスは投資助言業の登録を受けておらず、特定の有価証券の売買を推奨するものではありません。
+      掲載情報の正確性を保証せず、投資判断はご自身の責任において行ってください。
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 StockInsight AI</p>
+      <p style="font-size:.72rem;">最終更新: 2026-04-30</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+
+</body>
+</html>

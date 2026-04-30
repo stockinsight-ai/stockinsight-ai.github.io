@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>バックテストとは何か？投資戦略の過去成績を検証する方法 | AI銘柄選定サービス</title>
+  <meta name="description" content="バックテストの意味・やり方・限界について解説。過去データを使った戦略検証がなぜ重要で、どう読み解けばよいかをわかりやすく説明します。">
+
+  <!-- OGP -->
+  <meta property="og:title" content="StockInsight AI | AI銘柄選定">
+  <meta property="og:description" content="AIが毎週選ぶ中長期有望日本株。成績を完全公開。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://stockinsight-ai.github.io/">
+  <meta property="og:image" content="https://stockinsight-ai.github.io/assets/img/col_default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="StockInsight AI">
+  <meta property="og:locale" content="ja_JP">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="StockInsight AI">
+  <meta name="twitter:description" content="AIが毎週選ぶ中長期有望日本株">
+  <meta name="twitter:image" content="https://stockinsight-ai.github.io/assets/img/col_default.png">
+
+  <!-- 構造化データ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "StockInsight AI",
+    "url": "https://stockinsight-ai.github.io/",
+    "description": "AIによる中長期日本株銘柄選定サービス"
+  }
+  </script>
+
+  <link rel="canonical" href="https://stockinsight-ai.github.io/column/what-is-backtest/">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  
+</head>
+<body>
+
+<a href="#main-content" style="position:absolute;left:-9999px;top:0;z-index:999;background:#fff;padding:8px 16px;color:var(--primary);font-weight:700;border-radius:0 0 8px 0;" onfocus="this.style.left='0'">本文へスキップ</a>
+
+<!-- ヘッダー -->
+<header>
+  <div class="header-inner">
+    <a class="logo" href="/">Stock<span>Insight</span> AI</a>
+    <nav>
+      <a href="/picks/">今週の推奨</a>
+      <a href="/results/">成績</a>
+      <a href="/backtest/">バックテスト</a>
+      <a href="/about/">選定ロジック</a>
+      <a href="/column/">コラム</a>
+    </nav>
+    <button class="hamburger" id="hamburger-btn" aria-label="メニューを開く">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="/">トップ</a>
+    <a href="/picks/">今週の推奨</a>
+    <a href="/results/">成績</a>
+    <a href="/backtest/">バックテスト</a>
+    <a href="/about/">選定ロジック</a>
+    <a href="/column/">コラム</a>
+    <a href="/contact/">お問い合わせ</a>
+  </div>
+</header>
+
+<!-- 信頼バー -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    
+    <div class="trust-item"><span>📊</span><span><strong>毎週日曜</strong>自動更新</span></div>
+    <div class="trust-item"><span>🤖</span><span>テクニカル・ファンダ・センチメント <strong>3軸スコアリング</strong></span></div>
+    <div class="trust-item"><span>📈</span><span>成績を<strong>全件公開</strong>（勝ち負け含む）</span></div>
+    <div class="trust-item"><span>🆓</span><span><strong>完全無料</strong>・登録不要</span></div>
+    
+  </div>
+</div>
+
+<main id="main-content">
+  
+<div class="container page-wrap">
+
+  <div class="breadcrumb">
+    <a href="/">トップ</a>
+    <span>›</span>
+    <a href="/column/">コラム</a>
+    <span>›</span>
+    バックテストとは何か？投資戦略の過去成績を検証する方法
+  </div>
+
+  <div style="display:grid;gap:32px;grid-template-columns:1fr 280px;align-items:start;">
+
+    <!-- 記事本文 -->
+    <article>
+      <div style="margin-bottom:20px;">
+        <img src="/assets/img/col_default.png" alt="バックテストとは何か？投資戦略の過去成績を検証する方法" style="width:100%;height:200px;object-fit:cover;border-radius:12px;margin-bottom:20px;">
+        <div class="column-cat" style="margin-bottom:8px;">入門</div>
+        <h1 style="font-size:clamp(1.3rem,3vw,1.7rem);font-weight:800;color:var(--primary);line-height:1.4;margin-bottom:12px;">バックテストとは何か？投資戦略の過去成績を検証する方法</h1>
+        <p style="font-size:.85rem;color:var(--muted);">公開日: 2026年4月8日</p>
+      </div>
+
+      <div class="card" style="padding:28px 32px;">
+        <div class="article-body">
+          <h2>バックテストとは</h2>
+<p>バックテスト（Backtest）とは、投資戦略を<strong>過去の実際の株価データに適用して、その戦略が過去どれだけの成果を上げたかを検証する手法</strong>です。</p>
+<p>「もし3年前からこのルールで毎週銘柄を選んでいたら、今頃どうなっていたか？」を数値で確認できます。</p>
+<h2>なぜバックテストが重要なのか</h2>
+<p>投資戦略を評価する方法には2つのアプローチがあります。</p>
+<h3>方法1：理論から考える（トップダウン）</h3>
+<p>「ROEが高い会社は優良企業だから株価が上がるはず」という論理的推論だけで戦略を構築する方法。</p>
+<p><strong>問題点：</strong> いくら理論的に正しくても、実際の株価がその理論通りに動くとは限りません。</p>
+<h3>方法2：過去データで検証する（バックテスト）</h3>
+<p>実際の過去データに戦略を適用し、数値で結果を確認する方法。</p>
+<p><strong>長所：</strong> 感覚ではなく、数字で戦略の有効性を確かめられる。</p>
+<p>本サービスでは、戦略の実用性を裏付けるためにバックテストを実施し、その結果をすべて公開しています。</p>
+<h2>バックテストで確認すること</h2>
+<p>本サービスのバックテストでは、以下の指標を計算・公開しています。</p>
+<h3>総リターン</h3>
+<p>バックテスト期間全体での累積騰落率です。</p>
+<blockquote>
+<p>例：バックテスト期間3年間の総リターン +42.5%</p>
+</blockquote>
+<h3>年率リターン（CAGR）</h3>
+<p>毎年平均何%の利益が出たかを示す複利ベースの数値です。</p>
+<blockquote>
+<p>例：年率リターン +12.5%（対してTOPIXは年率+6.2%）</p>
+</blockquote>
+<h3>最大ドローダウン</h3>
+<p>戦略のピークから最も大きく下落した時の幅です。</p>
+<blockquote>
+<p>例：最大ドローダウン -18%（2020年コロナショック時）</p>
+</blockquote>
+<p>これは「最悪の局面でどこまで損失が膨らんだか」を示します。この数値が大きいほど、精神的に耐えにくい戦略といえます。</p>
+<h3>勝率（Hit Rate）</h3>
+<p>推奨銘柄のうち、12週後に+5%以上上昇した銘柄の割合です。</p>
+<blockquote>
+<p>例：勝率 58%（推奨100銘柄中58銘柄が+5%以上）</p>
+</blockquote>
+<h3>ベンチマーク比較</h3>
+<p>TOPIXや日経225と比較したアウトパフォーマンス（超過リターン）を確認します。市場全体が上がっているだけなのか、戦略固有の価値があるのかを判断できます。</p>
+<h2>バックテストの限界</h2>
+<p>バックテストには必ず限界があります。これを理解した上で使うことが重要です。</p>
+<h3>1. 過去が未来を保証しない</h3>
+<p>最も重要な点です。過去20年のデータで有効だった戦略が、今後も有効とは限りません。経済環境・市場構造・参加者の行動パターンは常に変化しています。</p>
+<h3>2. 過学習（オーバーフィッティング）リスク</h3>
+<p>バックテストのパラメータを細かく調整しすぎると、「過去データにだけ最適化された」戦略になってしまいます。実際の運用ではまったく機能しないことがあります。</p>
+<p>本サービスでは、パラメータの設定に恣意性が入らないよう、理論的根拠のある数値のみを使用しています。</p>
+<h3>3. 取引コストの問題</h3>
+<p>バックテストでは通常、理論的な株価で取引できることを前提にしています。しかし実際の取引では：<br />
+- スリッページ（指値が刺さらない）<br />
+- 売買手数料<br />
+- 市場インパクト（大口注文による価格変動）</p>
+<p>が発生します。本サービスのバックテストは、これらのコストを考慮した保守的な前提で計算しています。</p>
+<h3>4. 生存者バイアス</h3>
+<p>バックテスト時点では存在していたが、現在は上場廃止になった銘柄を無視すると、結果が実態よりよく見えることがあります（廃止された銘柄は多くが業績悪化銘柄）。本サービスでは廃止銘柄も含めた計算を行っています。</p>
+<h2>StockInsight AIのバックテスト概要</h2>
+<ul>
+<li><strong>対象期間：</strong> 2021年1月〜現在</li>
+<li><strong>評価期間：</strong> 推奨日から12週間後の株価で評価</li>
+<li><strong>対象銘柄：</strong> 毎週上位10銘柄を均等保有と仮定</li>
+<li><strong>ベンチマーク：</strong> TOPIX（配当なし）</li>
+<li><strong>取引コスト：</strong> 往復0.2%（証券会社手数料相当）を控除</li>
+</ul>
+<p>詳細な月次データはバックテスト結果ページでご覧いただけます。</p>
+<h2>まとめ</h2>
+<p>バックテストは「戦略が過去に有効だったかどうか」を確認する重要な道具です。</p>
+<p>ただし、「過去に良かった＝将来も良い」ではなく、「過去に有効だった根拠がある＝今後も参考にできる可能性が高い」という位置づけで活用してください。</p>
+<p>透明性のためにすべての数値を公開していますので、ぜひバックテスト結果ページもあわせてご確認ください。</p>
+<hr />
+<p>※本記事は参考情報です。投資判断は必ず自己責任で行ってください。</p>
+        </div>
+      </div>
+
+      <!-- シェア・ナビ -->
+      <div style="margin-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+        <a href="/column/" style="font-size:.84rem;color:var(--muted);">← コラム一覧へ</a>
+        <a href="/picks/" style="font-size:.84rem;color:var(--accent-dark);font-weight:700;">今週の推奨銘柄を見る →</a>
+      </div>
+    </article>
+
+    <!-- サイドバー -->
+    <aside>
+      <!-- 関連コラム -->
+      
+      <div class="card" style="padding:20px;">
+        <div style="font-size:.88rem;font-weight:700;color:var(--primary);margin-bottom:14px;">関連コラム</div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          
+          
+          <a href="/column/monthly-report-2026-04/" style="display:block;text-decoration:none;">
+            <div style="font-size:.82rem;font-weight:600;color:var(--primary);line-height:1.4;margin-bottom:2px;">2026年4月の推奨銘柄成績レポート</div>
+            <div style="font-size:.72rem;color:var(--muted);">月次レポート</div>
+          </a>
+          
+          
+          
+          <a href="/column/claude-code-auto-implementation/" style="display:block;text-decoration:none;">
+            <div style="font-size:.82rem;font-weight:600;color:var(--primary);line-height:1.4;margin-bottom:2px;">Claude Codeで株式分析システムを完全自動実装｜AIとペアプログラミングした開発体験記</div>
+            <div style="font-size:.72rem;color:var(--muted);">StockInsight AIの仕組み</div>
+          </a>
+          
+          
+          
+          <a href="/column/ai-stock-screening-logic/" style="display:block;text-decoration:none;">
+            <div style="font-size:.82rem;font-weight:600;color:var(--primary);line-height:1.4;margin-bottom:2px;">AIが仮想投資家3名と設計した銘柄選定ロジック｜スコアリング100点満点の仕組みを公開</div>
+            <div style="font-size:.72rem;color:var(--muted);">StockInsight AIの仕組み</div>
+          </a>
+          
+          
+          
+          <a href="/column/peg-ratio-explained/" style="display:block;text-decoration:none;">
+            <div style="font-size:.82rem;font-weight:600;color:var(--primary);line-height:1.4;margin-bottom:2px;">PEG比率とは？PERだけでは見えない「成長を考慮した割安感」を測る方法</div>
+            <div style="font-size:.72rem;color:var(--muted);">ファンダメンタル分析</div>
+          </a>
+          
+          
+          
+          <a href="/column/best-online-brokerage-2026/" style="display:block;text-decoration:none;">
+            <div style="font-size:.82rem;font-weight:600;color:var(--primary);line-height:1.4;margin-bottom:2px;">【2026年版】ネット証券おすすめ比較｜中長期投資家向けに徹底解説</div>
+            <div style="font-size:.72rem;color:var(--muted);">証券口座</div>
+          </a>
+          
+          
+        </div>
+      </div>
+      
+
+      <!-- 今週の推奨 -->
+      <div class="card" style="margin-top:16px;padding:20px;background:var(--primary);border:none;">
+        <div style="font-size:.88rem;font-weight:700;color:#fff;margin-bottom:8px;">今週の推奨銘柄</div>
+        <p style="font-size:.78rem;color:rgba(255,255,255,.7);margin-bottom:14px;line-height:1.6;">AIが選んだ今週の有望銘柄を無料公開中</p>
+        <a href="/picks/" style="display:block;background:var(--accent);color:#fff;font-weight:700;text-align:center;padding:10px;border-radius:8px;font-size:.84rem;text-decoration:none;">銘柄を見る</a>
+      </div>
+    </aside>
+
+  </div>
+</div>
+
+<style>
+@media (max-width: 768px) {
+  .container.page-wrap > div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+</style>
+
+</main>
+
+<!-- フッター -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>StockInsight AI</h4>
+        <p style="font-size:.8rem;color:rgba(255,255,255,.55);line-height:1.7;">
+          AIが毎週選ぶ中長期有望日本株。<br>
+          選定根拠・成績を完全公開。
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>メニュー</h4>
+        <a href="/picks/">今週の推奨銘柄</a>
+        <a href="/results/">過去の成績</a>
+        <a href="/backtest/">バックテスト</a>
+        <a href="/about/">選定ロジック</a>
+      </div>
+      <div class="footer-col">
+        <h4>コンテンツ</h4>
+        <a href="/column/">コラム一覧</a>
+        <a href="/contact/">お問い合わせ</a>
+        <a href="/about-site/">運営者情報</a>
+      </div>
+      <div class="footer-col">
+        <h4>ポリシー</h4>
+        <a href="/disclaimer/">免責事項</a>
+        <a href="/privacy/">プライバシーポリシー</a>
+      </div>
+    </div>
+    <div class="footer-disclaimer">
+      本サービスは投資助言業の登録を受けておらず、特定の有価証券の売買を推奨するものではありません。
+      掲載情報の正確性を保証せず、投資判断はご自身の責任において行ってください。
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 StockInsight AI</p>
+      <p style="font-size:.72rem;">最終更新: 2026-04-30</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+
+</body>
+</html>

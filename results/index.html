@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>過去の成績 | AI銘柄選定サービス</title>
+  <meta name="description" content="StockInsight AIが推奨した全銘柄の成績を公開。勝ち・負け含めて完全に公開しています。">
+
+  <!-- OGP -->
+  <meta property="og:title" content="StockInsight AI | AI銘柄選定">
+  <meta property="og:description" content="AIが毎週選ぶ中長期有望日本株。成績を完全公開。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://stockinsight-ai.github.io/">
+  <meta property="og:image" content="https://stockinsight-ai.github.io/assets/img/results_hero.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="StockInsight AI">
+  <meta property="og:locale" content="ja_JP">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="StockInsight AI">
+  <meta name="twitter:description" content="AIが毎週選ぶ中長期有望日本株">
+  <meta name="twitter:image" content="https://stockinsight-ai.github.io/assets/img/results_hero.png">
+
+  <!-- 構造化データ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "StockInsight AI",
+    "url": "https://stockinsight-ai.github.io/",
+    "description": "AIによる中長期日本株銘柄選定サービス"
+  }
+  </script>
+
+  <link rel="canonical" href="https://stockinsight-ai.github.io/results/">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  
+</head>
+<body>
+
+<a href="#main-content" style="position:absolute;left:-9999px;top:0;z-index:999;background:#fff;padding:8px 16px;color:var(--primary);font-weight:700;border-radius:0 0 8px 0;" onfocus="this.style.left='0'">本文へスキップ</a>
+
+<!-- ヘッダー -->
+<header>
+  <div class="header-inner">
+    <a class="logo" href="/">Stock<span>Insight</span> AI</a>
+    <nav>
+      <a href="/picks/">今週の推奨</a>
+      <a href="/results/">成績</a>
+      <a href="/backtest/">バックテスト</a>
+      <a href="/about/">選定ロジック</a>
+      <a href="/column/">コラム</a>
+    </nav>
+    <button class="hamburger" id="hamburger-btn" aria-label="メニューを開く">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="/">トップ</a>
+    <a href="/picks/">今週の推奨</a>
+    <a href="/results/">成績</a>
+    <a href="/backtest/">バックテスト</a>
+    <a href="/about/">選定ロジック</a>
+    <a href="/column/">コラム</a>
+    <a href="/contact/">お問い合わせ</a>
+  </div>
+</header>
+
+<!-- 信頼バー -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    
+    <div class="trust-item"><span>📊</span><span><strong>毎週日曜</strong>自動更新</span></div>
+    <div class="trust-item"><span>🤖</span><span>テクニカル・ファンダ・センチメント <strong>3軸スコアリング</strong></span></div>
+    <div class="trust-item"><span>📈</span><span>成績を<strong>全件公開</strong>（勝ち負け含む）</span></div>
+    <div class="trust-item"><span>🆓</span><span><strong>完全無料</strong>・登録不要</span></div>
+    
+  </div>
+</div>
+
+<main id="main-content">
+  
+<div class="container page-wrap">
+  <div class="page-hd">
+    <img src="/assets/img/results_hero.png" alt="成績公開イメージ" style="width:100%;max-height:240px;object-fit:cover;border-radius:12px;margin-bottom:24px;">
+    <h1>過去の成績</h1>
+    <p>推奨銘柄のその後を全件公開しています（勝ち・負け含む）</p>
+  </div>
+
+  <!-- サマリー -->
+  
+  <div class="stat-grid" style="margin-bottom:32px;">
+    <div class="stat-card">
+      <span class="val">3</span>
+      <span class="lbl">累計推奨銘柄数</span>
+    </div>
+    
+    <div class="stat-card hit">
+      <span class="val">0.0%</span>
+      <span class="lbl">勝率（12週後 +10%達成）</span>
+    </div>
+    
+    
+    <div class="stat-card accent">
+      <span class="val">+0.0%</span>
+      <span class="lbl">平均騰落率（12週後）</span>
+    </div>
+    
+    <div class="stat-card">
+      <span class="val">3</span>
+      <span class="lbl">今週の推奨数</span>
+    </div>
+  </div>
+  
+
+  <!-- 月次成績テーブル -->
+  
+
+  <!-- 週次サマリー -->
+  
+  <div class="section-title" style="margin-bottom:16px;">週次推奨一覧</div>
+  <div style="display:flex;flex-direction:column;gap:24px;margin-bottom:40px;">
+    
+    <div class="card">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:8px;">
+        <div>
+          <div style="font-weight:700;color:var(--primary);">2026年4月29日〜</div>
+          <div style="font-size:.78rem;color:var(--muted);">3銘柄</div>
+        </div>
+        <a href="/report/2026-04-29/" style="font-size:.82rem;color:var(--accent-dark);font-weight:600;">レポートを見る →</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        
+        <div class="result-card">
+          <div class="rc-name">
+            <strong>ムーンバット</strong>
+            <small>8115 / 卸売業</small>
+          </div>
+          <div class="rc-scores">
+            <div class="mini-score"><span class="val">81</span><span class="lbl">スコア</span></div>
+            
+            <div class="mini-score"><span class="val">1,536</span><span class="lbl">推奨価格</span></div>
+            
+            
+          </div>
+          <span class="status-badge status-watching">観察中</span>
+        </div>
+        
+        <div class="result-card">
+          <div class="rc-name">
+            <strong>ノジマ</strong>
+            <small>7419 / 小売業</small>
+          </div>
+          <div class="rc-scores">
+            <div class="mini-score"><span class="val">86</span><span class="lbl">スコア</span></div>
+            
+            <div class="mini-score"><span class="val">1,228</span><span class="lbl">推奨価格</span></div>
+            
+            
+          </div>
+          <span class="status-badge status-watching">観察中</span>
+        </div>
+        
+        <div class="result-card">
+          <div class="rc-name">
+            <strong>横田製作所</strong>
+            <small>6248 / 機械</small>
+          </div>
+          <div class="rc-scores">
+            <div class="mini-score"><span class="val">88</span><span class="lbl">スコア</span></div>
+            
+            <div class="mini-score"><span class="val">1,900</span><span class="lbl">推奨価格</span></div>
+            
+            
+          </div>
+          <span class="status-badge status-watching">観察中</span>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="card">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:8px;">
+        <div>
+          <div style="font-weight:700;color:var(--primary);">2026年4月26日〜</div>
+          <div style="font-size:.78rem;color:var(--muted);">5銘柄</div>
+        </div>
+        <a href="/report/2026-04-26/" style="font-size:.82rem;color:var(--accent-dark);font-weight:600;">レポートを見る →</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        
+        <div class="result-card">
+          <div class="rc-name">
+            <strong>ムーンバット</strong>
+            <small>8115 / 卸売業</small>
+          </div>
+          <div class="rc-scores">
+            <div class="mini-score"><span class="val">68</span><span class="lbl">スコア</span></div>
+            
+            <div class="mini-score"><span class="val">1,512</span><span class="lbl">推奨価格</span></div>
+            
+            
+          </div>
+          <span class="status-badge status-watching">観察中</span>
+        </div>
+        
+        <div class="result-card">
+          <div class="rc-name">
+            <strong>川崎地質</strong>
+            <small>4673 / サービス業</small>
+          </div>
+          <div class="rc-scores">
+            <div class="mini-score"><span class="val">70</span><span class="lbl">スコア</span></div>
+            
+            <div class="mini-score"><span class="val">5,590</span><span class="lbl">推奨価格</span></div>
+            
+            
+          </div>
+          <span class="status-badge status-watching">観察中</span>
+        </div>
+        
+        <div class="result-card">
+          <div class="rc-name">
+            <strong>富士紡ホールディングス</strong>
+            <small>3104 / 繊維製品</small>
+          </div>
+          <div class="rc-scores">
+            <div class="mini-score"><span class="val">70</span><span class="lbl">スコア</span></div>
+            
+            <div class="mini-score"><span class="val">3,835</span><span class="lbl">推奨価格</span></div>
+            
+            
+          </div>
+          <span class="status-badge status-watching">観察中</span>
+        </div>
+        
+        <div class="result-card">
+          <div class="rc-name">
+            <strong>ノジマ</strong>
+            <small>7419 / 小売業</small>
+          </div>
+          <div class="rc-scores">
+            <div class="mini-score"><span class="val">72</span><span class="lbl">スコア</span></div>
+            
+            <div class="mini-score"><span class="val">1,251</span><span class="lbl">推奨価格</span></div>
+            
+            
+          </div>
+          <span class="status-badge status-watching">観察中</span>
+        </div>
+        
+        <div class="result-card">
+          <div class="rc-name">
+            <strong>横田製作所</strong>
+            <small>6248 / 機械</small>
+          </div>
+          <div class="rc-scores">
+            <div class="mini-score"><span class="val">75</span><span class="lbl">スコア</span></div>
+            
+            <div class="mini-score"><span class="val">1,925</span><span class="lbl">推奨価格</span></div>
+            
+            
+          </div>
+          <span class="status-badge status-watching">観察中</span>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="card">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:8px;">
+        <div>
+          <div style="font-weight:700;color:var(--primary);">2026年4月19日〜</div>
+          <div style="font-size:.78rem;color:var(--muted);">5銘柄</div>
+        </div>
+        <a href="/report/2026-04-19/" style="font-size:.82rem;color:var(--accent-dark);font-weight:600;">レポートを見る →</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        
+        <div class="result-card">
+          <div class="rc-name">
+            <strong>古河電気工業</strong>
+            <small>5801 / 非鉄金属</small>
+          </div>
+          <div class="rc-scores">
+            <div class="mini-score"><span class="val">64</span><span class="lbl">スコア</span></div>
+            
+            <div class="mini-score"><span class="val">43,070</span><span class="lbl">推奨価格</span></div>
+            
+            
+          </div>
+          <span class="status-badge status-watching">観察中</span>
+        </div>
+        
+        <div class="result-card">
+          <div class="rc-name">
+            <strong>トーヨーカネツ</strong>
+            <small>6369 / 機械</small>
+          </div>
+          <div class="rc-scores">
+            <div class="mini-score"><span class="val">68</span><span class="lbl">スコア</span></div>
+            
+            <div class="mini-score"><span class="val">2,828</span><span class="lbl">推奨価格</span></div>
+            
+            
+          </div>
+          <span class="status-badge status-watching">観察中</span>
+        </div>
+        
+        <div class="result-card">
+          <div class="rc-name">
+            <strong>富士紡ホールディングス</strong>
+            <small>3104 / 繊維製品</small>
+          </div>
+          <div class="rc-scores">
+            <div class="mini-score"><span class="val">70</span><span class="lbl">スコア</span></div>
+            
+            <div class="mini-score"><span class="val">3,675</span><span class="lbl">推奨価格</span></div>
+            
+            
+          </div>
+          <span class="status-badge status-watching">観察中</span>
+        </div>
+        
+        <div class="result-card">
+          <div class="rc-name">
+            <strong>川崎地質</strong>
+            <small>4673 / サービス業</small>
+          </div>
+          <div class="rc-scores">
+            <div class="mini-score"><span class="val">73</span><span class="lbl">スコア</span></div>
+            
+            <div class="mini-score"><span class="val">5,800</span><span class="lbl">推奨価格</span></div>
+            
+            
+          </div>
+          <span class="status-badge status-watching">観察中</span>
+        </div>
+        
+        <div class="result-card">
+          <div class="rc-name">
+            <strong>キャピタル・アセット・プランニング</strong>
+            <small>3965 / 情報・通信業</small>
+          </div>
+          <div class="rc-scores">
+            <div class="mini-score"><span class="val">81</span><span class="lbl">スコア</span></div>
+            
+            <div class="mini-score"><span class="val">841</span><span class="lbl">推奨価格</span></div>
+            
+            
+          </div>
+          <span class="status-badge status-watching">観察中</span>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="card">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:8px;">
+        <div>
+          <div style="font-weight:700;color:var(--primary);">2026年4月12日〜</div>
+          <div style="font-size:.78rem;color:var(--muted);">7銘柄</div>
+        </div>
+        <a href="/report/2026-04-12/" style="font-size:.82rem;color:var(--accent-dark);font-weight:600;">レポートを見る →</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        
+        <div class="result-card">
+          <div class="rc-name">
+            <strong>トーヨーカネツ</strong>
+            <small>6369 / 機械</small>
+          </div>
+          <div class="rc-scores">
+            <div class="mini-score"><span class="val">60</span><span class="lbl">スコア</span></div>
+            
+            <div class="mini-score"><span class="val">2,988</span><span class="lbl">推奨価格</span></div>
+            
+            
+          </div>
+          <span class="status-badge status-watching">観察中</span>
+        </div>
+        
+        <div class="result-card">
+          <div class="rc-name">
+            <strong>富士紡ホールディングス</strong>
+            <small>3104 / 繊維製品</small>
+          </div>
+          <div class="rc-scores">
+            <div class="mini-score"><span class="val">66</span><span class="lbl">スコア</span></div>
+            
+            <div class="mini-score"><span class="val">4,190</span><span class="lbl">推奨価格</span></div>
+            
+            
+          </div>
+          <span class="status-badge status-watching">観察中</span>
+        </div>
+        
+        <div class="result-card">
+          <div class="rc-name">
+            <strong>グリムス</strong>
+            <small>3150 / 電気・ガス業</small>
+          </div>
+          <div class="rc-scores">
+            <div class="mini-score"><span class="val">68</span><span class="lbl">スコア</span></div>
+            
+            <div class="mini-score"><span class="val">2,898</span><span class="lbl">推奨価格</span></div>
+            
+            
+          </div>
+          <span class="status-badge status-watching">観察中</span>
+        </div>
+        
+        <div class="result-card">
+          <div class="rc-name">
+            <strong>ＧＬＣ　ＧＲＯＵＰ</strong>
+            <small>2970 / 不動産業</small>
+          </div>
+          <div class="rc-scores">
+            <div class="mini-score"><span class="val">69</span><span class="lbl">スコア</span></div>
+            
+            <div class="mini-score"><span class="val">1,154</span><span class="lbl">推奨価格</span></div>
+            
+            
+          </div>
+          <span class="status-badge status-watching">観察中</span>
+        </div>
+        
+        <div class="result-card">
+          <div class="rc-name">
+            <strong>川崎地質</strong>
+            <small>4673 / サービス業</small>
+          </div>
+          <div class="rc-scores">
+            <div class="mini-score"><span class="val">73</span><span class="lbl">スコア</span></div>
+            
+            <div class="mini-score"><span class="val">5,600</span><span class="lbl">推奨価格</span></div>
+            
+            
+          </div>
+          <span class="status-badge status-watching">観察中</span>
+        </div>
+        
+        <div class="result-card">
+          <div class="rc-name">
+            <strong>キャピタル・アセット・プランニング</strong>
+            <small>3965 / 情報・通信業</small>
+          </div>
+          <div class="rc-scores">
+            <div class="mini-score"><span class="val">81</span><span class="lbl">スコア</span></div>
+            
+            <div class="mini-score"><span class="val">846</span><span class="lbl">推奨価格</span></div>
+            
+            
+          </div>
+          <span class="status-badge status-watching">観察中</span>
+        </div>
+        
+        <div class="result-card">
+          <div class="rc-name">
+            <strong>ＴＡＮＡＫＥＮ</strong>
+            <small>1450 / 建設業</small>
+          </div>
+          <div class="rc-scores">
+            <div class="mini-score"><span class="val">94</span><span class="lbl">スコア</span></div>
+            
+            <div class="mini-score"><span class="val">1,505</span><span class="lbl">推奨価格</span></div>
+            
+            
+          </div>
+          <span class="status-badge status-watching">観察中</span>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="card">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:8px;">
+        <div>
+          <div style="font-weight:700;color:var(--primary);">2026年4月4日〜</div>
+          <div style="font-size:.78rem;color:var(--muted);">8銘柄</div>
+        </div>
+        <a href="/report/2026-04-04/" style="font-size:.82rem;color:var(--accent-dark);font-weight:600;">レポートを見る →</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        
+        <div class="result-card">
+          <div class="rc-name">
+            <strong>トーヨーカネツ</strong>
+            <small>6369 / 機械</small>
+          </div>
+          <div class="rc-scores">
+            <div class="mini-score"><span class="val">64</span><span class="lbl">スコア</span></div>
+            
+            <div class="mini-score"><span class="val">3,090</span><span class="lbl">推奨価格</span></div>
+            
+            
+          </div>
+          <span class="status-badge status-watching">観察中</span>
+        </div>
+        
+        <div class="result-card">
+          <div class="rc-name">
+            <strong>横田製作所</strong>
+            <small>6248 / 機械</small>
+          </div>
+          <div class="rc-scores">
+            <div class="mini-score"><span class="val">66</span><span class="lbl">スコア</span></div>
+            
+            <div class="mini-score"><span class="val">1,962</span><span class="lbl">推奨価格</span></div>
+            
+            
+          </div>
+          <span class="status-badge status-watching">観察中</span>
+        </div>
+        
+        <div class="result-card">
+          <div class="rc-name">
+            <strong>富士紡ホールディングス</strong>
+            <small>3104 / 繊維製品</small>
+          </div>
+          <div class="rc-scores">
+            <div class="mini-score"><span class="val">66</span><span class="lbl">スコア</span></div>
+            
+            <div class="mini-score"><span class="val">3,565</span><span class="lbl">推奨価格</span></div>
+            
+            
+          </div>
+          <span class="status-badge status-watching">観察中</span>
+        </div>
+        
+        <div class="result-card">
+          <div class="rc-name">
+            <strong>オークネット</strong>
+            <small>3964 / 情報・通信業</small>
+          </div>
+          <div class="rc-scores">
+            <div class="mini-score"><span class="val">67</span><span class="lbl">スコア</span></div>
+            
+            <div class="mini-score"><span class="val">1,262</span><span class="lbl">推奨価格</span></div>
+            
+            
+          </div>
+          <span class="status-badge status-watching">観察中</span>
+        </div>
+        
+        <div class="result-card">
+          <div class="rc-name">
+            <strong>グリムス</strong>
+            <small>3150 / 電気・ガス業</small>
+          </div>
+          <div class="rc-scores">
+            <div class="mini-score"><span class="val">68</span><span class="lbl">スコア</span></div>
+            
+            <div class="mini-score"><span class="val">2,954</span><span class="lbl">推奨価格</span></div>
+            
+            
+          </div>
+          <span class="status-badge status-watching">観察中</span>
+        </div>
+        
+        <div class="result-card">
+          <div class="rc-name">
+            <strong>ＧＬＣ　ＧＲＯＵＰ</strong>
+            <small>2970 / 不動産業</small>
+          </div>
+          <div class="rc-scores">
+            <div class="mini-score"><span class="val">80</span><span class="lbl">スコア</span></div>
+            
+            <div class="mini-score"><span class="val">1,133</span><span class="lbl">推奨価格</span></div>
+            
+            
+          </div>
+          <span class="status-badge status-watching">観察中</span>
+        </div>
+        
+        <div class="result-card">
+          <div class="rc-name">
+            <strong>キャピタル・アセット・プランニング</strong>
+            <small>3965 / 情報・通信業</small>
+          </div>
+          <div class="rc-scores">
+            <div class="mini-score"><span class="val">81</span><span class="lbl">スコア</span></div>
+            
+            <div class="mini-score"><span class="val">849</span><span class="lbl">推奨価格</span></div>
+            
+            
+          </div>
+          <span class="status-badge status-watching">観察中</span>
+        </div>
+        
+        <div class="result-card">
+          <div class="rc-name">
+            <strong>ＴＡＮＡＫＥＮ</strong>
+            <small>1450 / 建設業</small>
+          </div>
+          <div class="rc-scores">
+            <div class="mini-score"><span class="val">90</span><span class="lbl">スコア</span></div>
+            
+            <div class="mini-score"><span class="val">1,504</span><span class="lbl">推奨価格</span></div>
+            
+            
+          </div>
+          <span class="status-badge status-watching">観察中</span>
+        </div>
+        
+      </div>
+    </div>
+    
+  </div>
+  
+
+  <!-- 全レコードテーブル -->
+  
+  <div class="section-title" style="margin-bottom:16px;">全銘柄詳細</div>
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>推奨日</th>
+          <th>銘柄</th>
+          <th>コード</th>
+          <th class="num">スコア</th>
+          <th class="num">推奨価格</th>
+          <th class="num">4週後</th>
+          <th class="num">8週後</th>
+          <th class="num">12週後</th>
+          <th>ステータス</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+          <td style="white-space:nowrap;">2026-04-29</td>
+          <td>横田製作所</td>
+          <td>6248</td>
+          <td class="num">88</td>
+          <td class="num">1,900</td>
+          <td class="num ">
+            —
+          </td>
+          <td class="num ">
+            —
+          </td>
+          <td class="num ">
+            —
+          </td>
+          <td><span class="status-badge status-watching">観察中</span></td>
+        </tr>
+        
+        <tr>
+          <td style="white-space:nowrap;">2026-04-29</td>
+          <td>ノジマ</td>
+          <td>7419</td>
+          <td class="num">86</td>
+          <td class="num">1,228</td>
+          <td class="num ">
+            —
+          </td>
+          <td class="num ">
+            —
+          </td>
+          <td class="num ">
+            —
+          </td>
+          <td><span class="status-badge status-watching">観察中</span></td>
+        </tr>
+        
+        <tr>
+          <td style="white-space:nowrap;">2026-04-29</td>
+          <td>ムーンバット</td>
+          <td>8115</td>
+          <td class="num">81</td>
+          <td class="num">1,536</td>
+          <td class="num ">
+            —
+          </td>
+          <td class="num ">
+            —
+          </td>
+          <td class="num ">
+            —
+          </td>
+          <td><span class="status-badge status-watching">観察中</span></td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+  
+
+</div>
+
+</main>
+
+<!-- フッター -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>StockInsight AI</h4>
+        <p style="font-size:.8rem;color:rgba(255,255,255,.55);line-height:1.7;">
+          AIが毎週選ぶ中長期有望日本株。<br>
+          選定根拠・成績を完全公開。
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>メニュー</h4>
+        <a href="/picks/">今週の推奨銘柄</a>
+        <a href="/results/">過去の成績</a>
+        <a href="/backtest/">バックテスト</a>
+        <a href="/about/">選定ロジック</a>
+      </div>
+      <div class="footer-col">
+        <h4>コンテンツ</h4>
+        <a href="/column/">コラム一覧</a>
+        <a href="/contact/">お問い合わせ</a>
+        <a href="/about-site/">運営者情報</a>
+      </div>
+      <div class="footer-col">
+        <h4>ポリシー</h4>
+        <a href="/disclaimer/">免責事項</a>
+        <a href="/privacy/">プライバシーポリシー</a>
+      </div>
+    </div>
+    <div class="footer-disclaimer">
+      本サービスは投資助言業の登録を受けておらず、特定の有価証券の売買を推奨するものではありません。
+      掲載情報の正確性を保証せず、投資判断はご自身の責任において行ってください。
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 StockInsight AI</p>
+      <p style="font-size:.72rem;">最終更新: 2026-04-30</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+
+</body>
+</html>

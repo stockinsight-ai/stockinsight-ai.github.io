@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>出来高と株価の関係：なぜ出来高増加が重要なのか | AI銘柄選定サービス</title>
+  <meta name="description" content="出来高（売買高）が株価に与える影響を解説。出来高を使ったトレンド確認方法と、なぜ本サービスのスコアリングに組み込まれているかを説明します。">
+
+  <!-- OGP -->
+  <meta property="og:title" content="StockInsight AI | AI銘柄選定">
+  <meta property="og:description" content="AIが毎週選ぶ中長期有望日本株。成績を完全公開。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://stockinsight-ai.github.io/">
+  <meta property="og:image" content="https://stockinsight-ai.github.io/assets/img/col_default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="StockInsight AI">
+  <meta property="og:locale" content="ja_JP">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="StockInsight AI">
+  <meta name="twitter:description" content="AIが毎週選ぶ中長期有望日本株">
+  <meta name="twitter:image" content="https://stockinsight-ai.github.io/assets/img/col_default.png">
+
+  <!-- 構造化データ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "StockInsight AI",
+    "url": "https://stockinsight-ai.github.io/",
+    "description": "AIによる中長期日本株銘柄選定サービス"
+  }
+  </script>
+
+  <link rel="canonical" href="https://stockinsight-ai.github.io/column/volume-and-price/">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  
+</head>
+<body>
+
+<a href="#main-content" style="position:absolute;left:-9999px;top:0;z-index:999;background:#fff;padding:8px 16px;color:var(--primary);font-weight:700;border-radius:0 0 8px 0;" onfocus="this.style.left='0'">本文へスキップ</a>
+
+<!-- ヘッダー -->
+<header>
+  <div class="header-inner">
+    <a class="logo" href="/">Stock<span>Insight</span> AI</a>
+    <nav>
+      <a href="/picks/">今週の推奨</a>
+      <a href="/results/">成績</a>
+      <a href="/backtest/">バックテスト</a>
+      <a href="/about/">選定ロジック</a>
+      <a href="/column/">コラム</a>
+    </nav>
+    <button class="hamburger" id="hamburger-btn" aria-label="メニューを開く">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="/">トップ</a>
+    <a href="/picks/">今週の推奨</a>
+    <a href="/results/">成績</a>
+    <a href="/backtest/">バックテスト</a>
+    <a href="/about/">選定ロジック</a>
+    <a href="/column/">コラム</a>
+    <a href="/contact/">お問い合わせ</a>
+  </div>
+</header>
+
+<!-- 信頼バー -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    
+    <div class="trust-item"><span>📊</span><span><strong>毎週日曜</strong>自動更新</span></div>
+    <div class="trust-item"><span>🤖</span><span>テクニカル・ファンダ・センチメント <strong>3軸スコアリング</strong></span></div>
+    <div class="trust-item"><span>📈</span><span>成績を<strong>全件公開</strong>（勝ち負け含む）</span></div>
+    <div class="trust-item"><span>🆓</span><span><strong>完全無料</strong>・登録不要</span></div>
+    
+  </div>
+</div>
+
+<main id="main-content">
+  
+<div class="container page-wrap">
+
+  <div class="breadcrumb">
+    <a href="/">トップ</a>
+    <span>›</span>
+    <a href="/column/">コラム</a>
+    <span>›</span>
+    出来高と株価の関係：なぜ出来高増加が重要なのか
+  </div>
+
+  <div style="display:grid;gap:32px;grid-template-columns:1fr 280px;align-items:start;">
+
+    <!-- 記事本文 -->
+    <article>
+      <div style="margin-bottom:20px;">
+        <img src="/assets/img/col_default.png" alt="出来高と株価の関係：なぜ出来高増加が重要なのか" style="width:100%;height:200px;object-fit:cover;border-radius:12px;margin-bottom:20px;">
+        <div class="column-cat" style="margin-bottom:8px;">テクニカル</div>
+        <h1 style="font-size:clamp(1.3rem,3vw,1.7rem);font-weight:800;color:var(--primary);line-height:1.4;margin-bottom:12px;">出来高と株価の関係：なぜ出来高増加が重要なのか</h1>
+        <p style="font-size:.85rem;color:var(--muted);">公開日: 2026年4月11日</p>
+      </div>
+
+      <div class="card" style="padding:28px 32px;">
+        <div class="article-body">
+          <h2>出来高とは</h2>
+<p>出来高（売買高）とは、ある期間内に成立した売買の株数（または金額）のことです。</p>
+<p>たとえば「今日の出来高は100万株」であれば、その日に100万株分の売買が成立したことを意味します。</p>
+<p>この出来高は、株価の動きを判断する上で非常に重要な情報を含んでいます。</p>
+<h2>出来高が教えてくれること</h2>
+<p>出来高は「市場参加者の熱量」を示します。</p>
+<ul>
+<li><strong>出来高が多い</strong>：多くの投資家がその銘柄に注目し、活発に売買している</li>
+<li><strong>出来高が少ない</strong>：注目度が低く、売買が少ない</li>
+</ul>
+<p>重要なのは、<strong>株価の動きと出来高を組み合わせて見ること</strong>です。</p>
+<h2>株価と出来高の4パターン</h2>
+<h3>パターン1：株価上昇 ＋ 出来高増加（最も強いシグナル）</h3>
+<p>多くの投資家が買いに参加しながら株価が上がっている状態です。</p>
+<p>「本物の上昇」と判断でき、トレンドの継続性が高いとされています。</p>
+<blockquote>
+<p>例：新製品発表後に出来高が平常の3倍になり、株価が5%上昇</p>
+</blockquote>
+<h3>パターン2：株価上昇 ＋ 出来高減少（注意が必要）</h3>
+<p>株価は上がっているが、売買に参加している人が少ない状態です。</p>
+<p>「薄商いでの上昇」であり、少しの売りで株価が下落しやすい不安定な状態です。</p>
+<h3>パターン3：株価下落 ＋ 出来高増加（警戒シグナル）</h3>
+<p>多くの投資家が売りに回りながら株価が下落している状態です。</p>
+<p>「本物の下落」であり、さらなる下落が続く可能性があります。</p>
+<h3>パターン4：株価下落 ＋ 出来高減少（売り一巡の可能性）</h3>
+<p>少量の売りで下落しており、売り圧力自体は弱まっている状態です。</p>
+<p>「売り一巡」の可能性もあり、反発のタイミングを探る局面です。</p>
+<h2>StockInsight AIでの出来高評価</h2>
+<p>本サービスのテクニカルスコアでは、出来高に10点を配点しています。</p>
+<h3>評価方法</h3>
+<p>直近4週の平均出来高 ÷ 直近13週の平均出来高 を計算します。</p>
+<ul>
+<li><strong>10点</strong>：1.5倍以上（直近4週の出来高が13週平均の1.5倍超）</li>
+<li><strong>7点</strong>：1.3〜1.5倍</li>
+<li><strong>3点</strong>：1.0〜1.3倍</li>
+<li><strong>0点</strong>：1.0倍未満</li>
+</ul>
+<h3>なぜこの計算式なのか</h3>
+<p>絶対的な出来高の大小ではなく、「過去平均と比べて増えているか」で評価する理由：</p>
+<ul>
+<li>銘柄によって時価総額や流動性が大きく異なる</li>
+<li>絶対値では大型株と小型株を公平に比較できない</li>
+<li>「過去と比べた増加率」なら銘柄の性質に関わらず均一に評価できる</li>
+</ul>
+<h2>実際のトレードでの応用</h2>
+<h3>出来高急増は「何かが起きている」サイン</h3>
+<p>通常の何倍もの出来高が発生するとき、多くの場合は何らかの材料があります。</p>
+<ul>
+<li>決算発表・業績修正</li>
+<li>大型受注・M&amp;A発表</li>
+<li>機関投資家の大量購入</li>
+<li>話題のニュース（SNSバイラルを含む）</li>
+</ul>
+<p>出来高の急増を見つけたら、その背景にある材料を確認することが重要です。</p>
+<h3>「静かに上がっている」銘柄に注意</h3>
+<p>機関投資家が長期間かけてポジションを積み上げる場合、出来高が徐々に増加しながら株価も緩やかに上昇するパターンがあります。</p>
+<p>派手な動きではありませんが、このような「静かな上昇＋出来高増加」の銘柄は、大口が買い集めている可能性があり、中長期の上昇が期待できる場合があります。</p>
+<h2>出来高分析の限界</h2>
+<h3>空売りの影響</h3>
+<p>出来高には買いだけでなく空売り（売りから入る取引）も含まれます。出来高が多いからといって必ずしも買い優勢とは言えません。</p>
+<h3>先物・ETFの影響</h3>
+<p>大型株では、日経225やTOPIXの先物・ETF取引の影響で出来高が変動することがあります。個別銘柄の実態と乖離する場合があります。</p>
+<h2>まとめ</h2>
+<p>出来高は「株価の動きの信頼性」を確認するための重要な指標です。</p>
+<ul>
+<li>出来高増加＋株価上昇 = 強い買いシグナル</li>
+<li>出来高なし＋株価上昇 = 要注意</li>
+<li>過去平均の1.3倍以上の出来高増加 = 注目度の高まりのサイン</li>
+</ul>
+<p>テクニカル分析では単独指標で判断せず、移動平均線・MACDと組み合わせることで、精度の高い判断ができます。</p>
+<hr />
+<p>※本記事は参考情報です。投資判断は必ず自己責任で行ってください。</p>
+        </div>
+      </div>
+
+      <!-- シェア・ナビ -->
+      <div style="margin-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+        <a href="/column/" style="font-size:.84rem;color:var(--muted);">← コラム一覧へ</a>
+        <a href="/picks/" style="font-size:.84rem;color:var(--accent-dark);font-weight:700;">今週の推奨銘柄を見る →</a>
+      </div>
+    </article>
+
+    <!-- サイドバー -->
+    <aside>
+      <!-- 関連コラム -->
+      
+      <div class="card" style="padding:20px;">
+        <div style="font-size:.88rem;font-weight:700;color:var(--primary);margin-bottom:14px;">関連コラム</div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          
+          
+          <a href="/column/monthly-report-2026-04/" style="display:block;text-decoration:none;">
+            <div style="font-size:.82rem;font-weight:600;color:var(--primary);line-height:1.4;margin-bottom:2px;">2026年4月の推奨銘柄成績レポート</div>
+            <div style="font-size:.72rem;color:var(--muted);">月次レポート</div>
+          </a>
+          
+          
+          
+          <a href="/column/claude-code-auto-implementation/" style="display:block;text-decoration:none;">
+            <div style="font-size:.82rem;font-weight:600;color:var(--primary);line-height:1.4;margin-bottom:2px;">Claude Codeで株式分析システムを完全自動実装｜AIとペアプログラミングした開発体験記</div>
+            <div style="font-size:.72rem;color:var(--muted);">StockInsight AIの仕組み</div>
+          </a>
+          
+          
+          
+          <a href="/column/ai-stock-screening-logic/" style="display:block;text-decoration:none;">
+            <div style="font-size:.82rem;font-weight:600;color:var(--primary);line-height:1.4;margin-bottom:2px;">AIが仮想投資家3名と設計した銘柄選定ロジック｜スコアリング100点満点の仕組みを公開</div>
+            <div style="font-size:.72rem;color:var(--muted);">StockInsight AIの仕組み</div>
+          </a>
+          
+          
+          
+          <a href="/column/peg-ratio-explained/" style="display:block;text-decoration:none;">
+            <div style="font-size:.82rem;font-weight:600;color:var(--primary);line-height:1.4;margin-bottom:2px;">PEG比率とは？PERだけでは見えない「成長を考慮した割安感」を測る方法</div>
+            <div style="font-size:.72rem;color:var(--muted);">ファンダメンタル分析</div>
+          </a>
+          
+          
+          
+          <a href="/column/best-online-brokerage-2026/" style="display:block;text-decoration:none;">
+            <div style="font-size:.82rem;font-weight:600;color:var(--primary);line-height:1.4;margin-bottom:2px;">【2026年版】ネット証券おすすめ比較｜中長期投資家向けに徹底解説</div>
+            <div style="font-size:.72rem;color:var(--muted);">証券口座</div>
+          </a>
+          
+          
+        </div>
+      </div>
+      
+
+      <!-- 今週の推奨 -->
+      <div class="card" style="margin-top:16px;padding:20px;background:var(--primary);border:none;">
+        <div style="font-size:.88rem;font-weight:700;color:#fff;margin-bottom:8px;">今週の推奨銘柄</div>
+        <p style="font-size:.78rem;color:rgba(255,255,255,.7);margin-bottom:14px;line-height:1.6;">AIが選んだ今週の有望銘柄を無料公開中</p>
+        <a href="/picks/" style="display:block;background:var(--accent);color:#fff;font-weight:700;text-align:center;padding:10px;border-radius:8px;font-size:.84rem;text-decoration:none;">銘柄を見る</a>
+      </div>
+    </aside>
+
+  </div>
+</div>
+
+<style>
+@media (max-width: 768px) {
+  .container.page-wrap > div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+</style>
+
+</main>
+
+<!-- フッター -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>StockInsight AI</h4>
+        <p style="font-size:.8rem;color:rgba(255,255,255,.55);line-height:1.7;">
+          AIが毎週選ぶ中長期有望日本株。<br>
+          選定根拠・成績を完全公開。
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>メニュー</h4>
+        <a href="/picks/">今週の推奨銘柄</a>
+        <a href="/results/">過去の成績</a>
+        <a href="/backtest/">バックテスト</a>
+        <a href="/about/">選定ロジック</a>
+      </div>
+      <div class="footer-col">
+        <h4>コンテンツ</h4>
+        <a href="/column/">コラム一覧</a>
+        <a href="/contact/">お問い合わせ</a>
+        <a href="/about-site/">運営者情報</a>
+      </div>
+      <div class="footer-col">
+        <h4>ポリシー</h4>
+        <a href="/disclaimer/">免責事項</a>
+        <a href="/privacy/">プライバシーポリシー</a>
+      </div>
+    </div>
+    <div class="footer-disclaimer">
+      本サービスは投資助言業の登録を受けておらず、特定の有価証券の売買を推奨するものではありません。
+      掲載情報の正確性を保証せず、投資判断はご自身の責任において行ってください。
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 StockInsight AI</p>
+      <p style="font-size:.72rem;">最終更新: 2026-04-30</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+
+</body>
+</html>

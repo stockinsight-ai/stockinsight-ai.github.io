@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>スイングトレードのエントリータイミング｜移動平均線とMACDで見極める方法 | AI銘柄選定サービス</title>
+  <meta name="description" content="中長期スイングトレードで使える、移動平均線とMACDを組み合わせたエントリータイミングの見極め方を実例付きで解説します。">
+
+  <!-- OGP -->
+  <meta property="og:title" content="StockInsight AI | AI銘柄選定">
+  <meta property="og:description" content="AIが毎週選ぶ中長期有望日本株。成績を完全公開。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://stockinsight-ai.github.io/">
+  <meta property="og:image" content="https://stockinsight-ai.github.io/assets/img/col_default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="StockInsight AI">
+  <meta property="og:locale" content="ja_JP">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="StockInsight AI">
+  <meta name="twitter:description" content="AIが毎週選ぶ中長期有望日本株">
+  <meta name="twitter:image" content="https://stockinsight-ai.github.io/assets/img/col_default.png">
+
+  <!-- 構造化データ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "StockInsight AI",
+    "url": "https://stockinsight-ai.github.io/",
+    "description": "AIによる中長期日本株銘柄選定サービス"
+  }
+  </script>
+
+  <link rel="canonical" href="https://stockinsight-ai.github.io/column/swing-trade-entry-timing/">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  
+</head>
+<body>
+
+<a href="#main-content" style="position:absolute;left:-9999px;top:0;z-index:999;background:#fff;padding:8px 16px;color:var(--primary);font-weight:700;border-radius:0 0 8px 0;" onfocus="this.style.left='0'">本文へスキップ</a>
+
+<!-- ヘッダー -->
+<header>
+  <div class="header-inner">
+    <a class="logo" href="/">Stock<span>Insight</span> AI</a>
+    <nav>
+      <a href="/picks/">今週の推奨</a>
+      <a href="/results/">成績</a>
+      <a href="/backtest/">バックテスト</a>
+      <a href="/about/">選定ロジック</a>
+      <a href="/column/">コラム</a>
+    </nav>
+    <button class="hamburger" id="hamburger-btn" aria-label="メニューを開く">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="/">トップ</a>
+    <a href="/picks/">今週の推奨</a>
+    <a href="/results/">成績</a>
+    <a href="/backtest/">バックテスト</a>
+    <a href="/about/">選定ロジック</a>
+    <a href="/column/">コラム</a>
+    <a href="/contact/">お問い合わせ</a>
+  </div>
+</header>
+
+<!-- 信頼バー -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    
+    <div class="trust-item"><span>📊</span><span><strong>毎週日曜</strong>自動更新</span></div>
+    <div class="trust-item"><span>🤖</span><span>テクニカル・ファンダ・センチメント <strong>3軸スコアリング</strong></span></div>
+    <div class="trust-item"><span>📈</span><span>成績を<strong>全件公開</strong>（勝ち負け含む）</span></div>
+    <div class="trust-item"><span>🆓</span><span><strong>完全無料</strong>・登録不要</span></div>
+    
+  </div>
+</div>
+
+<main id="main-content">
+  
+<div class="container page-wrap">
+
+  <div class="breadcrumb">
+    <a href="/">トップ</a>
+    <span>›</span>
+    <a href="/column/">コラム</a>
+    <span>›</span>
+    スイングトレードのエントリータイミング｜移動平均線とMACDで見極める方法
+  </div>
+
+  <div style="display:grid;gap:32px;grid-template-columns:1fr 280px;align-items:start;">
+
+    <!-- 記事本文 -->
+    <article>
+      <div style="margin-bottom:20px;">
+        <img src="/assets/img/col_default.png" alt="スイングトレードのエントリータイミング｜移動平均線とMACDで見極める方法" style="width:100%;height:200px;object-fit:cover;border-radius:12px;margin-bottom:20px;">
+        <div class="column-cat" style="margin-bottom:8px;">テクニカル分析</div>
+        <h1 style="font-size:clamp(1.3rem,3vw,1.7rem);font-weight:800;color:var(--primary);line-height:1.4;margin-bottom:12px;">スイングトレードのエントリータイミング｜移動平均線とMACDで見極める方法</h1>
+        <p style="font-size:.85rem;color:var(--muted);">公開日: 2026年4月20日</p>
+      </div>
+
+      <div class="card" style="padding:28px 32px;">
+        <div class="article-body">
+          <h2>スイングトレードとは</h2>
+<p>スイングトレードとは、<strong>数日〜数週間のトレンドに乗って利益を狙う取引手法</strong>です。デイトレードのような毎日の監視は不要で、週に数回チャートを確認するだけでOKなため、会社員や主婦の方でも取り組みやすいのが特徴です。</p>
+<p>StockInsight AI が推奨する中長期投資（1〜3ヶ月）も、このスイングトレードの考え方に基づいています。</p>
+<hr />
+<h2>エントリー前に確認すべき3つのシグナル</h2>
+<h3>シグナル1：25日移動平均線を株価が上抜け</h3>
+<p>移動平均線（MA）は、一定期間の平均株価を示す指標です。<strong>25日移動平均線を株価が下から上に突き抜けるとき</strong>（ゴールデンクロスに近い状態）は、上昇トレンドへの転換サインです。</p>
+<p><strong>確認ポイント：</strong><br />
+- 株価が25日MAの下から上に突き抜けているか<br />
+- 25日MAの傾きが上向きかどうか（傾きが下向きのときは信頼度が低い）</p>
+<h3>シグナル2：MACDのゴールデンクロス</h3>
+<p>MACD（Moving Average Convergence Divergence）は、2本の移動平均線の差を使ったモメンタム指標です。</p>
+<p><strong>MACDのゴールデンクロス</strong>：MACD線がシグナル線を下から上に突き抜けるタイミングが買いサインです。</p>
+<ul>
+<li><strong>ゼロライン付近でのクロス</strong>：上昇の初動であることが多い</li>
+<li><strong>ゼロラインより下でのクロス</strong>：強い反転サインになりやすい</li>
+</ul>
+<h3>シグナル3：出来高の増加</h3>
+<p>株価が動く時に<strong>出来高（取引量）が増えているかどうか</strong>も重要です。</p>
+<ul>
+<li>上昇時に出来高増加 → <strong>強い買いシグナル</strong></li>
+<li>上昇時に出来高減少 → 信頼度が低い（出来高なき上昇は続かない）</li>
+</ul>
+<hr />
+<h2>実践的なエントリー戦略</h2>
+<h3>理想的なエントリーパターン</h3>
+<ol>
+<li>株価が25日MAを上回った</li>
+<li>MACDがゴールデンクロスした（またはクロス直後）</li>
+<li>出来高が直近平均の1.5倍以上</li>
+</ol>
+<p>この3つが揃ったとき、エントリーの信頼度が高まります。</p>
+<h3>リスク管理：ロスカットラインの設定</h3>
+<p>スイングトレードでは<strong>必ずロスカットラインを設定</strong>してください。</p>
+<ul>
+<li>エントリー価格の <strong>-5〜-8%</strong> に逆指値注文を置く</li>
+<li>25日MAを再び下回ったらロスカットする</li>
+</ul>
+<p>損小利大の原則を守ることが長期的な勝率向上につながります。</p>
+<hr />
+<h2>AIスクリーニングとテクニカル分析の組み合わせ</h2>
+<p>StockInsight AI では、以下の指標を組み合わせてスクリーニングを行っています。</p>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>内容</th>
+<th>比重</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MA乖離率</td>
+<td>25日移動平均線からの乖離</td>
+<td>テクニカル</td>
+</tr>
+<tr>
+<td>MACDクロス</td>
+<td>ゴールデンクロスの有無</td>
+<td>テクニカル</td>
+</tr>
+<tr>
+<td>出来高比率</td>
+<td>直近平均比（1.5倍以上）</td>
+<td>テクニカル</td>
+</tr>
+<tr>
+<td>RSI</td>
+<td>30〜70の適正レンジ</td>
+<td>テクニカル</td>
+</tr>
+<tr>
+<td>ROE</td>
+<td>10%以上（企業の収益力）</td>
+<td>ファンダメンタル</td>
+</tr>
+<tr>
+<td>売上成長率</td>
+<td>前年比10%以上</td>
+<td>ファンダメンタル</td>
+</tr>
+</tbody>
+</table>
+<p>これらの指標を <strong>100点満点でスコアリング</strong> し、上位銘柄を推奨しています。</p>
+<p>スコアの内訳は毎週の推奨ページで確認できます。テクニカル・ファンダメンタル・センチメントの3軸で評価するため、根拠のある投資判断が可能です。</p>
+<hr />
+<h2>よくある失敗パターン</h2>
+<h3>失敗1：FOMO（出遅れ恐怖）でのエントリー</h3>
+<p>すでに大きく上昇した後に「乗り遅れまい」とエントリーするのは危険です。チャートが以下の状態になっていたら要注意です。</p>
+<ul>
+<li>25日MAから+20%以上乖離している</li>
+<li>RSIが70以上（買われすぎ）</li>
+</ul>
+<h3>失敗2：ロスカットをしない</h3>
+<p>「損切りしたくない」という心理から損切りを後回しにすると、小さな損失が大きな損失に発展します。エントリー時に必ずロスカットラインを決めましょう。</p>
+<h3>失敗3：1銘柄への集中投資</h3>
+<p>1銘柄に資金を集中すると、個別リスクが大きくなります。<strong>3〜5銘柄に分散投資</strong>することでリスクを軽減できます。</p>
+<hr />
+<h2>まとめ</h2>
+<p>スイングトレードのエントリータイミングを見極めるには、以下の3点が鍵です。</p>
+<ol>
+<li><strong>25日移動平均線の上抜け</strong>：上昇トレンドへの転換確認</li>
+<li><strong>MACDのゴールデンクロス</strong>：モメンタムの方向転換</li>
+<li><strong>出来高の増加</strong>：トレンドの信頼性確認</li>
+</ol>
+<p>StockInsight AI の推奨銘柄では、これらのテクニカル指標をAIが自動チェックし、スコアとして表示しています。<strong>スコア70点以上の銘柄</strong>を優先的に検討することで、より精度の高いエントリーが期待できます。</p>
+<blockquote>
+<p>※ 株式投資には元本割れのリスクがあります。本記事は投資教育を目的としており、特定銘柄への投資を推奨するものではありません。投資判断はご自身の責任で行ってください。</p>
+</blockquote>
+        </div>
+      </div>
+
+      <!-- シェア・ナビ -->
+      <div style="margin-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+        <a href="/column/" style="font-size:.84rem;color:var(--muted);">← コラム一覧へ</a>
+        <a href="/picks/" style="font-size:.84rem;color:var(--accent-dark);font-weight:700;">今週の推奨銘柄を見る →</a>
+      </div>
+    </article>
+
+    <!-- サイドバー -->
+    <aside>
+      <!-- 関連コラム -->
+      
+      <div class="card" style="padding:20px;">
+        <div style="font-size:.88rem;font-weight:700;color:var(--primary);margin-bottom:14px;">関連コラム</div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          
+          
+          <a href="/column/monthly-report-2026-04/" style="display:block;text-decoration:none;">
+            <div style="font-size:.82rem;font-weight:600;color:var(--primary);line-height:1.4;margin-bottom:2px;">2026年4月の推奨銘柄成績レポート</div>
+            <div style="font-size:.72rem;color:var(--muted);">月次レポート</div>
+          </a>
+          
+          
+          
+          <a href="/column/claude-code-auto-implementation/" style="display:block;text-decoration:none;">
+            <div style="font-size:.82rem;font-weight:600;color:var(--primary);line-height:1.4;margin-bottom:2px;">Claude Codeで株式分析システムを完全自動実装｜AIとペアプログラミングした開発体験記</div>
+            <div style="font-size:.72rem;color:var(--muted);">StockInsight AIの仕組み</div>
+          </a>
+          
+          
+          
+          <a href="/column/ai-stock-screening-logic/" style="display:block;text-decoration:none;">
+            <div style="font-size:.82rem;font-weight:600;color:var(--primary);line-height:1.4;margin-bottom:2px;">AIが仮想投資家3名と設計した銘柄選定ロジック｜スコアリング100点満点の仕組みを公開</div>
+            <div style="font-size:.72rem;color:var(--muted);">StockInsight AIの仕組み</div>
+          </a>
+          
+          
+          
+          <a href="/column/peg-ratio-explained/" style="display:block;text-decoration:none;">
+            <div style="font-size:.82rem;font-weight:600;color:var(--primary);line-height:1.4;margin-bottom:2px;">PEG比率とは？PERだけでは見えない「成長を考慮した割安感」を測る方法</div>
+            <div style="font-size:.72rem;color:var(--muted);">ファンダメンタル分析</div>
+          </a>
+          
+          
+          
+          <a href="/column/best-online-brokerage-2026/" style="display:block;text-decoration:none;">
+            <div style="font-size:.82rem;font-weight:600;color:var(--primary);line-height:1.4;margin-bottom:2px;">【2026年版】ネット証券おすすめ比較｜中長期投資家向けに徹底解説</div>
+            <div style="font-size:.72rem;color:var(--muted);">証券口座</div>
+          </a>
+          
+          
+        </div>
+      </div>
+      
+
+      <!-- 今週の推奨 -->
+      <div class="card" style="margin-top:16px;padding:20px;background:var(--primary);border:none;">
+        <div style="font-size:.88rem;font-weight:700;color:#fff;margin-bottom:8px;">今週の推奨銘柄</div>
+        <p style="font-size:.78rem;color:rgba(255,255,255,.7);margin-bottom:14px;line-height:1.6;">AIが選んだ今週の有望銘柄を無料公開中</p>
+        <a href="/picks/" style="display:block;background:var(--accent);color:#fff;font-weight:700;text-align:center;padding:10px;border-radius:8px;font-size:.84rem;text-decoration:none;">銘柄を見る</a>
+      </div>
+    </aside>
+
+  </div>
+</div>
+
+<style>
+@media (max-width: 768px) {
+  .container.page-wrap > div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+</style>
+
+</main>
+
+<!-- フッター -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>StockInsight AI</h4>
+        <p style="font-size:.8rem;color:rgba(255,255,255,.55);line-height:1.7;">
+          AIが毎週選ぶ中長期有望日本株。<br>
+          選定根拠・成績を完全公開。
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>メニュー</h4>
+        <a href="/picks/">今週の推奨銘柄</a>
+        <a href="/results/">過去の成績</a>
+        <a href="/backtest/">バックテスト</a>
+        <a href="/about/">選定ロジック</a>
+      </div>
+      <div class="footer-col">
+        <h4>コンテンツ</h4>
+        <a href="/column/">コラム一覧</a>
+        <a href="/contact/">お問い合わせ</a>
+        <a href="/about-site/">運営者情報</a>
+      </div>
+      <div class="footer-col">
+        <h4>ポリシー</h4>
+        <a href="/disclaimer/">免責事項</a>
+        <a href="/privacy/">プライバシーポリシー</a>
+      </div>
+    </div>
+    <div class="footer-disclaimer">
+      本サービスは投資助言業の登録を受けておらず、特定の有価証券の売買を推奨するものではありません。
+      掲載情報の正確性を保証せず、投資判断はご自身の責任において行ってください。
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 StockInsight AI</p>
+      <p style="font-size:.72rem;">最終更新: 2026-04-30</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+
+</body>
+</html>

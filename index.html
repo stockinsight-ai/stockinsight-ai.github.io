@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StockInsight AI — AIが選ぶ中長期有望日本株 | AI銘柄選定サービス</title>
+  <meta name="description" content="AIが毎週選ぶ中長期有望日本株。テクニカル・ファンダメンタル・センチメント3軸スコアで厳選した銘柄と、その後の成績を完全公開。バックテスト勝率80.6%。">
+
+  <!-- OGP -->
+  <meta property="og:title" content="StockInsight AI | AI銘柄選定">
+  <meta property="og:description" content="AIが毎週選ぶ中長期有望日本株。成績を完全公開。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://stockinsight-ai.github.io/">
+  <meta property="og:image" content="https://stockinsight-ai.github.io/assets/img/ogp.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="StockInsight AI">
+  <meta property="og:locale" content="ja_JP">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="StockInsight AI">
+  <meta name="twitter:description" content="AIが毎週選ぶ中長期有望日本株">
+  <meta name="twitter:image" content="https://stockinsight-ai.github.io/assets/img/ogp.png">
+
+  <!-- 構造化データ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "StockInsight AI",
+    "url": "https://stockinsight-ai.github.io/",
+    "description": "AIによる中長期日本株銘柄選定サービス"
+  }
+  </script>
+
+  <link rel="canonical" href="https://stockinsight-ai.github.io/">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  
+</head>
+<body>
+
+<a href="#main-content" style="position:absolute;left:-9999px;top:0;z-index:999;background:#fff;padding:8px 16px;color:var(--primary);font-weight:700;border-radius:0 0 8px 0;" onfocus="this.style.left='0'">本文へスキップ</a>
+
+<!-- ヘッダー -->
+<header>
+  <div class="header-inner">
+    <a class="logo" href="/">Stock<span>Insight</span> AI</a>
+    <nav>
+      <a href="/picks/">今週の推奨</a>
+      <a href="/results/">成績</a>
+      <a href="/backtest/">バックテスト</a>
+      <a href="/about/">選定ロジック</a>
+      <a href="/column/">コラム</a>
+    </nav>
+    <button class="hamburger" id="hamburger-btn" aria-label="メニューを開く">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="/">トップ</a>
+    <a href="/picks/">今週の推奨</a>
+    <a href="/results/">成績</a>
+    <a href="/backtest/">バックテスト</a>
+    <a href="/about/">選定ロジック</a>
+    <a href="/column/">コラム</a>
+    <a href="/contact/">お問い合わせ</a>
+  </div>
+</header>
+
+<!-- 信頼バー -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    
+
+<div class="trust-item"><span>📊</span><span>推奨累計 <strong>3銘柄</strong></span></div>
+
+
+<div class="trust-item"><span>🎯</span><span>バックテスト勝率 <strong>80.6%</strong></span></div>
+<div class="trust-item"><span>📈</span><span>平均騰落率 <strong>+5.67%</strong></span></div>
+
+<div class="trust-item"><span>🆓</span><span><strong>完全無料</strong>・登録不要</span></div>
+<div class="trust-item"><span>🔄</span><span>毎週<strong>日曜</strong>更新</span></div>
+
+  </div>
+</div>
+
+<main id="main-content">
+  
+
+<!-- ヒーロー -->
+<section class="hero" role="banner" style="background-image:linear-gradient(135deg,rgba(26,58,92,.92) 0%,rgba(10,25,45,.85) 100%),url('/assets/img/hero.png');background-size:cover;background-position:center;">
+  <div class="hero-inner">
+    <div class="hero-badge">AI株式スクリーニング — 毎週無料公開中</div>
+    <h1>AIが毎週選ぶ<br><span>中長期有望銘柄</span></h1>
+    <p>テクニカル・ファンダメンタル・センチメントの3軸スコアで東証上場銘柄を自動スクリーニング。
+       選定根拠・その後の成績をすべて公開しています。</p>
+    
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="num">80.6%</span>
+        <span class="lbl">バックテスト勝率</span>
+      </div>
+      <div class="hero-divider"></div>
+      <div class="hero-stat">
+        <span class="num">+5.67%</span>
+        <span class="lbl">平均騰落率</span>
+      </div>
+      <div class="hero-divider"></div>
+      <div class="hero-stat">
+        <span class="num">2.48</span>
+        <span class="lbl">シャープレシオ</span>
+      </div>
+    </div>
+    
+    <a class="hero-cta" href="/picks/">今週の推奨銘柄を見る</a>
+  </div>
+</section>
+
+<!-- 今週の推奨 -->
+<section class="section">
+  <div class="container">
+    <div class="section-hd">
+      <div>
+        <div class="section-title">今週の推奨銘柄</div>
+        
+        <div class="section-subtitle">2026年4月29日〜</div>
+        
+      </div>
+      <a class="more" href="/picks/">すべて見る →</a>
+    </div>
+
+    
+    <div class="card-grid">
+      
+      <div class="stock-card">
+        <div class="stock-card-head">
+          <div>
+            <div class="stock-rank">#1</div>
+            <div class="stock-name">ムーンバット</div>
+            <div class="stock-code">8115
+              <span class="badge">Standard</span>
+              <span class="badge">卸売業</span>
+            </div>
+          </div>
+          <div style="text-align:right">
+            <div class="score-total">81<small>/100</small></div>
+            
+          </div>
+        </div>
+        <div class="score-section">
+          <div class="score-row">
+            <span class="score-label">テクニカル</span>
+            <div class="score-bar-wrap"><div class="score-bar tech" style="width:78%"></div></div>
+            <span class="score-val">31</span>
+          </div>
+          <div class="score-row">
+            <span class="score-label">ファンダ</span>
+            <div class="score-bar-wrap"><div class="score-bar funda" style="width:75%"></div></div>
+            <span class="score-val">30</span>
+          </div>
+          <div class="score-row">
+            <span class="score-label">センチメント</span>
+            <div class="score-bar-wrap"><div class="score-bar sent" style="width:100%"></div></div>
+            <span class="score-val">20</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="stock-card">
+        <div class="stock-card-head">
+          <div>
+            <div class="stock-rank">#2</div>
+            <div class="stock-name">ノジマ</div>
+            <div class="stock-code">7419
+              <span class="badge">Prime</span>
+              <span class="badge">小売業</span>
+            </div>
+          </div>
+          <div style="text-align:right">
+            <div class="score-total">86<small>/100</small></div>
+            
+          </div>
+        </div>
+        <div class="score-section">
+          <div class="score-row">
+            <span class="score-label">テクニカル</span>
+            <div class="score-bar-wrap"><div class="score-bar tech" style="width:92%"></div></div>
+            <span class="score-val">37</span>
+          </div>
+          <div class="score-row">
+            <span class="score-label">ファンダ</span>
+            <div class="score-bar-wrap"><div class="score-bar funda" style="width:85%"></div></div>
+            <span class="score-val">34</span>
+          </div>
+          <div class="score-row">
+            <span class="score-label">センチメント</span>
+            <div class="score-bar-wrap"><div class="score-bar sent" style="width:75%"></div></div>
+            <span class="score-val">15</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="stock-card">
+        <div class="stock-card-head">
+          <div>
+            <div class="stock-rank">#3</div>
+            <div class="stock-name">横田製作所</div>
+            <div class="stock-code">6248
+              <span class="badge">Standard</span>
+              <span class="badge">機械</span>
+            </div>
+          </div>
+          <div style="text-align:right">
+            <div class="score-total">88<small>/100</small></div>
+            
+          </div>
+        </div>
+        <div class="score-section">
+          <div class="score-row">
+            <span class="score-label">テクニカル</span>
+            <div class="score-bar-wrap"><div class="score-bar tech" style="width:80%"></div></div>
+            <span class="score-val">32</span>
+          </div>
+          <div class="score-row">
+            <span class="score-label">ファンダ</span>
+            <div class="score-bar-wrap"><div class="score-bar funda" style="width:90%"></div></div>
+            <span class="score-val">36</span>
+          </div>
+          <div class="score-row">
+            <span class="score-label">センチメント</span>
+            <div class="score-bar-wrap"><div class="score-bar sent" style="width:100%"></div></div>
+            <span class="score-val">20</span>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+</section>
+
+<!-- 成績スナップショット -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-hd">
+      <div>
+        <div class="section-title">成績スナップショット</div>
+        <div class="section-subtitle">バックテスト（2023年〜）</div>
+      </div>
+      <a class="more" href="/backtest/">詳細を見る →</a>
+    </div>
+    
+    <div class="stat-grid">
+      <div class="stat-card hit">
+        <span class="val">80.6%</span>
+        <span class="lbl">勝率（12週後 +10%達成）</span>
+      </div>
+      <div class="stat-card accent">
+        <span class="val">+5.67%</span>
+        <span class="lbl">平均騰落率</span>
+      </div>
+      <div class="stat-card">
+        <span class="val">2.48</span>
+        <span class="lbl">シャープレシオ</span>
+      </div>
+      <div class="stat-card">
+        <span class="val">-15.73%</span>
+        <span class="lbl">最大ドローダウン</span>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<!-- 最新週次レポート -->
+
+<section class="section">
+  <div class="container">
+    <div class="section-hd">
+      <div>
+        <div class="section-title">最新週次レポート</div>
+        <div class="section-subtitle">選定根拠・その後の成績</div>
+      </div>
+      <a class="more" href="/results/">成績一覧 →</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;">
+      
+      <a href="/report/2026-04-29/" style="display:flex;align-items:center;justify-content:space-between;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:14px 20px;text-decoration:none;transition:box-shadow .2s;" onmouseover="this.style.boxShadow='0 4px 16px rgba(0,0,0,.1)'" onmouseout="this.style.boxShadow=''">
+        <span style="font-weight:700;color:var(--primary);">2026年4月29日〜</span>
+        <span style="font-size:.82rem;color:var(--muted);">3銘柄選定 →</span>
+      </a>
+      
+      <a href="/report/2026-04-26/" style="display:flex;align-items:center;justify-content:space-between;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:14px 20px;text-decoration:none;transition:box-shadow .2s;" onmouseover="this.style.boxShadow='0 4px 16px rgba(0,0,0,.1)'" onmouseout="this.style.boxShadow=''">
+        <span style="font-weight:700;color:var(--primary);">2026年4月26日〜</span>
+        <span style="font-size:.82rem;color:var(--muted);">5銘柄選定 →</span>
+      </a>
+      
+      <a href="/report/2026-04-19/" style="display:flex;align-items:center;justify-content:space-between;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:14px 20px;text-decoration:none;transition:box-shadow .2s;" onmouseover="this.style.boxShadow='0 4px 16px rgba(0,0,0,.1)'" onmouseout="this.style.boxShadow=''">
+        <span style="font-weight:700;color:var(--primary);">2026年4月19日〜</span>
+        <span style="font-size:.82rem;color:var(--muted);">5銘柄選定 →</span>
+      </a>
+      
+    </div>
+  </div>
+</section>
+
+
+<!-- コラム -->
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-hd">
+      <div>
+        <div class="section-title">投資コラム</div>
+        <div class="section-subtitle">中長期投資の考え方・スクリーニング手法を解説</div>
+      </div>
+      <a class="more" href="/column/">すべて見る →</a>
+    </div>
+    <div class="column-grid">
+      
+      <a class="column-card" href="/column/monthly-report-2026-04/">
+        <div class="column-cat">月次レポート</div>
+        <div class="column-title">2026年4月の推奨銘柄成績レポート</div>
+        <div class="column-desc">2026年4月にStockInsight AIが推奨した銘柄の成績を月次でまとめたレポートです。全銘柄の騰落率・勝率・TOPIX比較を公開します。</div>
+        <div class="column-date">2026年4月30日</div>
+      </a>
+      
+      <a class="column-card" href="/column/claude-code-auto-implementation/">
+        <div class="column-cat">StockInsight AIの仕組み</div>
+        <div class="column-title">Claude Codeで株式分析システムを完全自動実装｜AIとペアプログラミングした開発体験記</div>
+        <div class="column-desc">AIアシスタント「Claude Code」を使って日本株の中長期スクリーニングシステムを自動実装した体験を解説。設計から実装・テストまでAIが担った工程と、人間が判断した工程を具体的に紹介します。</div>
+        <div class="column-date">2026年4月30日</div>
+      </a>
+      
+      <a class="column-card" href="/column/ai-stock-screening-logic/">
+        <div class="column-cat">StockInsight AIの仕組み</div>
+        <div class="column-title">AIが仮想投資家3名と設計した銘柄選定ロジック｜スコアリング100点満点の仕組みを公開</div>
+        <div class="column-desc">StockInsight AIの銘柄選定ロジックをどう設計したか、仮想の投資家3名によるディスカッション形式で解説。テクニカル40点・ファンダ40点・センチメント20点の根拠とは。</div>
+        <div class="column-date">2026年4月28日</div>
+      </a>
+      
+    </div>
+  </div>
+</section>
+
+
+<!-- FAQ -->
+<section class="section">
+  <div class="container">
+    <div class="section-title" style="margin-bottom:24px;">よくある質問</div>
+    <div style="display:flex;flex-direction:column;gap:12px;max-width:720px;">
+      
+      <div class="card" style="padding:16px 20px;">
+        <div style="font-weight:700;color:var(--primary);margin-bottom:6px;">Q. このサービスは無料ですか？</div>
+        <div style="font-size:.87rem;color:var(--text);">はい、完全無料です。会員登録も不要です。</div>
+      </div>
+      
+      <div class="card" style="padding:16px 20px;">
+        <div style="font-weight:700;color:var(--primary);margin-bottom:6px;">Q. 推奨銘柄は実際に売買できますか？</div>
+        <div style="font-size:.87rem;color:var(--text);">本サービスは情報提供のみです。投資判断はご自身の責任で行ってください。投資助言業の登録を受けておりません。</div>
+      </div>
+      
+      <div class="card" style="padding:16px 20px;">
+        <div style="font-weight:700;color:var(--primary);margin-bottom:6px;">Q. どのくらいの頻度で更新されますか？</div>
+        <div style="font-size:.87rem;color:var(--text);">毎週日曜日の夜に自動更新されます。</div>
+      </div>
+      
+      <div class="card" style="padding:16px 20px;">
+        <div style="font-weight:700;color:var(--primary);margin-bottom:6px;">Q. バックテストの条件は？</div>
+        <div style="font-size:.87rem;color:var(--text);">2023年1月〜の週足データを使用。12週後に+10%以上を「勝ち」として集計しています。</div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+</main>
+
+<!-- フッター -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>StockInsight AI</h4>
+        <p style="font-size:.8rem;color:rgba(255,255,255,.55);line-height:1.7;">
+          AIが毎週選ぶ中長期有望日本株。<br>
+          選定根拠・成績を完全公開。
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>メニュー</h4>
+        <a href="/picks/">今週の推奨銘柄</a>
+        <a href="/results/">過去の成績</a>
+        <a href="/backtest/">バックテスト</a>
+        <a href="/about/">選定ロジック</a>
+      </div>
+      <div class="footer-col">
+        <h4>コンテンツ</h4>
+        <a href="/column/">コラム一覧</a>
+        <a href="/contact/">お問い合わせ</a>
+        <a href="/about-site/">運営者情報</a>
+      </div>
+      <div class="footer-col">
+        <h4>ポリシー</h4>
+        <a href="/disclaimer/">免責事項</a>
+        <a href="/privacy/">プライバシーポリシー</a>
+      </div>
+    </div>
+    <div class="footer-disclaimer">
+      本サービスは投資助言業の登録を受けておらず、特定の有価証券の売買を推奨するものではありません。
+      掲載情報の正確性を保証せず、投資判断はご自身の責任において行ってください。
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 StockInsight AI</p>
+      <p style="font-size:.72rem;">最終更新: 2026-04-30</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+
+</body>
+</html>

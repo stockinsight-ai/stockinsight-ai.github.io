@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ファンダメンタル分析入門：ROEとPEGレシオの見方 | AI銘柄選定サービス</title>
+  <meta name="description" content="株式投資のファンダメンタル分析の基本。ROE（自己資本利益率）とPEGレシオの意味・計算方法・使い方をやさしく解説します。">
+
+  <!-- OGP -->
+  <meta property="og:title" content="StockInsight AI | AI銘柄選定">
+  <meta property="og:description" content="AIが毎週選ぶ中長期有望日本株。成績を完全公開。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://stockinsight-ai.github.io/">
+  <meta property="og:image" content="https://stockinsight-ai.github.io/assets/img/col_default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="StockInsight AI">
+  <meta property="og:locale" content="ja_JP">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="StockInsight AI">
+  <meta name="twitter:description" content="AIが毎週選ぶ中長期有望日本株">
+  <meta name="twitter:image" content="https://stockinsight-ai.github.io/assets/img/col_default.png">
+
+  <!-- 構造化データ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "StockInsight AI",
+    "url": "https://stockinsight-ai.github.io/",
+    "description": "AIによる中長期日本株銘柄選定サービス"
+  }
+  </script>
+
+  <link rel="canonical" href="https://stockinsight-ai.github.io/column/fundamental-roe-peg-basics/">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  
+</head>
+<body>
+
+<a href="#main-content" style="position:absolute;left:-9999px;top:0;z-index:999;background:#fff;padding:8px 16px;color:var(--primary);font-weight:700;border-radius:0 0 8px 0;" onfocus="this.style.left='0'">本文へスキップ</a>
+
+<!-- ヘッダー -->
+<header>
+  <div class="header-inner">
+    <a class="logo" href="/">Stock<span>Insight</span> AI</a>
+    <nav>
+      <a href="/picks/">今週の推奨</a>
+      <a href="/results/">成績</a>
+      <a href="/backtest/">バックテスト</a>
+      <a href="/about/">選定ロジック</a>
+      <a href="/column/">コラム</a>
+    </nav>
+    <button class="hamburger" id="hamburger-btn" aria-label="メニューを開く">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="/">トップ</a>
+    <a href="/picks/">今週の推奨</a>
+    <a href="/results/">成績</a>
+    <a href="/backtest/">バックテスト</a>
+    <a href="/about/">選定ロジック</a>
+    <a href="/column/">コラム</a>
+    <a href="/contact/">お問い合わせ</a>
+  </div>
+</header>
+
+<!-- 信頼バー -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    
+    <div class="trust-item"><span>📊</span><span><strong>毎週日曜</strong>自動更新</span></div>
+    <div class="trust-item"><span>🤖</span><span>テクニカル・ファンダ・センチメント <strong>3軸スコアリング</strong></span></div>
+    <div class="trust-item"><span>📈</span><span>成績を<strong>全件公開</strong>（勝ち負け含む）</span></div>
+    <div class="trust-item"><span>🆓</span><span><strong>完全無料</strong>・登録不要</span></div>
+    
+  </div>
+</div>
+
+<main id="main-content">
+  
+<div class="container page-wrap">
+
+  <div class="breadcrumb">
+    <a href="/">トップ</a>
+    <span>›</span>
+    <a href="/column/">コラム</a>
+    <span>›</span>
+    ファンダメンタル分析入門：ROEとPEGレシオの見方
+  </div>
+
+  <div style="display:grid;gap:32px;grid-template-columns:1fr 280px;align-items:start;">
+
+    <!-- 記事本文 -->
+    <article>
+      <div style="margin-bottom:20px;">
+        <img src="/assets/img/col_default.png" alt="ファンダメンタル分析入門：ROEとPEGレシオの見方" style="width:100%;height:200px;object-fit:cover;border-radius:12px;margin-bottom:20px;">
+        <div class="column-cat" style="margin-bottom:8px;">ファンダメンタル</div>
+        <h1 style="font-size:clamp(1.3rem,3vw,1.7rem);font-weight:800;color:var(--primary);line-height:1.4;margin-bottom:12px;">ファンダメンタル分析入門：ROEとPEGレシオの見方</h1>
+        <p style="font-size:.85rem;color:var(--muted);">公開日: 2026年4月4日</p>
+      </div>
+
+      <div class="card" style="padding:28px 32px;">
+        <div class="article-body">
+          <h2>ファンダメンタル分析とは</h2>
+<p>テクニカル分析がチャートの形を見る手法であるのに対し、<strong>ファンダメンタル分析</strong>は企業の「実力」を数字で評価する手法です。</p>
+<p>「この会社は本当に稼げているのか」「成長しているのか」「割安なのか」を財務データから判断します。</p>
+<p>本サービスでは特に<strong>ROE</strong>と<strong>PEGレシオ</strong>を重要指標として採用しています。</p>
+<h2>ROEとは</h2>
+<p>ROE（Return on Equity：自己資本利益率）は、企業が株主から預かったお金（自己資本）を使ってどれだけ効率よく利益を上げているかを示す指標です。</p>
+<h3>計算式</h3>
+<blockquote>
+<p>ROE = 当期純利益 ÷ 自己資本 × 100（%）</p>
+</blockquote>
+<h3>具体例</h3>
+<p>たとえば、自己資本が1,000億円の会社が当期純利益100億円を稼いだ場合：</p>
+<blockquote>
+<p>ROE = 100 ÷ 1,000 × 100 = <strong>10%</strong></p>
+</blockquote>
+<h3>StockInsight AIの基準：ROE 8%以上</h3>
+<p>一般的に、ROE 8%以上が「効率よく稼いでいる会社」の目安とされています。</p>
+<p>日本企業の平均ROEは歴史的に低めでしたが、近年はコーポレートガバナンス改革もあり改善傾向にあります。8%以上の銘柄は、その中でも比較的優秀な部類といえます。</p>
+<h3>ROEが高すぎる場合の注意点</h3>
+<p>ROEは高ければ高いほど良いわけではありません。</p>
+<p>借金（負債）を多く使えば自己資本が小さくなり、ROEが見かけ上高くなることがあります。本サービスでは自己資本比率（30%以上）もあわせてチェックすることで、こうした歪みを排除しています。</p>
+<h2>PEGレシオとは</h2>
+<p>PEGレシオ（Price/Earnings to Growth ratio）は、株価の割高・割安を「成長性」を加味して判断する指標です。</p>
+<h3>計算式</h3>
+<blockquote>
+<p>PEGレシオ = PER ÷ 利益成長率（%）</p>
+</blockquote>
+<h3>具体例</h3>
+<ul>
+<li>PER = 20倍</li>
+<li>利益成長率 = 25%</li>
+</ul>
+<blockquote>
+<p>PEGレシオ = 20 ÷ 25 = <strong>0.8</strong></p>
+</blockquote>
+<h3>PEGレシオの判断基準</h3>
+<ul>
+<li><strong>1.0以下</strong>：成長性に対して割安（買い候補）</li>
+<li><strong>1.0〜1.5</strong>：適正水準</li>
+<li><strong>1.5以上</strong>：成長性に対して割高</li>
+</ul>
+<p>PERだけ見ると「高い」と感じる銘柄でも、成長率が高ければPEGは低くなります。成長株の割安感を測るのに特に有効な指標です。</p>
+<h3>なぜPEGを採用するのか</h3>
+<p>本サービスが対象とするのは中長期（1〜3ヶ月）の投資です。この時間軸では、<strong>成長し続けている会社</strong>が報われやすいため、成長率を加味したPEGレシオが単純なPERより有効と考えています。</p>
+<p>PEGレシオ1.0以下の銘柄は、「高成長なのに株価がまだ追いついていない」状態を示す場合があり、中長期的な上昇余地があると判断しています。</p>
+<h2>ROEとPEGを組み合わせる</h2>
+<p>ROEが高く（稼ぐ力がある）、かつPEGが低い（割安な成長株）銘柄は、ファンダメンタル的に非常に魅力的です。</p>
+<p>本サービスのファンダメンタルスコア40点のうち、ROEに10点、PEGに5点を配点しています。これら2つだけで15点分を占める重要指標です。</p>
+<h2>まとめ</h2>
+<ul>
+<li><strong>ROE</strong>：企業の「稼ぐ効率」を示す。8%以上が目安</li>
+<li><strong>PEGレシオ</strong>：成長性を加味した割安感を示す。1.0以下が買い目安</li>
+</ul>
+<p>これら2つの指標を組み合わせることで、「効率よく稼げていて、かつ成長しているのに割安な銘柄」を見つけることができます。</p>
+<hr />
+<p>※本記事は参考情報です。投資判断は必ず自己責任で行ってください。</p>
+        </div>
+      </div>
+
+      <!-- シェア・ナビ -->
+      <div style="margin-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+        <a href="/column/" style="font-size:.84rem;color:var(--muted);">← コラム一覧へ</a>
+        <a href="/picks/" style="font-size:.84rem;color:var(--accent-dark);font-weight:700;">今週の推奨銘柄を見る →</a>
+      </div>
+    </article>
+
+    <!-- サイドバー -->
+    <aside>
+      <!-- 関連コラム -->
+      
+      <div class="card" style="padding:20px;">
+        <div style="font-size:.88rem;font-weight:700;color:var(--primary);margin-bottom:14px;">関連コラム</div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          
+          
+          <a href="/column/monthly-report-2026-04/" style="display:block;text-decoration:none;">
+            <div style="font-size:.82rem;font-weight:600;color:var(--primary);line-height:1.4;margin-bottom:2px;">2026年4月の推奨銘柄成績レポート</div>
+            <div style="font-size:.72rem;color:var(--muted);">月次レポート</div>
+          </a>
+          
+          
+          
+          <a href="/column/claude-code-auto-implementation/" style="display:block;text-decoration:none;">
+            <div style="font-size:.82rem;font-weight:600;color:var(--primary);line-height:1.4;margin-bottom:2px;">Claude Codeで株式分析システムを完全自動実装｜AIとペアプログラミングした開発体験記</div>
+            <div style="font-size:.72rem;color:var(--muted);">StockInsight AIの仕組み</div>
+          </a>
+          
+          
+          
+          <a href="/column/ai-stock-screening-logic/" style="display:block;text-decoration:none;">
+            <div style="font-size:.82rem;font-weight:600;color:var(--primary);line-height:1.4;margin-bottom:2px;">AIが仮想投資家3名と設計した銘柄選定ロジック｜スコアリング100点満点の仕組みを公開</div>
+            <div style="font-size:.72rem;color:var(--muted);">StockInsight AIの仕組み</div>
+          </a>
+          
+          
+          
+          <a href="/column/peg-ratio-explained/" style="display:block;text-decoration:none;">
+            <div style="font-size:.82rem;font-weight:600;color:var(--primary);line-height:1.4;margin-bottom:2px;">PEG比率とは？PERだけでは見えない「成長を考慮した割安感」を測る方法</div>
+            <div style="font-size:.72rem;color:var(--muted);">ファンダメンタル分析</div>
+          </a>
+          
+          
+          
+          <a href="/column/best-online-brokerage-2026/" style="display:block;text-decoration:none;">
+            <div style="font-size:.82rem;font-weight:600;color:var(--primary);line-height:1.4;margin-bottom:2px;">【2026年版】ネット証券おすすめ比較｜中長期投資家向けに徹底解説</div>
+            <div style="font-size:.72rem;color:var(--muted);">証券口座</div>
+          </a>
+          
+          
+        </div>
+      </div>
+      
+
+      <!-- 今週の推奨 -->
+      <div class="card" style="margin-top:16px;padding:20px;background:var(--primary);border:none;">
+        <div style="font-size:.88rem;font-weight:700;color:#fff;margin-bottom:8px;">今週の推奨銘柄</div>
+        <p style="font-size:.78rem;color:rgba(255,255,255,.7);margin-bottom:14px;line-height:1.6;">AIが選んだ今週の有望銘柄を無料公開中</p>
+        <a href="/picks/" style="display:block;background:var(--accent);color:#fff;font-weight:700;text-align:center;padding:10px;border-radius:8px;font-size:.84rem;text-decoration:none;">銘柄を見る</a>
+      </div>
+    </aside>
+
+  </div>
+</div>
+
+<style>
+@media (max-width: 768px) {
+  .container.page-wrap > div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+</style>
+
+</main>
+
+<!-- フッター -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>StockInsight AI</h4>
+        <p style="font-size:.8rem;color:rgba(255,255,255,.55);line-height:1.7;">
+          AIが毎週選ぶ中長期有望日本株。<br>
+          選定根拠・成績を完全公開。
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>メニュー</h4>
+        <a href="/picks/">今週の推奨銘柄</a>
+        <a href="/results/">過去の成績</a>
+        <a href="/backtest/">バックテスト</a>
+        <a href="/about/">選定ロジック</a>
+      </div>
+      <div class="footer-col">
+        <h4>コンテンツ</h4>
+        <a href="/column/">コラム一覧</a>
+        <a href="/contact/">お問い合わせ</a>
+        <a href="/about-site/">運営者情報</a>
+      </div>
+      <div class="footer-col">
+        <h4>ポリシー</h4>
+        <a href="/disclaimer/">免責事項</a>
+        <a href="/privacy/">プライバシーポリシー</a>
+      </div>
+    </div>
+    <div class="footer-disclaimer">
+      本サービスは投資助言業の登録を受けておらず、特定の有価証券の売買を推奨するものではありません。
+      掲載情報の正確性を保証せず、投資判断はご自身の責任において行ってください。
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 StockInsight AI</p>
+      <p style="font-size:.72rem;">最終更新: 2026-04-30</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+
+</body>
+</html>

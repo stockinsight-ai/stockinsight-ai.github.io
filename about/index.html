@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>選定ロジック | AI銘柄選定サービス</title>
+  <meta name="description" content="StockInsight AIの銘柄選定ロジックを完全公開。テクニカル・ファンダメンタル・センチメントの3軸スコアリングの仕組みを解説。">
+
+  <!-- OGP -->
+  <meta property="og:title" content="StockInsight AI | AI銘柄選定">
+  <meta property="og:description" content="AIが毎週選ぶ中長期有望日本株。成績を完全公開。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://stockinsight-ai.github.io/">
+  <meta property="og:image" content="https://stockinsight-ai.github.io/assets/img/about_hero.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="StockInsight AI">
+  <meta property="og:locale" content="ja_JP">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="StockInsight AI">
+  <meta name="twitter:description" content="AIが毎週選ぶ中長期有望日本株">
+  <meta name="twitter:image" content="https://stockinsight-ai.github.io/assets/img/about_hero.png">
+
+  <!-- 構造化データ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "StockInsight AI",
+    "url": "https://stockinsight-ai.github.io/",
+    "description": "AIによる中長期日本株銘柄選定サービス"
+  }
+  </script>
+
+  <link rel="canonical" href="https://stockinsight-ai.github.io/about/">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  
+</head>
+<body>
+
+<a href="#main-content" style="position:absolute;left:-9999px;top:0;z-index:999;background:#fff;padding:8px 16px;color:var(--primary);font-weight:700;border-radius:0 0 8px 0;" onfocus="this.style.left='0'">本文へスキップ</a>
+
+<!-- ヘッダー -->
+<header>
+  <div class="header-inner">
+    <a class="logo" href="/">Stock<span>Insight</span> AI</a>
+    <nav>
+      <a href="/picks/">今週の推奨</a>
+      <a href="/results/">成績</a>
+      <a href="/backtest/">バックテスト</a>
+      <a href="/about/">選定ロジック</a>
+      <a href="/column/">コラム</a>
+    </nav>
+    <button class="hamburger" id="hamburger-btn" aria-label="メニューを開く">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="/">トップ</a>
+    <a href="/picks/">今週の推奨</a>
+    <a href="/results/">成績</a>
+    <a href="/backtest/">バックテスト</a>
+    <a href="/about/">選定ロジック</a>
+    <a href="/column/">コラム</a>
+    <a href="/contact/">お問い合わせ</a>
+  </div>
+</header>
+
+<!-- 信頼バー -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    
+    <div class="trust-item"><span>📊</span><span><strong>毎週日曜</strong>自動更新</span></div>
+    <div class="trust-item"><span>🤖</span><span>テクニカル・ファンダ・センチメント <strong>3軸スコアリング</strong></span></div>
+    <div class="trust-item"><span>📈</span><span>成績を<strong>全件公開</strong>（勝ち負け含む）</span></div>
+    <div class="trust-item"><span>🆓</span><span><strong>完全無料</strong>・登録不要</span></div>
+    
+  </div>
+</div>
+
+<main id="main-content">
+  
+<div class="container page-wrap" style="max-width:800px;">
+  <div class="page-hd">
+    <img src="/assets/img/about_hero.png" alt="選定ロジック図" style="width:100%;max-height:280px;object-fit:cover;border-radius:12px;margin-bottom:24px;">
+    <h1>選定ロジック</h1>
+    <p>ブラックボックスなし — AIの判断根拠をすべて公開します</p>
+  </div>
+
+  <!-- スコアリング概要 -->
+  <div class="logic-card">
+    <div class="logic-title">スコアリング概要</div>
+    <p style="font-size:.87rem;color:var(--muted);line-height:1.8;margin-bottom:16px;">
+      テクニカル・ファンダメンタル・センチメントの3軸で各銘柄を評価し、
+      100点満点のスコアを算出します。上位銘柄を推奨銘柄として毎週日曜日に公開します。
+    </p>
+    <div class="score-pills">
+      <div class="score-pill" style="border-top-color:#3498db;">
+        <div class="val" style="color:#3498db;">40点</div>
+        <div class="lbl">テクニカル</div>
+      </div>
+      <div class="score-pill" style="border-top-color:var(--hit);">
+        <div class="val" style="color:var(--hit);">40点</div>
+        <div class="lbl">ファンダメンタル</div>
+      </div>
+      <div class="score-pill" style="border-top-color:var(--accent);">
+        <div class="val" style="color:var(--accent-dark);">20点</div>
+        <div class="lbl">センチメント</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 対象ユニバース -->
+  <div class="logic-card">
+    <div class="logic-title">対象ユニバース</div>
+    <ul class="check-list">
+      
+      <li><span class="check-mark">✓</span><span>東証プライム・スタンダード上場銘柄</span></li>
+      
+      <li><span class="check-mark">✓</span><span>時価総額 300億円以上</span></li>
+      
+      <li><span class="check-mark">✓</span><span>1日平均売買代金 5,000万円以上</span></li>
+      
+      <li><span class="check-mark">✓</span><span>新興・小型・テーマ株は除外（安定性重視）</span></li>
+      
+    </ul>
+  </div>
+
+  <!-- テクニカル -->
+  <div class="logic-card">
+    <div class="logic-title">テクニカル分析（40点）</div>
+    <div class="logic-subtitle">週足チャートベース。中長期のトレンド確認が目的。</div>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>指標</th><th>条件</th><th>配点</th></tr></thead>
+        <tbody>
+          
+          <tr>
+            <td><strong>25週移動平均線</strong></td>
+            <td style="color:var(--muted);">現在株価が25週MAを上回っている</td>
+            <td style="color:var(--primary);font-weight:700;">15点</td>
+          </tr>
+          
+          <tr>
+            <td><strong>週足MACD</strong></td>
+            <td style="color:var(--muted);">MACDがゴールデンクロスまたは上昇トレンド</td>
+            <td style="color:var(--primary);font-weight:700;">15点</td>
+          </tr>
+          
+          <tr>
+            <td><strong>出来高比率</strong></td>
+            <td style="color:var(--muted);">直近4週の出来高が13週平均の1.3倍以上</td>
+            <td style="color:var(--primary);font-weight:700;">10点</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ファンダメンタル -->
+  <div class="logic-card">
+    <div class="logic-title">ファンダメンタル分析（40点）</div>
+    <div class="logic-subtitle">直近決算データを使用。成長性と財務健全性を評価。</div>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>指標</th><th>条件</th><th>配点</th></tr></thead>
+        <tbody>
+          
+          <tr>
+            <td><strong>ROE</strong></td>
+            <td style="color:var(--muted);">10%以上</td>
+            <td style="color:var(--primary);font-weight:700;">10点</td>
+          </tr>
+          
+          <tr>
+            <td><strong>売上成長率（YoY）</strong></td>
+            <td style="color:var(--muted);">10%以上</td>
+            <td style="color:var(--primary);font-weight:700;">10点</td>
+          </tr>
+          
+          <tr>
+            <td><strong>営業利益成長率（YoY）</strong></td>
+            <td style="color:var(--muted);">15%以上で高評価</td>
+            <td style="color:var(--primary);font-weight:700;">10点</td>
+          </tr>
+          
+          <tr>
+            <td><strong>PEGレシオ</strong></td>
+            <td style="color:var(--muted);">1.5以下</td>
+            <td style="color:var(--primary);font-weight:700;">5点</td>
+          </tr>
+          
+          <tr>
+            <td><strong>自己資本比率</strong></td>
+            <td style="color:var(--muted);">30%以上</td>
+            <td style="color:var(--primary);font-weight:700;">5点</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- センチメント -->
+  <div class="logic-card">
+    <div class="logic-title">センチメント分析（20点）</div>
+    <div class="logic-subtitle">ニュース・業績修正情報から市場の注目度を判断。</div>
+    <ul class="check-list">
+      
+      <li><span class="check-mark">✓</span><span>Yahoo Financeニュースのポジティブ率（自然言語処理）</span></li>
+      
+      <li><span class="check-mark">✓</span><span>業績修正状況（上方修正 &gt; 据え置き &gt; 下方修正）</span></li>
+      
+      <li><span class="check-mark">✓</span><span>アナリスト評価（利用可能な場合）</span></li>
+      
+    </ul>
+  </div>
+
+  <!-- 除外フィルタ -->
+  <div class="logic-card">
+    <div class="logic-title">除外フィルタ</div>
+    <p style="font-size:.87rem;color:var(--muted);margin-bottom:12px;">以下に該当する銘柄はスクリーニング対象外です。</p>
+    <ul class="check-list">
+      
+      <li><span class="check-mark" style="color:var(--miss);">✗</span><span>直近52週で株価が50%以上下落</span></li>
+      
+      <li><span class="check-mark" style="color:var(--miss);">✗</span><span>上場廃止・合併予定</span></li>
+      
+      <li><span class="check-mark" style="color:var(--miss);">✗</span><span>1単元株価 5,000円以上（流動性懸念）</span></li>
+      
+      <li><span class="check-mark" style="color:var(--miss);">✗</span><span>時価総額 100億円未満</span></li>
+      
+    </ul>
+  </div>
+
+  <!-- 選定フロー -->
+  <div class="logic-card">
+    <div class="logic-title">選定フロー</div>
+    <div style="display:flex;flex-direction:column;gap:0;">
+      
+      <div style="display:flex;gap:16px;padding:12px 0;border-bottom:1px solid var(--border);">
+        <div style="font-size:.78rem;font-weight:700;color:var(--accent-dark);min-width:130px;flex-shrink:0;">Step 1: ユニバース取得</div>
+        <div style="font-size:.87rem;color:var(--text);">東証プライム・スタンダード全銘柄を取得</div>
+      </div>
+      
+      <div style="display:flex;gap:16px;padding:12px 0;border-bottom:1px solid var(--border);">
+        <div style="font-size:.78rem;font-weight:700;color:var(--accent-dark);min-width:130px;flex-shrink:0;">Step 2: 除外フィルタ</div>
+        <div style="font-size:.87rem;color:var(--text);">流動性・上場状況・下落銘柄を除外</div>
+      </div>
+      
+      <div style="display:flex;gap:16px;padding:12px 0;border-bottom:1px solid var(--border);">
+        <div style="font-size:.78rem;font-weight:700;color:var(--accent-dark);min-width:130px;flex-shrink:0;">Step 3: テクニカル判定</div>
+        <div style="font-size:.87rem;color:var(--text);">MA・MACD・出来高でフィルタリング</div>
+      </div>
+      
+      <div style="display:flex;gap:16px;padding:12px 0;border-bottom:1px solid var(--border);">
+        <div style="font-size:.78rem;font-weight:700;color:var(--accent-dark);min-width:130px;flex-shrink:0;">Step 4: ファンダメンタル判定</div>
+        <div style="font-size:.87rem;color:var(--text);">財務データでスコアリング</div>
+      </div>
+      
+      <div style="display:flex;gap:16px;padding:12px 0;border-bottom:1px solid var(--border);">
+        <div style="font-size:.78rem;font-weight:700;color:var(--accent-dark);min-width:130px;flex-shrink:0;">Step 5: センチメント判定</div>
+        <div style="font-size:.87rem;color:var(--text);">ニュース・業績修正で加点</div>
+      </div>
+      
+      <div style="display:flex;gap:16px;padding:12px 0;border-bottom:1px solid var(--border);">
+        <div style="font-size:.78rem;font-weight:700;color:var(--accent-dark);min-width:130px;flex-shrink:0;">Step 6: 上位銘柄を公開</div>
+        <div style="font-size:.87rem;color:var(--text);">合計スコア上位銘柄を毎週日曜に公開</div>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- 注意事項 -->
+  <div style="background:rgba(231,76,60,.06);border:1px solid rgba(231,76,60,.2);border-radius:8px;padding:16px;font-size:.82rem;color:var(--muted);line-height:1.8;">
+    本システムは投資助言業の登録を受けておらず、特定の有価証券の売買を推奨するものではありません。
+    投資に関する最終的な判断はご自身の責任で行ってください。
+    <a href="/disclaimer/" style="color:var(--miss);">免責事項を確認する</a>
+  </div>
+
+</div>
+
+</main>
+
+<!-- フッター -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>StockInsight AI</h4>
+        <p style="font-size:.8rem;color:rgba(255,255,255,.55);line-height:1.7;">
+          AIが毎週選ぶ中長期有望日本株。<br>
+          選定根拠・成績を完全公開。
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>メニュー</h4>
+        <a href="/picks/">今週の推奨銘柄</a>
+        <a href="/results/">過去の成績</a>
+        <a href="/backtest/">バックテスト</a>
+        <a href="/about/">選定ロジック</a>
+      </div>
+      <div class="footer-col">
+        <h4>コンテンツ</h4>
+        <a href="/column/">コラム一覧</a>
+        <a href="/contact/">お問い合わせ</a>
+        <a href="/about-site/">運営者情報</a>
+      </div>
+      <div class="footer-col">
+        <h4>ポリシー</h4>
+        <a href="/disclaimer/">免責事項</a>
+        <a href="/privacy/">プライバシーポリシー</a>
+      </div>
+    </div>
+    <div class="footer-disclaimer">
+      本サービスは投資助言業の登録を受けておらず、特定の有価証券の売買を推奨するものではありません。
+      掲載情報の正確性を保証せず、投資判断はご自身の責任において行ってください。
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 StockInsight AI</p>
+      <p style="font-size:.72rem;">最終更新: 2026-04-30</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>バックテスト結果 | AI銘柄選定サービス</title>
+  <meta name="description" content="StockInsight AIのバックテスト結果。2023年〜の実績シミュレーション。勝率・シャープレシオ・最大ドローダウンを公開。">
+
+  <!-- OGP -->
+  <meta property="og:title" content="StockInsight AI | AI銘柄選定">
+  <meta property="og:description" content="AIが毎週選ぶ中長期有望日本株。成績を完全公開。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://stockinsight-ai.github.io/">
+  <meta property="og:image" content="https://stockinsight-ai.github.io/assets/img/backtest_hero.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="StockInsight AI">
+  <meta property="og:locale" content="ja_JP">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="StockInsight AI">
+  <meta name="twitter:description" content="AIが毎週選ぶ中長期有望日本株">
+  <meta name="twitter:image" content="https://stockinsight-ai.github.io/assets/img/backtest_hero.png">
+
+  <!-- 構造化データ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "StockInsight AI",
+    "url": "https://stockinsight-ai.github.io/",
+    "description": "AIによる中長期日本株銘柄選定サービス"
+  }
+  </script>
+
+  <link rel="canonical" href="https://stockinsight-ai.github.io/backtest/">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  
+</head>
+<body>
+
+<a href="#main-content" style="position:absolute;left:-9999px;top:0;z-index:999;background:#fff;padding:8px 16px;color:var(--primary);font-weight:700;border-radius:0 0 8px 0;" onfocus="this.style.left='0'">本文へスキップ</a>
+
+<!-- ヘッダー -->
+<header>
+  <div class="header-inner">
+    <a class="logo" href="/">Stock<span>Insight</span> AI</a>
+    <nav>
+      <a href="/picks/">今週の推奨</a>
+      <a href="/results/">成績</a>
+      <a href="/backtest/">バックテスト</a>
+      <a href="/about/">選定ロジック</a>
+      <a href="/column/">コラム</a>
+    </nav>
+    <button class="hamburger" id="hamburger-btn" aria-label="メニューを開く">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="/">トップ</a>
+    <a href="/picks/">今週の推奨</a>
+    <a href="/results/">成績</a>
+    <a href="/backtest/">バックテスト</a>
+    <a href="/about/">選定ロジック</a>
+    <a href="/column/">コラム</a>
+    <a href="/contact/">お問い合わせ</a>
+  </div>
+</header>
+
+<!-- 信頼バー -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    
+    <div class="trust-item"><span>📊</span><span><strong>毎週日曜</strong>自動更新</span></div>
+    <div class="trust-item"><span>🤖</span><span>テクニカル・ファンダ・センチメント <strong>3軸スコアリング</strong></span></div>
+    <div class="trust-item"><span>📈</span><span>成績を<strong>全件公開</strong>（勝ち負け含む）</span></div>
+    <div class="trust-item"><span>🆓</span><span><strong>完全無料</strong>・登録不要</span></div>
+    
+  </div>
+</div>
+
+<main id="main-content">
+  
+<div class="container page-wrap">
+  <div class="page-hd">
+    <img src="/assets/img/backtest_hero.png" alt="バックテスト結果イメージ" style="width:100%;max-height:240px;object-fit:cover;border-radius:12px;margin-bottom:24px;">
+    <h1>バックテスト結果</h1>
+    <p>
+      2023-01 〜 2025-12
+      の週足データによるシミュレーション
+    </p>
+  </div>
+
+  
+  <!-- サマリーカード -->
+  <div class="bt-summary">
+    <div class="bt-card">
+      <div class="val pos">80.6%</div>
+      <div class="lbl">勝率（12週後+10%）</div>
+    </div>
+    <div class="bt-card highlight">
+      <div class="val">+5.67%</div>
+      <div class="lbl">平均騰落率</div>
+    </div>
+    <div class="bt-card">
+      <div class="val">+562.19%</div>
+      <div class="lbl">累計リターン</div>
+    </div>
+    <div class="bt-card">
+      <div class="val">+604.34%</div>
+      <div class="lbl">TOPIX累計（同期間）</div>
+    </div>
+    <div class="bt-card">
+      <div class="val">2.48</div>
+      <div class="lbl">シャープレシオ</div>
+    </div>
+    <div class="bt-card">
+      <div class="val neg">-15.73%</div>
+      <div class="lbl">最大ドローダウン</div>
+    </div>
+  </div>
+
+  <!-- 注意書き -->
+  <div style="background:rgba(232,160,32,.08);border:1px solid rgba(232,160,32,.3);border-radius:8px;padding:14px 18px;font-size:.8rem;color:var(--muted);margin-bottom:32px;">
+    ※ バックテストは過去のデータに基づくシミュレーションです。将来の運用成果を保証するものではありません。
+    取引コスト・スリッページは考慮していません。
+  </div>
+
+  <!-- 月次チャート -->
+  
+  <div class="card" style="margin-bottom:24px;">
+    <div class="section-title" style="margin-bottom:4px;">月次リターン</div>
+    <div style="font-size:.8rem;color:var(--muted);margin-bottom:16px;">StockInsight AI vs TOPIX</div>
+    <div class="chart-wrap">
+      <canvas id="monthly-chart"></canvas>
+    </div>
+  </div>
+  
+
+  <!-- 累積チャート -->
+  
+  <div class="card" style="margin-bottom:32px;">
+    <div class="section-title" style="margin-bottom:4px;">累積リターン推移</div>
+    <div style="font-size:.8rem;color:var(--muted);margin-bottom:16px;">累積騰落率（%）</div>
+    <div class="chart-wrap">
+      <canvas id="cumulative-chart"></canvas>
+    </div>
+  </div>
+  
+
+  <!-- 月次テーブル -->
+  
+  <div class="section-title" style="margin-bottom:16px;">月次成績詳細</div>
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>月</th>
+          <th class="num">月次リターン</th>
+          <th class="num">TOPIX</th>
+          <th class="num">推奨数</th>
+          <th class="num">達成数</th>
+          <th class="num">勝率</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        
+        <tr>
+          <td>2023-01</td>
+          <td class="num pos">+7.6%</td>
+          <td class="num pos">+3.5%</td>
+          <td class="num">10</td>
+          <td class="num">3</td>
+          <td class="num ">30%</td>
+        </tr>
+        
+        
+        <tr>
+          <td>2023-02</td>
+          <td class="num pos">+3.5%</td>
+          <td class="num pos">+5.8%</td>
+          <td class="num">10</td>
+          <td class="num">2</td>
+          <td class="num neg">20%</td>
+        </tr>
+        
+        
+        <tr>
+          <td>2023-03</td>
+          <td class="num pos">+14.7%</td>
+          <td class="num pos">+7.6%</td>
+          <td class="num">10</td>
+          <td class="num">8</td>
+          <td class="num pos">80%</td>
+        </tr>
+        
+        
+        <tr>
+          <td>2023-04</td>
+          <td class="num pos">+22.3%</td>
+          <td class="num pos">+12.9%</td>
+          <td class="num">10</td>
+          <td class="num">7</td>
+          <td class="num pos">70%</td>
+        </tr>
+        
+        
+        <tr>
+          <td>2023-05</td>
+          <td class="num pos">+14.1%</td>
+          <td class="num pos">+10.6%</td>
+          <td class="num">10</td>
+          <td class="num">6</td>
+          <td class="num pos">60%</td>
+        </tr>
+        
+        
+        <tr>
+          <td>2023-06</td>
+          <td class="num pos">+4.2%</td>
+          <td class="num pos">+4.0%</td>
+          <td class="num">10</td>
+          <td class="num">4</td>
+          <td class="num ">40%</td>
+        </tr>
+        
+        
+        <tr>
+          <td>2023-07</td>
+          <td class="num pos">+3.0%</td>
+          <td class="num pos">+4.0%</td>
+          <td class="num">10</td>
+          <td class="num">3</td>
+          <td class="num ">30%</td>
+        </tr>
+        
+        
+        <tr>
+          <td>2023-08</td>
+          <td class="num pos">+0.7%</td>
+          <td class="num pos">+0.2%</td>
+          <td class="num">10</td>
+          <td class="num">2</td>
+          <td class="num neg">20%</td>
+        </tr>
+        
+        
+        <tr>
+          <td>2023-09</td>
+          <td class="num pos">+4.5%</td>
+          <td class="num pos">+2.8%</td>
+          <td class="num">10</td>
+          <td class="num">3</td>
+          <td class="num ">30%</td>
+        </tr>
+        
+        
+        <tr>
+          <td>2023-10</td>
+          <td class="num neg">-1.5%</td>
+          <td class="num pos">+0.6%</td>
+          <td class="num">10</td>
+          <td class="num">1</td>
+          <td class="num neg">10%</td>
+        </tr>
+        
+        
+        <tr>
+          <td>2023-11</td>
+          <td class="num pos">+4.8%</td>
+          <td class="num pos">+7.7%</td>
+          <td class="num">10</td>
+          <td class="num">1</td>
+          <td class="num neg">10%</td>
+        </tr>
+        
+        
+        <tr>
+          <td>2023-12</td>
+          <td class="num pos">+17.0%</td>
+          <td class="num pos">+11.9%</td>
+          <td class="num">10</td>
+          <td class="num">6</td>
+          <td class="num pos">60%</td>
+        </tr>
+        
+        
+        <tr>
+          <td>2024-01</td>
+          <td class="num pos">+11.5%</td>
+          <td class="num pos">+16.9%</td>
+          <td class="num">10</td>
+          <td class="num">4</td>
+          <td class="num ">40%</td>
+        </tr>
+        
+        
+        <tr>
+          <td>2024-02</td>
+          <td class="num pos">+3.1%</td>
+          <td class="num pos">+6.6%</td>
+          <td class="num">10</td>
+          <td class="num">4</td>
+          <td class="num ">40%</td>
+        </tr>
+        
+        
+        <tr>
+          <td>2024-03</td>
+          <td class="num neg">-2.6%</td>
+          <td class="num pos">+2.2%</td>
+          <td class="num">10</td>
+          <td class="num">1</td>
+          <td class="num neg">10%</td>
+        </tr>
+        
+        
+        <tr>
+          <td>2024-04</td>
+          <td class="num pos">+3.2%</td>
+          <td class="num pos">+4.0%</td>
+          <td class="num">10</td>
+          <td class="num">3</td>
+          <td class="num ">30%</td>
+        </tr>
+        
+        
+        <tr>
+          <td>2024-05</td>
+          <td class="num neg">-0.3%</td>
+          <td class="num pos">+0.1%</td>
+          <td class="num">10</td>
+          <td class="num">1</td>
+          <td class="num neg">10%</td>
+        </tr>
+        
+        
+        <tr>
+          <td>2024-06</td>
+          <td class="num neg">-8.1%</td>
+          <td class="num neg">-3.6%</td>
+          <td class="num">10</td>
+          <td class="num">0</td>
+          <td class="num neg">0%</td>
+        </tr>
+        
+        
+        <tr>
+          <td>2024-07</td>
+          <td class="num neg">-8.0%</td>
+          <td class="num neg">-4.2%</td>
+          <td class="num">10</td>
+          <td class="num">1</td>
+          <td class="num neg">10%</td>
+        </tr>
+        
+        
+        <tr>
+          <td>2024-08</td>
+          <td class="num pos">+9.4%</td>
+          <td class="num pos">+4.2%</td>
+          <td class="num">10</td>
+          <td class="num">3</td>
+          <td class="num ">30%</td>
+        </tr>
+        
+        
+        <tr>
+          <td>2024-09</td>
+          <td class="num neg">-1.0%</td>
+          <td class="num pos">+0.5%</td>
+          <td class="num">10</td>
+          <td class="num">2</td>
+          <td class="num neg">20%</td>
+        </tr>
+        
+        
+        <tr>
+          <td>2024-10</td>
+          <td class="num pos">+3.3%</td>
+          <td class="num pos">+4.3%</td>
+          <td class="num">10</td>
+          <td class="num">2</td>
+          <td class="num neg">20%</td>
+        </tr>
+        
+        
+        <tr>
+          <td>2024-11</td>
+          <td class="num pos">+4.0%</td>
+          <td class="num pos">+4.1%</td>
+          <td class="num">10</td>
+          <td class="num">3</td>
+          <td class="num ">30%</td>
+        </tr>
+        
+        
+        <tr>
+          <td>2024-12</td>
+          <td class="num pos">+1.9%</td>
+          <td class="num pos">+2.4%</td>
+          <td class="num">10</td>
+          <td class="num">2</td>
+          <td class="num neg">20%</td>
+        </tr>
+        
+        
+        <tr>
+          <td>2025-01</td>
+          <td class="num pos">+2.0%</td>
+          <td class="num pos">+0.3%</td>
+          <td class="num">10</td>
+          <td class="num">3</td>
+          <td class="num ">30%</td>
+        </tr>
+        
+        
+        <tr>
+          <td>2025-02</td>
+          <td class="num neg">-7.5%</td>
+          <td class="num neg">-4.6%</td>
+          <td class="num">10</td>
+          <td class="num">0</td>
+          <td class="num neg">0%</td>
+        </tr>
+        
+        
+        <tr>
+          <td>2025-03</td>
+          <td class="num pos">+1.5%</td>
+          <td class="num pos">+3.3%</td>
+          <td class="num">10</td>
+          <td class="num">1</td>
+          <td class="num neg">10%</td>
+        </tr>
+        
+        
+        <tr>
+          <td>2025-04</td>
+          <td class="num pos">+11.0%</td>
+          <td class="num pos">+14.7%</td>
+          <td class="num">10</td>
+          <td class="num">4</td>
+          <td class="num ">40%</td>
+        </tr>
+        
+        
+        <tr>
+          <td>2025-05</td>
+          <td class="num pos">+4.4%</td>
+          <td class="num pos">+7.6%</td>
+          <td class="num">10</td>
+          <td class="num">2</td>
+          <td class="num neg">20%</td>
+        </tr>
+        
+        
+        <tr>
+          <td>2025-06</td>
+          <td class="num pos">+6.5%</td>
+          <td class="num pos">+8.6%</td>
+          <td class="num">10</td>
+          <td class="num">4</td>
+          <td class="num ">40%</td>
+        </tr>
+        
+        
+        <tr>
+          <td>2025-07</td>
+          <td class="num pos">+19.7%</td>
+          <td class="num pos">+10.2%</td>
+          <td class="num">10</td>
+          <td class="num">7</td>
+          <td class="num pos">70%</td>
+        </tr>
+        
+        
+        <tr>
+          <td>2025-08</td>
+          <td class="num pos">+21.0%</td>
+          <td class="num pos">+11.2%</td>
+          <td class="num">10</td>
+          <td class="num">6</td>
+          <td class="num pos">60%</td>
+        </tr>
+        
+        
+        <tr>
+          <td>2025-09</td>
+          <td class="num pos">+2.6%</td>
+          <td class="num pos">+9.7%</td>
+          <td class="num">10</td>
+          <td class="num">1</td>
+          <td class="num neg">10%</td>
+        </tr>
+        
+        
+        <tr>
+          <td>2025-10</td>
+          <td class="num pos">+5.0%</td>
+          <td class="num pos">+9.4%</td>
+          <td class="num">10</td>
+          <td class="num">3</td>
+          <td class="num ">30%</td>
+        </tr>
+        
+        
+        <tr>
+          <td>2025-11</td>
+          <td class="num pos">+5.0%</td>
+          <td class="num pos">+9.2%</td>
+          <td class="num">10</td>
+          <td class="num">4</td>
+          <td class="num ">40%</td>
+        </tr>
+        
+        
+        <tr>
+          <td>2025-12</td>
+          <td class="num pos">+21.6%</td>
+          <td class="num pos">+17.3%</td>
+          <td class="num">10</td>
+          <td class="num">7</td>
+          <td class="num pos">70%</td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+  
+
+  
+
+</div>
+
+</main>
+
+<!-- フッター -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>StockInsight AI</h4>
+        <p style="font-size:.8rem;color:rgba(255,255,255,.55);line-height:1.7;">
+          AIが毎週選ぶ中長期有望日本株。<br>
+          選定根拠・成績を完全公開。
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>メニュー</h4>
+        <a href="/picks/">今週の推奨銘柄</a>
+        <a href="/results/">過去の成績</a>
+        <a href="/backtest/">バックテスト</a>
+        <a href="/about/">選定ロジック</a>
+      </div>
+      <div class="footer-col">
+        <h4>コンテンツ</h4>
+        <a href="/column/">コラム一覧</a>
+        <a href="/contact/">お問い合わせ</a>
+        <a href="/about-site/">運営者情報</a>
+      </div>
+      <div class="footer-col">
+        <h4>ポリシー</h4>
+        <a href="/disclaimer/">免責事項</a>
+        <a href="/privacy/">プライバシーポリシー</a>
+      </div>
+    </div>
+    <div class="footer-disclaimer">
+      本サービスは投資助言業の登録を受けておらず、特定の有価証券の売買を推奨するものではありません。
+      掲載情報の正確性を保証せず、投資判断はご自身の責任において行ってください。
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 StockInsight AI</p>
+      <p style="font-size:.72rem;">最終更新: 2026-04-30</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js"></script>
+<script>
+var monthlyData = [{"benchmark_return_pct": 3.47, "n_hit": 3, "n_picks": 10, "return_pct": 7.59, "year_month": "2023-01"}, {"benchmark_return_pct": 5.79, "n_hit": 2, "n_picks": 10, "return_pct": 3.55, "year_month": "2023-02"}, {"benchmark_return_pct": 7.57, "n_hit": 8, "n_picks": 10, "return_pct": 14.71, "year_month": "2023-03"}, {"benchmark_return_pct": 12.86, "n_hit": 7, "n_picks": 10, "return_pct": 22.31, "year_month": "2023-04"}, {"benchmark_return_pct": 10.56, "n_hit": 6, "n_picks": 10, "return_pct": 14.11, "year_month": "2023-05"}, {"benchmark_return_pct": 3.99, "n_hit": 4, "n_picks": 10, "return_pct": 4.2, "year_month": "2023-06"}, {"benchmark_return_pct": 3.99, "n_hit": 3, "n_picks": 10, "return_pct": 3.02, "year_month": "2023-07"}, {"benchmark_return_pct": 0.23, "n_hit": 2, "n_picks": 10, "return_pct": 0.65, "year_month": "2023-08"}, {"benchmark_return_pct": 2.8, "n_hit": 3, "n_picks": 10, "return_pct": 4.55, "year_month": "2023-09"}, {"benchmark_return_pct": 0.58, "n_hit": 1, "n_picks": 10, "return_pct": -1.54, "year_month": "2023-10"}, {"benchmark_return_pct": 7.69, "n_hit": 1, "n_picks": 10, "return_pct": 4.84, "year_month": "2023-11"}, {"benchmark_return_pct": 11.89, "n_hit": 6, "n_picks": 10, "return_pct": 17.04, "year_month": "2023-12"}, {"benchmark_return_pct": 16.85, "n_hit": 4, "n_picks": 10, "return_pct": 11.51, "year_month": "2024-01"}, {"benchmark_return_pct": 6.6, "n_hit": 4, "n_picks": 10, "return_pct": 3.09, "year_month": "2024-02"}, {"benchmark_return_pct": 2.19, "n_hit": 1, "n_picks": 10, "return_pct": -2.62, "year_month": "2024-03"}, {"benchmark_return_pct": 4.01, "n_hit": 3, "n_picks": 10, "return_pct": 3.21, "year_month": "2024-04"}, {"benchmark_return_pct": 0.06, "n_hit": 1, "n_picks": 10, "return_pct": -0.33, "year_month": "2024-05"}, {"benchmark_return_pct": -3.6, "n_hit": 0, "n_picks": 10, "return_pct": -8.07, "year_month": "2024-06"}, {"benchmark_return_pct": -4.18, "n_hit": 1, "n_picks": 10, "return_pct": -8.03, "year_month": "2024-07"}, {"benchmark_return_pct": 4.19, "n_hit": 3, "n_picks": 10, "return_pct": 9.39, "year_month": "2024-08"}, {"benchmark_return_pct": 0.48, "n_hit": 2, "n_picks": 10, "return_pct": -1.03, "year_month": "2024-09"}, {"benchmark_return_pct": 4.31, "n_hit": 2, "n_picks": 10, "return_pct": 3.31, "year_month": "2024-10"}, {"benchmark_return_pct": 4.06, "n_hit": 3, "n_picks": 10, "return_pct": 4.03, "year_month": "2024-11"}, {"benchmark_return_pct": 2.42, "n_hit": 2, "n_picks": 10, "return_pct": 1.95, "year_month": "2024-12"}, {"benchmark_return_pct": 0.26, "n_hit": 3, "n_picks": 10, "return_pct": 1.99, "year_month": "2025-01"}, {"benchmark_return_pct": -4.62, "n_hit": 0, "n_picks": 10, "return_pct": -7.48, "year_month": "2025-02"}, {"benchmark_return_pct": 3.29, "n_hit": 1, "n_picks": 10, "return_pct": 1.5, "year_month": "2025-03"}, {"benchmark_return_pct": 14.74, "n_hit": 4, "n_picks": 10, "return_pct": 10.99, "year_month": "2025-04"}, {"benchmark_return_pct": 7.64, "n_hit": 2, "n_picks": 10, "return_pct": 4.41, "year_month": "2025-05"}, {"benchmark_return_pct": 8.58, "n_hit": 4, "n_picks": 10, "return_pct": 6.46, "year_month": "2025-06"}, {"benchmark_return_pct": 10.17, "n_hit": 7, "n_picks": 10, "return_pct": 19.69, "year_month": "2025-07"}, {"benchmark_return_pct": 11.19, "n_hit": 6, "n_picks": 10, "return_pct": 20.96, "year_month": "2025-08"}, {"benchmark_return_pct": 9.66, "n_hit": 1, "n_picks": 10, "return_pct": 2.65, "year_month": "2025-09"}, {"benchmark_return_pct": 9.39, "n_hit": 3, "n_picks": 10, "return_pct": 5.04, "year_month": "2025-10"}, {"benchmark_return_pct": 9.19, "n_hit": 4, "n_picks": 10, "return_pct": 5.04, "year_month": "2025-11"}, {"benchmark_return_pct": 17.29, "n_hit": 7, "n_picks": 10, "return_pct": 21.57, "year_month": "2025-12"}];
+var cumulativeData = [{"benchmark": 3.47, "date": "2023-01-01", "strategy": 7.59}, {"benchmark": 9.46, "date": "2023-02-01", "strategy": 11.41}, {"benchmark": 17.75, "date": "2023-03-01", "strategy": 27.8}, {"benchmark": 32.89, "date": "2023-04-01", "strategy": 56.31}, {"benchmark": 46.92, "date": "2023-05-01", "strategy": 78.36}, {"benchmark": 52.78, "date": "2023-06-01", "strategy": 85.86}, {"benchmark": 58.88, "date": "2023-07-01", "strategy": 91.47}, {"benchmark": 59.25, "date": "2023-08-01", "strategy": 92.71}, {"benchmark": 63.71, "date": "2023-09-01", "strategy": 101.48}, {"benchmark": 64.65, "date": "2023-10-01", "strategy": 98.38}, {"benchmark": 77.32, "date": "2023-11-01", "strategy": 107.98}, {"benchmark": 98.4, "date": "2023-12-01", "strategy": 143.42}, {"benchmark": 131.83, "date": "2024-01-01", "strategy": 171.44}, {"benchmark": 147.13, "date": "2024-02-01", "strategy": 179.83}, {"benchmark": 152.54, "date": "2024-03-01", "strategy": 172.49}, {"benchmark": 162.67, "date": "2024-04-01", "strategy": 181.24}, {"benchmark": 162.83, "date": "2024-05-01", "strategy": 180.31}, {"benchmark": 153.37, "date": "2024-06-01", "strategy": 157.69}, {"benchmark": 142.77, "date": "2024-07-01", "strategy": 137.0}, {"benchmark": 152.95, "date": "2024-08-01", "strategy": 159.25}, {"benchmark": 154.16, "date": "2024-09-01", "strategy": 156.58}, {"benchmark": 165.12, "date": "2024-10-01", "strategy": 165.08}, {"benchmark": 175.88, "date": "2024-11-01", "strategy": 175.76}, {"benchmark": 182.56, "date": "2024-12-01", "strategy": 181.14}, {"benchmark": 183.29, "date": "2025-01-01", "strategy": 186.73}, {"benchmark": 170.2, "date": "2025-02-01", "strategy": 165.28}, {"benchmark": 179.09, "date": "2025-03-01", "strategy": 169.26}, {"benchmark": 220.23, "date": "2025-04-01", "strategy": 198.85}, {"benchmark": 244.7, "date": "2025-05-01", "strategy": 212.03}, {"benchmark": 274.27, "date": "2025-06-01", "strategy": 232.19}, {"benchmark": 312.33, "date": "2025-07-01", "strategy": 297.6}, {"benchmark": 358.47, "date": "2025-08-01", "strategy": 380.94}, {"benchmark": 402.76, "date": "2025-09-01", "strategy": 393.68}, {"benchmark": 449.97, "date": "2025-10-01", "strategy": 418.56}, {"benchmark": 500.51, "date": "2025-11-01", "strategy": 444.7}, {"benchmark": 604.34, "date": "2025-12-01", "strategy": 562.19}];
+window.initBacktestCharts(monthlyData, cumulativeData);
+</script>
+
+
+</body>
+</html>
