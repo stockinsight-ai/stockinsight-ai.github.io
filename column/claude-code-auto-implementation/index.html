@@ -125,8 +125,8 @@ claude
 <p>最初にやったのは「どんな銘柄を選ぶか」という仕様の明確化です。ここは人間が主体的に考える必要がありました。</p>
 <p>Claude Codeに対して、「バリュー投資家・グロース投資家・テクニカル分析家の3つの視点でディスカッションして、スクリーニング条件を決めてほしい」と依頼しました。</p>
 <p>AIは3人の仮想投資家キャラクターとして以下のような議論を展開しました：</p>
-<p><strong>バリュー投資家A：</strong> 「ROE 8%以上、自己資本比率30%以上は最低条件。財務の健全性なくして長期投資は成立しない」</p>
-<p><strong>グロース投資家B：</strong> 「ROEより成長率が重要。PEG比率1.0以下で、成長に見合った価格かを確認する」</p>
+<p><strong>バリュー投資家A：</strong> 「ROE 10%以上、自己資本比率30%以上は最低条件。財務の健全性なくして長期投資は成立しない」</p>
+<p><strong>グロース投資家B：</strong> 「ROEより成長率が重要。PEG比率1.5以下で、成長に見合った価格かを確認する」</p>
 <p><strong>テクニカル分析家C：</strong> 「いくら良い会社でも上昇トレンドでなければ買わない。週足MACDのゴールデンクロスを確認する」</p>
 <p>この「仮想ディスカッション」を通じて、テクニカル40点・ファンダメンタル40点・センチメント20点の3軸スコアリングという設計に落ち着きました。</p>
 <h3>2. アーキテクチャ設計（AIが提案）</h3>
@@ -148,18 +148,22 @@ def calc_technical_score(df: pd.DataFrame) -&gt; dict:
     score = 0
     reasons = []
 
-    # 25週移動平均線チェック（15点）
+    # 25週移動平均線チェック（10点）
     ma25 = df[&quot;Close&quot;].rolling(25).mean()
-    if df[&quot;Close&quot;].iloc[-1] &gt; ma25.iloc[-1] and ma25.iloc[-1] &gt; ma25.iloc[-5]:
-        score += 15
-        reasons.append(&quot;25週MA上抜け・上向き&quot;)
+    deviation = (df[&quot;Close&quot;].iloc[-1] - ma25.iloc[-1]) / ma25.iloc[-1] * 100
+    if 5 &lt;= deviation &lt;= 15:
+        score += 10
+        reasons.append(f&quot;25週MA乖離率{deviation:.1f}%（適正）&quot;)
+    elif 0 &lt;= deviation &lt; 5:
+        score += 7
+        reasons.append(f&quot;25週MA上抜け直後（乖離率{deviation:.1f}%）&quot;)
 
-    # 週足MACDゴールデンクロス（15点）
+    # 週足MACDヒストグラム（10点）
     macd = ta.macd(df[&quot;Close&quot;], fast=12, slow=26, signal=9)
-    if (macd[&quot;MACD_12_26_9&quot;].iloc[-1] &gt; macd[&quot;MACDs_12_26_9&quot;].iloc[-1] and
-        macd[&quot;MACD_12_26_9&quot;].iloc[-2] &lt;= macd[&quot;MACDs_12_26_9&quot;].iloc[-2]):
-        score += 15
-        reasons.append(&quot;週足MACDゴールデンクロス&quot;)
+    hist = macd[&quot;MACDh_12_26_9&quot;].iloc[-1]
+    if hist &gt; 0:
+        score += 10
+        reasons.append(&quot;週足MACDヒストグラムプラス&quot;)
 
     # 出来高比率チェック（10点）
     vol_ratio = df[&quot;Volume&quot;].iloc[-4:].mean() / df[&quot;Volume&quot;].iloc[-17:-4].mean()
