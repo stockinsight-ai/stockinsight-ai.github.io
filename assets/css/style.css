@@ -447,3 +447,8 @@ footer {
 /* ===== アフィリエイトバナー（記事内） ===== */
 .article-affiliate { background: #f8f9fa; border: 1px solid var(--border); border-radius: 8px; padding: 12px 16px; margin: 20px 0; display: inline-block; }
 .article-affiliate-label { display: inline-block; font-size: .65rem; font-weight: 700; color: #fff; background: #888; padding: 1px 6px; border-radius: 3px; margin-bottom: 4px; letter-spacing: .05em; }
+
+/* ===== 推奨銘柄ページ 選定日メタ ===== */
+.picks-meta { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; margin-top: 6px; font-size: .88rem; color: var(--muted); }
+.picks-meta-item strong { color: var(--primary); }
+.picks-meta-sep { color: var(--border); }
