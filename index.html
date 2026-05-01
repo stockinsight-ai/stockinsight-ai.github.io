@@ -258,19 +258,19 @@
     <div class="stat-grid">
       <div class="stat-card hit">
         <span class="val">75.0%</span>
-        <span class="lbl">勝率（12週後 +10%達成）</span>
+        <span class="lbl">勝率（12週後 +10%達成）<button class="tip-icon" data-tip="win_rate" aria-label="勝率の説明">?</button></span>
       </div>
       <div class="stat-card accent">
         <span class="val">+4.99%</span>
-        <span class="lbl">平均騰落率</span>
+        <span class="lbl">平均騰落率<button class="tip-icon" data-tip="avg_return" aria-label="平均騰落率の説明">?</button></span>
       </div>
       <div class="stat-card">
         <span class="val">2.57</span>
-        <span class="lbl">シャープレシオ</span>
+        <span class="lbl">シャープレシオ<button class="tip-icon" data-tip="sharpe" aria-label="シャープレシオの説明">?</button></span>
       </div>
       <div class="stat-card">
         <span class="val">-12.17%</span>
-        <span class="lbl">最大ドローダウン</span>
+        <span class="lbl">最大ドローダウン<button class="tip-icon" data-tip="drawdown" aria-label="最大ドローダウンの説明">?</button></span>
       </div>
     </div>
     
@@ -510,6 +510,15 @@
     </div>
   </div>
 </footer>
+
+<!-- 指標説明ツールチップ モーダル -->
+<div class="tip-overlay" id="tip-overlay" role="dialog" aria-modal="true">
+  <div class="tip-modal">
+    <button class="tip-modal-close" id="tip-close" aria-label="閉じる">×</button>
+    <div class="tip-modal-title"></div>
+    <div class="tip-modal-body"></div>
+  </div>
+</div>
 
 <script src="/assets/js/main.js"></script>
 

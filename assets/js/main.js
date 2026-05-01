@@ -1,5 +1,59 @@
 /* StockInsight AI — メインJS */
 
+// ===== 指標ツールチップ =====
+(function () {
+  var tips = {
+    "win_rate":      { title: "勝率（12週後 +10%達成）とは", body: "推奨した銘柄のうち、選定から約3ヶ月後（12週後）に株価が+10%以上になっていた割合です。\n\n例：10銘柄中7銘柄が+10%以上 → 勝率70%\n\nバックテスト期間（2023〜2025年）の集計結果です。" },
+    "avg_return":    { title: "平均騰落率とは", body: "推奨した全銘柄の、12週後の株価変化率の平均値です。\n\n+4.99%であれば、平均的に約5%値上がりしていたことを意味します。マイナス銘柄も含めた平均です。" },
+    "sharpe":        { title: "シャープレシオとは", body: "リスク（値動きの激しさ）に対して、どれだけ効率よくリターンを得られたかを示す指標です。\n\n■ 目安\n1.0以上：良好\n2.0以上：優秀\n\n数値が大きいほど、安定して利益を上げていることを意味します。" },
+    "drawdown":      { title: "最大ドローダウンとは", body: "ポートフォリオの価値が、最高値からどこまで下落したかの最大値です。\n\n例：-12.17%であれば、最も悪い時期に最高値から約12%下げた、という意味です。\n\n小さいほどリスクが低いことを示します。" },
+    "total_return":  { title: "累計リターンとは", body: "バックテスト期間（2023〜2025年）全体を通じた、ストラテジーの合計騰落率です。\n\n毎月の月次リターンを複利で積み上げた結果です。" },
+    "benchmark":     { title: "TOPIX累計（同期間）とは", body: "同じ期間に日本全体の株価指数「TOPIX」が何%上昇したかを示します。\n\nStockInsight AIの成績との比較に使います。上回れば「市場平均に勝った」ことを意味します。" },
+  };
+
+  function showTip(key) {
+    var t = tips[key];
+    if (!t) return;
+    var overlay = document.getElementById("tip-overlay");
+    if (!overlay) return;
+    overlay.querySelector(".tip-modal-title").textContent = t.title;
+    overlay.querySelector(".tip-modal-body").innerHTML = t.body.replace(/\n/g, "<br>");
+    overlay.classList.add("active");
+    document.body.style.overflow = "hidden";
+  }
+
+  function hideTip() {
+    var overlay = document.getElementById("tip-overlay");
+    if (!overlay) return;
+    overlay.classList.remove("active");
+    document.body.style.overflow = "";
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // ボタンクリック
+    document.querySelectorAll(".tip-icon[data-tip]").forEach(function (btn) {
+      btn.addEventListener("click", function (e) {
+        e.stopPropagation();
+        showTip(btn.getAttribute("data-tip"));
+      });
+    });
+    // 閉じるボタン
+    var closeBtn = document.getElementById("tip-close");
+    if (closeBtn) closeBtn.addEventListener("click", hideTip);
+    // オーバーレイクリックで閉じる
+    var overlay = document.getElementById("tip-overlay");
+    if (overlay) {
+      overlay.addEventListener("click", function (e) {
+        if (e.target === overlay) hideTip();
+      });
+    }
+    // ESCキー
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") hideTip();
+    });
+  });
+})();
+
 // ===== ハンバーガーメニュー =====
 (function () {
   const btn = document.getElementById("hamburger-btn");
@@ -84,8 +138,8 @@ window.initBacktestCharts = function (monthlyData, cumulativeData) {
   var cumEl = document.getElementById("cumulative-chart");
   if (cumEl && cumulativeData && cumulativeData.length) {
     var cumLabels = cumulativeData.map(function (d) { return d.year_month || d.date || ""; });
-    var cumAI   = cumulativeData.map(function (d) { return d.cumulative_return_pct || 0; });
-    var cumBench = cumulativeData.map(function (d) { return d.benchmark_cumulative_pct || 0; });
+    var cumAI   = cumulativeData.map(function (d) { return d.strategy != null ? d.strategy : (d.cumulative_return_pct || 0); });
+    var cumBench = cumulativeData.map(function (d) { return d.benchmark != null ? d.benchmark : (d.benchmark_cumulative_pct || 0); });
     new Chart(cumEl, {
       type: "line",
       data: {
