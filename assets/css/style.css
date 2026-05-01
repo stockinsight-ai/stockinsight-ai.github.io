@@ -483,3 +483,90 @@ footer {
   font-size: 1.2rem; color: var(--muted); line-height: 1;
 }
 .tip-modal-close:hover { color: var(--primary); }
+
+/* ===== コラムカテゴリフィルターバー ===== */
+.col-filter-wrap {
+  display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px;
+}
+.col-filter-btn {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 7px 14px; border-radius: 20px; border: 1.5px solid var(--border);
+  background: var(--card); color: var(--text); font-size: .82rem; font-weight: 600;
+  cursor: pointer; transition: all .18s; white-space: nowrap;
+}
+.col-filter-btn:hover { border-color: var(--primary); color: var(--primary); }
+.col-filter-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+.col-filter-count {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 18px; height: 18px; padding: 0 4px;
+  border-radius: 9px; background: rgba(255,255,255,.25); font-size: .72rem; font-weight: 700;
+}
+.col-filter-btn:not(.active) .col-filter-count {
+  background: var(--bg); color: var(--muted);
+}
+
+/* ===== 成績ページ 2×2 サマリーグリッド ===== */
+.stat-grid-2col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+.stat-grid-2col .stat-card { padding: 20px 16px; }
+.stat-grid-2col .stat-card .val { font-size: 1.8rem; }
+
+/* ===== 週次フィルターバー ===== */
+.week-filter-wrap {
+  display: flex; gap: 6px; overflow-x: auto; padding-bottom: 4px; margin-bottom: 20px;
+  scrollbar-width: none; -webkit-overflow-scrolling: touch;
+}
+.week-filter-wrap::-webkit-scrollbar { display: none; }
+.week-filter-btn {
+  flex-shrink: 0; padding: 6px 14px; border-radius: 16px;
+  border: 1.5px solid var(--border); background: var(--card);
+  color: var(--text); font-size: .8rem; font-weight: 600;
+  cursor: pointer; transition: all .18s; white-space: nowrap;
+}
+.week-filter-btn:hover { border-color: var(--primary); color: var(--primary); }
+.week-filter-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+/* ===== 結果カード リデザイン ===== */
+.result-card { background: var(--bg); border-radius: 8px; padding: 12px 14px; }
+.rc-head {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  gap: 12px; margin-bottom: 10px;
+}
+.rc-name { display: flex; flex-direction: column; gap: 2px; }
+.rc-name strong { font-size: .94rem; color: var(--primary); }
+.rc-name small { font-size: .74rem; color: var(--muted); }
+
+/* ===== 株価推移タイムライン ===== */
+.price-timeline {
+  display: flex; align-items: flex-start; gap: 0;
+  padding-top: 4px;
+}
+.pt-step {
+  display: flex; flex-direction: column; align-items: center;
+  gap: 4px; flex: 1; min-width: 0;
+}
+.pt-dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: var(--border); border: 2px solid var(--border);
+  flex-shrink: 0; transition: background .2s;
+}
+.pt-done .pt-dot { background: var(--primary); border-color: var(--primary); }
+.pt-line {
+  flex: 1; height: 2px; background: var(--border);
+  margin-top: 5px; min-width: 8px;
+  align-self: flex-start; margin-top: 9px;
+}
+.pt-label { font-size: .68rem; color: var(--muted); white-space: nowrap; }
+.pt-val { font-size: .8rem; font-weight: 700; text-align: center; line-height: 1.3; }
+.pt-price { display: block; font-size: .68rem; font-weight: 400; color: var(--muted); margin-top: 1px; }
+.pt-watching { font-size: .72rem; color: var(--muted); font-weight: 400; }
+
+@media (max-width: 480px) {
+  .stat-grid-2col { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .stat-grid-2col .stat-card .val { font-size: 1.4rem; }
+  .pt-label { font-size: .6rem; }
+  .pt-val { font-size: .72rem; }
+}

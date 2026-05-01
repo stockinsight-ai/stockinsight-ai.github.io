@@ -93,7 +93,6 @@
   </div>
 
   
-  <!-- カテゴリ別グループ -->
   
   
     
@@ -147,476 +146,452 @@
     
   
 
-  
-  
-  <div style="margin-bottom:36px;">
-    <div style="font-size:.82rem;font-weight:700;color:var(--accent-dark);margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--accent);">
-      成績レビュー（1件）
-    </div>
-    <div class="column-grid">
-      
-      <a class="column-card" href="/column/failure-autopsy-2026-04/">
-        <div class="column-thumb">
-          <img src="/assets/img/col_default.png" alt="AIが外した推奨を解剖する【2026年4月版】" loading="lazy">
-          <span class="new-badge">NEW</span>
-        </div>
-        <div class="column-body">
-          <div class="column-cat">成績レビュー</div>
-          <div class="column-title">AIが外した推奨を解剖する【2026年4月版】</div>
-          <div class="column-desc">期待通りに動かなかった推奨銘柄について、なぜスコアが高かったのに外れたのかを率直に分析。スコアの限界と改善点も正直に書きます。</div>
-          <div class="column-date">2026年5月1日</div>
-        </div>
-      </a>
-      
-    </div>
+  <!-- カテゴリフィルターバー -->
+  <div class="col-filter-wrap">
+    <button class="col-filter-btn active" data-cat="all">
+      すべて <span class="col-filter-count">25</span>
+    </button>
+    
+    
+    <button class="col-filter-btn" data-cat="成績レビュー">
+      成績レビュー <span class="col-filter-count">1</span>
+    </button>
+    
+    
+    <button class="col-filter-btn" data-cat="月次レポート">
+      月次レポート <span class="col-filter-count">1</span>
+    </button>
+    
+    
+    <button class="col-filter-btn" data-cat="StockInsight AIの仕組み">
+      StockInsight AIの仕組み <span class="col-filter-count">2</span>
+    </button>
+    
+    
+    <button class="col-filter-btn" data-cat="ファンダメンタル分析">
+      ファンダメンタル分析 <span class="col-filter-count">1</span>
+    </button>
+    
+    
+    <button class="col-filter-btn" data-cat="証券口座">
+      証券口座 <span class="col-filter-count">3</span>
+    </button>
+    
+    
+    <button class="col-filter-btn" data-cat="NISA・税制">
+      NISA・税制 <span class="col-filter-count">1</span>
+    </button>
+    
+    
+    <button class="col-filter-btn" data-cat="テクニカル分析">
+      テクニカル分析 <span class="col-filter-count">1</span>
+    </button>
+    
+    
+    <button class="col-filter-btn" data-cat="実践">
+      実践 <span class="col-filter-count">1</span>
+    </button>
+    
+    
+    <button class="col-filter-btn" data-cat="サービス紹介">
+      サービス紹介 <span class="col-filter-count">1</span>
+    </button>
+    
+    
+    <button class="col-filter-btn" data-cat="投資戦略">
+      投資戦略 <span class="col-filter-count">1</span>
+    </button>
+    
+    
+    <button class="col-filter-btn" data-cat="ファンダメンタル">
+      ファンダメンタル <span class="col-filter-count">4</span>
+    </button>
+    
+    
+    <button class="col-filter-btn" data-cat="テクニカル">
+      テクニカル <span class="col-filter-count">3</span>
+    </button>
+    
+    
+    <button class="col-filter-btn" data-cat="ロジック解説">
+      ロジック解説 <span class="col-filter-count">2</span>
+    </button>
+    
+    
+    <button class="col-filter-btn" data-cat="入門">
+      入門 <span class="col-filter-count">3</span>
+    </button>
+    
   </div>
-  
-  
-  <div style="margin-bottom:36px;">
-    <div style="font-size:.82rem;font-weight:700;color:var(--accent-dark);margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--accent);">
-      月次レポート（1件）
-    </div>
-    <div class="column-grid">
-      
-      <a class="column-card" href="/column/monthly-report-2026-04/">
-        <div class="column-thumb">
-          <img src="/assets/img/col_default.png" alt="2026年4月の推奨銘柄成績レポート" loading="lazy">
-          
-        </div>
-        <div class="column-body">
-          <div class="column-cat">月次レポート</div>
-          <div class="column-title">2026年4月の推奨銘柄成績レポート</div>
-          <div class="column-desc">2026年4月にStockInsight AIが推奨した銘柄の成績を月次でまとめたレポートです。全銘柄の騰落率・勝率・TOPIX比較を公開します。</div>
-          <div class="column-date">2026年4月30日</div>
-        </div>
-      </a>
-      
-    </div>
+
+  <!-- カード一覧（全カテゴリ混在） -->
+  <div class="column-grid" id="col-grid">
+    
+    <a class="column-card" href="/column/failure-autopsy-2026-04/" data-cat="成績レビュー">
+      <div class="column-thumb">
+        <img src="/assets/img/col_default.png" alt="AIが外した推奨を解剖する【2026年4月版】" loading="lazy">
+        <span class="new-badge">NEW</span>
+      </div>
+      <div class="column-body">
+        <div class="column-cat">成績レビュー</div>
+        <div class="column-title">AIが外した推奨を解剖する【2026年4月版】</div>
+        <div class="column-desc">期待通りに動かなかった推奨銘柄について、なぜスコアが高かったのに外れたのかを率直に分析。スコアの限界と改善点も正直に書きます。</div>
+        <div class="column-date">2026年5月1日</div>
+      </div>
+    </a>
+    
+    <a class="column-card" href="/column/monthly-report-2026-04/" data-cat="月次レポート">
+      <div class="column-thumb">
+        <img src="/assets/img/col_default.png" alt="2026年4月の推奨銘柄成績レポート" loading="lazy">
+        
+      </div>
+      <div class="column-body">
+        <div class="column-cat">月次レポート</div>
+        <div class="column-title">2026年4月の推奨銘柄成績レポート</div>
+        <div class="column-desc">2026年4月にStockInsight AIが推奨した銘柄の成績を月次でまとめたレポートです。全銘柄の騰落率・勝率・TOPIX比較を公開します。</div>
+        <div class="column-date">2026年4月30日</div>
+      </div>
+    </a>
+    
+    <a class="column-card" href="/column/claude-code-auto-implementation/" data-cat="StockInsight AIの仕組み">
+      <div class="column-thumb">
+        <img src="/assets/img/col_default.png" alt="Claude Codeで株式分析システムを完全自動実装｜AIとペアプログラミングした開発体験記" loading="lazy">
+        
+      </div>
+      <div class="column-body">
+        <div class="column-cat">StockInsight AIの仕組み</div>
+        <div class="column-title">Claude Codeで株式分析システムを完全自動実装｜AIとペアプログラミングした開発体験記</div>
+        <div class="column-desc">AIアシスタント「Claude Code」を使って日本株の中長期スクリーニングシステムを自動実装した体験を解説。設計から実装・テストまでAIが担った工程と、人間が判断した工程を具体的に紹介します。</div>
+        <div class="column-date">2026年4月30日</div>
+      </div>
+    </a>
+    
+    <a class="column-card" href="/column/ai-stock-screening-logic/" data-cat="StockInsight AIの仕組み">
+      <div class="column-thumb">
+        <img src="/assets/img/col_default.png" alt="3人の仮想投資家が激論：このロジックで本当に勝てるのか？" loading="lazy">
+        
+      </div>
+      <div class="column-body">
+        <div class="column-cat">StockInsight AIの仕組み</div>
+        <div class="column-title">3人の仮想投資家が激論：このロジックで本当に勝てるのか？</div>
+        <div class="column-desc">StockInsight AIのスコアリング設計の舞台裏。バリュー・グロース・テクニカルの3つの視点が衝突し、テクニカル40点・ファンダ40点・センチメント20点という設計に落ち着くまでの議論。</div>
+        <div class="column-date">2026年4月28日</div>
+      </div>
+    </a>
+    
+    <a class="column-card" href="/column/peg-ratio-explained/" data-cat="ファンダメンタル分析">
+      <div class="column-thumb">
+        <img src="/assets/img/col_default.png" alt="PEG比率とは？PERだけでは見えない「成長を考慮した割安感」を測る方法" loading="lazy">
+        
+      </div>
+      <div class="column-body">
+        <div class="column-cat">ファンダメンタル分析</div>
+        <div class="column-title">PEG比率とは？PERだけでは見えない「成長を考慮した割安感」を測る方法</div>
+        <div class="column-desc">PEG比率（PER÷利益成長率）の計算方法と活用法を解説。バリュー株とグロース株を横断的に比較できる、中長期投資家必須の指標です。</div>
+        <div class="column-date">2026年4月26日</div>
+      </div>
+    </a>
+    
+    <a class="column-card" href="/column/best-online-brokerage-2026/" data-cat="証券口座">
+      <div class="column-thumb">
+        <img src="/assets/img/col_default.png" alt="【2026年版】ネット証券おすすめ比較｜中長期投資家向けに徹底解説" loading="lazy">
+        
+      </div>
+      <div class="column-body">
+        <div class="column-cat">証券口座</div>
+        <div class="column-title">【2026年版】ネット証券おすすめ比較｜中長期投資家向けに徹底解説</div>
+        <div class="column-desc">SBI証券・楽天証券・松井証券・マネックス証券を中長期投資家の視点で比較。手数料・ツール・NISA対応など詳細を解説します。</div>
+        <div class="column-date">2026年4月25日</div>
+      </div>
+    </a>
+    
+    <a class="column-card" href="/column/rakuten-securities-account/" data-cat="証券口座">
+      <div class="column-thumb">
+        <img src="/assets/img/col_default.png" alt="楽天証券の口座開設方法｜楽天ポイントで投資できる！スマホ完結手順を解説" loading="lazy">
+        
+      </div>
+      <div class="column-body">
+        <div class="column-cat">証券口座</div>
+        <div class="column-title">楽天証券の口座開設方法｜楽天ポイントで投資できる！スマホ完結手順を解説</div>
+        <div class="column-desc">楽天証券の口座開設手順を詳しく解説。楽天ポイントで株が買える・楽天銀行との連携で金利0.1%など、楽天ユーザーに特におすすめの証券会社です。</div>
+        <div class="column-date">2026年4月24日</div>
+      </div>
+    </a>
+    
+    <a class="column-card" href="/column/how-to-open-sbi-securities/" data-cat="証券口座">
+      <div class="column-thumb">
+        <img src="/assets/img/col_default.png" alt="SBI証券の口座開設方法｜スマホで最短10分・手順を画像付きで解説" loading="lazy">
+        
+      </div>
+      <div class="column-body">
+        <div class="column-cat">証券口座</div>
+        <div class="column-title">SBI証券の口座開設方法｜スマホで最短10分・手順を画像付きで解説</div>
+        <div class="column-desc">SBI証券の口座開設手順を初心者向けに解説。必要書類・スマホ完結の申し込み方法・NISA口座の同時開設方法まで詳しく説明します。</div>
+        <div class="column-date">2026年4月23日</div>
+      </div>
+    </a>
+    
+    <a class="column-card" href="/column/nisa-growth-investment/" data-cat="NISA・税制">
+      <div class="column-thumb">
+        <img src="/assets/img/col_default.png" alt="NISA成長投資枠で中長期スイングトレード｜年240万円を非課税で運用する方法" loading="lazy">
+        
+      </div>
+      <div class="column-body">
+        <div class="column-cat">NISA・税制</div>
+        <div class="column-title">NISA成長投資枠で中長期スイングトレード｜年240万円を非課税で運用する方法</div>
+        <div class="column-desc">新NISAの成長投資枠（年240万円）を使って中長期投資（1〜3ヶ月）を行う方法を解説。対象銘柄・メリット・注意点を具体的に説明します。</div>
+        <div class="column-date">2026年4月22日</div>
+      </div>
+    </a>
+    
+    <a class="column-card" href="/column/swing-trade-entry-timing/" data-cat="テクニカル分析">
+      <div class="column-thumb">
+        <img src="/assets/img/col_default.png" alt="スイングトレードのエントリータイミング｜移動平均線とMACDで見極める方法" loading="lazy">
+        
+      </div>
+      <div class="column-body">
+        <div class="column-cat">テクニカル分析</div>
+        <div class="column-title">スイングトレードのエントリータイミング｜移動平均線とMACDで見極める方法</div>
+        <div class="column-desc">中長期スイングトレードで使える、移動平均線とMACDを組み合わせたエントリータイミングの見極め方を実例付きで解説します。</div>
+        <div class="column-date">2026年4月20日</div>
+      </div>
+    </a>
+    
+    <a class="column-card" href="/column/how-to-review-picks/" data-cat="実践">
+      <div class="column-thumb">
+        <img src="/assets/img/col_default.png" alt="推奨銘柄の成績を自分で振り返る方法：投資スキルを高めるレビュー術" loading="lazy">
+        
+      </div>
+      <div class="column-body">
+        <div class="column-cat">実践</div>
+        <div class="column-title">推奨銘柄の成績を自分で振り返る方法：投資スキルを高めるレビュー術</div>
+        <div class="column-desc">推奨された銘柄の成績を自分で振り返り、投資判断の精度を高めるための実践的なレビュー方法を解説します。</div>
+        <div class="column-date">2026年4月16日</div>
+      </div>
+    </a>
+    
+    <a class="column-card" href="/column/why-publish-results/" data-cat="サービス紹介">
+      <div class="column-thumb">
+        <img src="/assets/img/col_default.png" alt="推奨銘柄が外れた。でも、隠しませんでした。" loading="lazy">
+        
+      </div>
+      <div class="column-body">
+        <div class="column-cat">サービス紹介</div>
+        <div class="column-title">推奨銘柄が外れた。でも、隠しませんでした。</div>
+        <div class="column-desc">外れた推奨を隠せばラクでした。でも、そうしませんでした。StockInsight AIが成績をすべてさらし続ける、本当の理由を書きます。</div>
+        <div class="column-date">2026年4月15日</div>
+      </div>
+    </a>
+    
+    <a class="column-card" href="/column/sector-diversification/" data-cat="投資戦略">
+      <div class="column-thumb">
+        <img src="/assets/img/col_default.png" alt="セクター分散の重要性：なぜ同一業種への集中投資を避けるのか" loading="lazy">
+        
+      </div>
+      <div class="column-body">
+        <div class="column-cat">投資戦略</div>
+        <div class="column-title">セクター分散の重要性：なぜ同一業種への集中投資を避けるのか</div>
+        <div class="column-desc">株式投資におけるセクター分散の意味と重要性を解説。なぜ本サービスが同一セクター最大3銘柄のルールを設けているのかを説明します。</div>
+        <div class="column-date">2026年4月14日</div>
+      </div>
+    </a>
+    
+    <a class="column-card" href="/column/revenue-growth-10pct/" data-cat="ファンダメンタル">
+      <div class="column-thumb">
+        <img src="/assets/img/col_default.png" alt="売上成長率+10%を重視する理由：なぜ「稼ぐ力」より「伸びる力」なのか" loading="lazy">
+        
+      </div>
+      <div class="column-body">
+        <div class="column-cat">ファンダメンタル</div>
+        <div class="column-title">売上成長率+10%を重視する理由：なぜ「稼ぐ力」より「伸びる力」なのか</div>
+        <div class="column-desc">売上高成長率がなぜ中長期投資で重要なのか、なぜ+10%を一つの目安にするのかを解説。成長株投資の基本的な考え方をわかりやすく説明します。</div>
+        <div class="column-date">2026年4月13日</div>
+      </div>
+    </a>
+    
+    <a class="column-card" href="/column/equity-ratio-30pct/" data-cat="ファンダメンタル">
+      <div class="column-thumb">
+        <img src="/assets/img/col_default.png" alt="自己資本比率30%を基準にする理由：財務の健全性をどう見るか" loading="lazy">
+        
+      </div>
+      <div class="column-body">
+        <div class="column-cat">ファンダメンタル</div>
+        <div class="column-title">自己資本比率30%を基準にする理由：財務の健全性をどう見るか</div>
+        <div class="column-desc">自己資本比率の意味と計算方法、なぜ30%を基準に設定しているのかを解説。企業の財務健全性と投資リスクの関係をわかりやすく説明します。</div>
+        <div class="column-date">2026年4月12日</div>
+      </div>
+    </a>
+    
+    <a class="column-card" href="/column/volume-and-price/" data-cat="テクニカル">
+      <div class="column-thumb">
+        <img src="/assets/img/col_default.png" alt="出来高と株価の関係：なぜ出来高増加が重要なのか" loading="lazy">
+        
+      </div>
+      <div class="column-body">
+        <div class="column-cat">テクニカル</div>
+        <div class="column-title">出来高と株価の関係：なぜ出来高増加が重要なのか</div>
+        <div class="column-desc">出来高（売買高）が株価に与える影響を解説。出来高を使ったトレンド確認方法と、なぜ本サービスのスコアリングに組み込まれているかを説明します。</div>
+        <div class="column-date">2026年4月11日</div>
+      </div>
+    </a>
+    
+    <a class="column-card" href="/column/ma25w-practical-guide/" data-cat="テクニカル">
+      <div class="column-thumb">
+        <img src="/assets/img/col_default.png" alt="25週移動平均線の実践的な使い方：中長期投資で最も頼れる指標" loading="lazy">
+        
+      </div>
+      <div class="column-body">
+        <div class="column-cat">テクニカル</div>
+        <div class="column-title">25週移動平均線の実践的な使い方：中長期投資で最も頼れる指標</div>
+        <div class="column-desc">25週移動平均線（25週MA）の意味と実践的な使い方を解説。中長期トレードでの買いタイミングの見極め方を具体的に説明します。</div>
+        <div class="column-date">2026年4月10日</div>
+      </div>
+    </a>
+    
+    <a class="column-card" href="/column/sentiment-analysis-news/" data-cat="ロジック解説">
+      <div class="column-thumb">
+        <img src="/assets/img/col_default.png" alt="センチメント分析とは？ニュースが株価に与える影響を読む" loading="lazy">
+        
+      </div>
+      <div class="column-body">
+        <div class="column-cat">ロジック解説</div>
+        <div class="column-title">センチメント分析とは？ニュースが株価に与える影響を読む</div>
+        <div class="column-desc">株式投資におけるセンチメント分析の意味と手法を解説。業績修正・ニュースのポジネガ判定がどのように銘柄評価に使われるかを説明します。</div>
+        <div class="column-date">2026年4月9日</div>
+      </div>
+    </a>
+    
+    <a class="column-card" href="/column/what-is-backtest/" data-cat="入門">
+      <div class="column-thumb">
+        <img src="/assets/img/col_default.png" alt="バックテストとは何か？投資戦略の過去成績を検証する方法" loading="lazy">
+        
+      </div>
+      <div class="column-body">
+        <div class="column-cat">入門</div>
+        <div class="column-title">バックテストとは何か？投資戦略の過去成績を検証する方法</div>
+        <div class="column-desc">バックテストの意味・やり方・限界について解説。過去データを使った戦略検証がなぜ重要で、どう読み解けばよいかをわかりやすく説明します。</div>
+        <div class="column-date">2026年4月8日</div>
+      </div>
+    </a>
+    
+    <a class="column-card" href="/column/our-scoring-logic-explained/" data-cat="ロジック解説">
+      <div class="column-thumb">
+        <img src="/assets/img/col_default.png" alt="StockInsight AIの選定ロジック完全解説：100点満点の採点基準" loading="lazy">
+        
+      </div>
+      <div class="column-body">
+        <div class="column-cat">ロジック解説</div>
+        <div class="column-title">StockInsight AIの選定ロジック完全解説：100点満点の採点基準</div>
+        <div class="column-desc">AIが推奨銘柄を選ぶ具体的なスコアリング方法を全公開。テクニカル40点・ファンダメンタル40点・センチメント20点の詳細な採点基準を解説します。</div>
+        <div class="column-date">2026年4月7日</div>
+      </div>
+    </a>
+    
+    <a class="column-card" href="/column/value-stock-pbr-per/" data-cat="ファンダメンタル">
+      <div class="column-thumb">
+        <img src="/assets/img/col_default.png" alt="割安株の見つけ方：PBRとPERを使いこなす" loading="lazy">
+        
+      </div>
+      <div class="column-body">
+        <div class="column-cat">ファンダメンタル</div>
+        <div class="column-title">割安株の見つけ方：PBRとPERを使いこなす</div>
+        <div class="column-desc">PBR（株価純資産倍率）とPER（株価収益率）の意味・計算方法・日本株での活用法を初心者向けにわかりやすく解説します。</div>
+        <div class="column-date">2026年4月6日</div>
+      </div>
+    </a>
+    
+    <a class="column-card" href="/column/what-is-screening/" data-cat="入門">
+      <div class="column-thumb">
+        <img src="/assets/img/col_default.png" alt="4,000銘柄を全部調べようとして、挫折した話" loading="lazy">
+        
+      </div>
+      <div class="column-body">
+        <div class="column-cat">入門</div>
+        <div class="column-title">4,000銘柄を全部調べようとして、挫折した話</div>
+        <div class="column-desc">スクリーニングとは何か、なぜ個人投資家に必要なのか。「全銘柄チェック」の限界から始まる、AI銘柄選定の入口となる記事。</div>
+        <div class="column-date">2026年4月5日</div>
+      </div>
+    </a>
+    
+    <a class="column-card" href="/column/fundamental-roe-peg-basics/" data-cat="ファンダメンタル">
+      <div class="column-thumb">
+        <img src="/assets/img/col_default.png" alt="ファンダメンタル分析入門：ROEとPEGレシオの見方" loading="lazy">
+        
+      </div>
+      <div class="column-body">
+        <div class="column-cat">ファンダメンタル</div>
+        <div class="column-title">ファンダメンタル分析入門：ROEとPEGレシオの見方</div>
+        <div class="column-desc">株式投資のファンダメンタル分析の基本。ROE（自己資本利益率）とPEGレシオの意味・計算方法・使い方をやさしく解説します。</div>
+        <div class="column-date">2026年4月4日</div>
+      </div>
+    </a>
+    
+    <a class="column-card" href="/column/technical-macd-ma-basics/" data-cat="テクニカル">
+      <div class="column-thumb">
+        <img src="/assets/img/col_default.png" alt="テクニカル分析入門：MACDと移動平均線の使い方" loading="lazy">
+        
+      </div>
+      <div class="column-body">
+        <div class="column-cat">テクニカル</div>
+        <div class="column-title">テクニカル分析入門：MACDと移動平均線の使い方</div>
+        <div class="column-desc">株式投資のテクニカル分析の基本、MACD（マックディー）と移動平均線の仕組みと読み方をわかりやすく解説します。</div>
+        <div class="column-date">2026年4月3日</div>
+      </div>
+    </a>
+    
+    <a class="column-card" href="/column/intro-medium-term-investing/" data-cat="入門">
+      <div class="column-thumb">
+        <img src="/assets/img/col_default.png" alt="中長期投資とは何か？短期トレードとの違いとメリットを解説" loading="lazy">
+        
+      </div>
+      <div class="column-body">
+        <div class="column-cat">入門</div>
+        <div class="column-title">中長期投資とは何か？短期トレードとの違いとメリットを解説</div>
+        <div class="column-desc">中長期投資（1〜3ヶ月）の定義・特徴・短期トレードとの違いを解説。なぜStockInsight AIが中長期を対象にするのかも説明します。</div>
+        <div class="column-date">2026年4月1日</div>
+      </div>
+    </a>
+    
   </div>
-  
-  
-  <div style="margin-bottom:36px;">
-    <div style="font-size:.82rem;font-weight:700;color:var(--accent-dark);margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--accent);">
-      StockInsight AIの仕組み（2件）
-    </div>
-    <div class="column-grid">
-      
-      <a class="column-card" href="/column/claude-code-auto-implementation/">
-        <div class="column-thumb">
-          <img src="/assets/img/col_default.png" alt="Claude Codeで株式分析システムを完全自動実装｜AIとペアプログラミングした開発体験記" loading="lazy">
-          
-        </div>
-        <div class="column-body">
-          <div class="column-cat">StockInsight AIの仕組み</div>
-          <div class="column-title">Claude Codeで株式分析システムを完全自動実装｜AIとペアプログラミングした開発体験記</div>
-          <div class="column-desc">AIアシスタント「Claude Code」を使って日本株の中長期スクリーニングシステムを自動実装した体験を解説。設計から実装・テストまでAIが担った工程と、人間が判断した工程を具体的に紹介します。</div>
-          <div class="column-date">2026年4月30日</div>
-        </div>
-      </a>
-      
-      <a class="column-card" href="/column/ai-stock-screening-logic/">
-        <div class="column-thumb">
-          <img src="/assets/img/col_default.png" alt="3人の仮想投資家が激論：このロジックで本当に勝てるのか？" loading="lazy">
-          
-        </div>
-        <div class="column-body">
-          <div class="column-cat">StockInsight AIの仕組み</div>
-          <div class="column-title">3人の仮想投資家が激論：このロジックで本当に勝てるのか？</div>
-          <div class="column-desc">StockInsight AIのスコアリング設計の舞台裏。バリュー・グロース・テクニカルの3つの視点が衝突し、テクニカル40点・ファンダ40点・センチメント20点という設計に落ち着くまでの議論。</div>
-          <div class="column-date">2026年4月28日</div>
-        </div>
-      </a>
-      
-    </div>
+
+  <div id="col-empty" style="display:none;" class="empty-state">
+    <p>このカテゴリのコラムはまだありません。</p>
   </div>
-  
-  
-  <div style="margin-bottom:36px;">
-    <div style="font-size:.82rem;font-weight:700;color:var(--accent-dark);margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--accent);">
-      ファンダメンタル分析（1件）
-    </div>
-    <div class="column-grid">
-      
-      <a class="column-card" href="/column/peg-ratio-explained/">
-        <div class="column-thumb">
-          <img src="/assets/img/col_default.png" alt="PEG比率とは？PERだけでは見えない「成長を考慮した割安感」を測る方法" loading="lazy">
-          
-        </div>
-        <div class="column-body">
-          <div class="column-cat">ファンダメンタル分析</div>
-          <div class="column-title">PEG比率とは？PERだけでは見えない「成長を考慮した割安感」を測る方法</div>
-          <div class="column-desc">PEG比率（PER÷利益成長率）の計算方法と活用法を解説。バリュー株とグロース株を横断的に比較できる、中長期投資家必須の指標です。</div>
-          <div class="column-date">2026年4月26日</div>
-        </div>
-      </a>
-      
-    </div>
-  </div>
-  
-  
-  <div style="margin-bottom:36px;">
-    <div style="font-size:.82rem;font-weight:700;color:var(--accent-dark);margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--accent);">
-      証券口座（3件）
-    </div>
-    <div class="column-grid">
-      
-      <a class="column-card" href="/column/best-online-brokerage-2026/">
-        <div class="column-thumb">
-          <img src="/assets/img/col_default.png" alt="【2026年版】ネット証券おすすめ比較｜中長期投資家向けに徹底解説" loading="lazy">
-          
-        </div>
-        <div class="column-body">
-          <div class="column-cat">証券口座</div>
-          <div class="column-title">【2026年版】ネット証券おすすめ比較｜中長期投資家向けに徹底解説</div>
-          <div class="column-desc">SBI証券・楽天証券・松井証券・マネックス証券を中長期投資家の視点で比較。手数料・ツール・NISA対応など詳細を解説します。</div>
-          <div class="column-date">2026年4月25日</div>
-        </div>
-      </a>
-      
-      <a class="column-card" href="/column/rakuten-securities-account/">
-        <div class="column-thumb">
-          <img src="/assets/img/col_default.png" alt="楽天証券の口座開設方法｜楽天ポイントで投資できる！スマホ完結手順を解説" loading="lazy">
-          
-        </div>
-        <div class="column-body">
-          <div class="column-cat">証券口座</div>
-          <div class="column-title">楽天証券の口座開設方法｜楽天ポイントで投資できる！スマホ完結手順を解説</div>
-          <div class="column-desc">楽天証券の口座開設手順を詳しく解説。楽天ポイントで株が買える・楽天銀行との連携で金利0.1%など、楽天ユーザーに特におすすめの証券会社です。</div>
-          <div class="column-date">2026年4月24日</div>
-        </div>
-      </a>
-      
-      <a class="column-card" href="/column/how-to-open-sbi-securities/">
-        <div class="column-thumb">
-          <img src="/assets/img/col_default.png" alt="SBI証券の口座開設方法｜スマホで最短10分・手順を画像付きで解説" loading="lazy">
-          
-        </div>
-        <div class="column-body">
-          <div class="column-cat">証券口座</div>
-          <div class="column-title">SBI証券の口座開設方法｜スマホで最短10分・手順を画像付きで解説</div>
-          <div class="column-desc">SBI証券の口座開設手順を初心者向けに解説。必要書類・スマホ完結の申し込み方法・NISA口座の同時開設方法まで詳しく説明します。</div>
-          <div class="column-date">2026年4月23日</div>
-        </div>
-      </a>
-      
-    </div>
-  </div>
-  
-  
-  <div style="margin-bottom:36px;">
-    <div style="font-size:.82rem;font-weight:700;color:var(--accent-dark);margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--accent);">
-      NISA・税制（1件）
-    </div>
-    <div class="column-grid">
-      
-      <a class="column-card" href="/column/nisa-growth-investment/">
-        <div class="column-thumb">
-          <img src="/assets/img/col_default.png" alt="NISA成長投資枠で中長期スイングトレード｜年240万円を非課税で運用する方法" loading="lazy">
-          
-        </div>
-        <div class="column-body">
-          <div class="column-cat">NISA・税制</div>
-          <div class="column-title">NISA成長投資枠で中長期スイングトレード｜年240万円を非課税で運用する方法</div>
-          <div class="column-desc">新NISAの成長投資枠（年240万円）を使って中長期投資（1〜3ヶ月）を行う方法を解説。対象銘柄・メリット・注意点を具体的に説明します。</div>
-          <div class="column-date">2026年4月22日</div>
-        </div>
-      </a>
-      
-    </div>
-  </div>
-  
-  
-  <div style="margin-bottom:36px;">
-    <div style="font-size:.82rem;font-weight:700;color:var(--accent-dark);margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--accent);">
-      テクニカル分析（1件）
-    </div>
-    <div class="column-grid">
-      
-      <a class="column-card" href="/column/swing-trade-entry-timing/">
-        <div class="column-thumb">
-          <img src="/assets/img/col_default.png" alt="スイングトレードのエントリータイミング｜移動平均線とMACDで見極める方法" loading="lazy">
-          
-        </div>
-        <div class="column-body">
-          <div class="column-cat">テクニカル分析</div>
-          <div class="column-title">スイングトレードのエントリータイミング｜移動平均線とMACDで見極める方法</div>
-          <div class="column-desc">中長期スイングトレードで使える、移動平均線とMACDを組み合わせたエントリータイミングの見極め方を実例付きで解説します。</div>
-          <div class="column-date">2026年4月20日</div>
-        </div>
-      </a>
-      
-    </div>
-  </div>
-  
-  
-  <div style="margin-bottom:36px;">
-    <div style="font-size:.82rem;font-weight:700;color:var(--accent-dark);margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--accent);">
-      実践（1件）
-    </div>
-    <div class="column-grid">
-      
-      <a class="column-card" href="/column/how-to-review-picks/">
-        <div class="column-thumb">
-          <img src="/assets/img/col_default.png" alt="推奨銘柄の成績を自分で振り返る方法：投資スキルを高めるレビュー術" loading="lazy">
-          
-        </div>
-        <div class="column-body">
-          <div class="column-cat">実践</div>
-          <div class="column-title">推奨銘柄の成績を自分で振り返る方法：投資スキルを高めるレビュー術</div>
-          <div class="column-desc">推奨された銘柄の成績を自分で振り返り、投資判断の精度を高めるための実践的なレビュー方法を解説します。</div>
-          <div class="column-date">2026年4月16日</div>
-        </div>
-      </a>
-      
-    </div>
-  </div>
-  
-  
-  <div style="margin-bottom:36px;">
-    <div style="font-size:.82rem;font-weight:700;color:var(--accent-dark);margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--accent);">
-      サービス紹介（1件）
-    </div>
-    <div class="column-grid">
-      
-      <a class="column-card" href="/column/why-publish-results/">
-        <div class="column-thumb">
-          <img src="/assets/img/col_default.png" alt="推奨銘柄が外れた。でも、隠しませんでした。" loading="lazy">
-          
-        </div>
-        <div class="column-body">
-          <div class="column-cat">サービス紹介</div>
-          <div class="column-title">推奨銘柄が外れた。でも、隠しませんでした。</div>
-          <div class="column-desc">外れた推奨を隠せばラクでした。でも、そうしませんでした。StockInsight AIが成績をすべてさらし続ける、本当の理由を書きます。</div>
-          <div class="column-date">2026年4月15日</div>
-        </div>
-      </a>
-      
-    </div>
-  </div>
-  
-  
-  <div style="margin-bottom:36px;">
-    <div style="font-size:.82rem;font-weight:700;color:var(--accent-dark);margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--accent);">
-      投資戦略（1件）
-    </div>
-    <div class="column-grid">
-      
-      <a class="column-card" href="/column/sector-diversification/">
-        <div class="column-thumb">
-          <img src="/assets/img/col_default.png" alt="セクター分散の重要性：なぜ同一業種への集中投資を避けるのか" loading="lazy">
-          
-        </div>
-        <div class="column-body">
-          <div class="column-cat">投資戦略</div>
-          <div class="column-title">セクター分散の重要性：なぜ同一業種への集中投資を避けるのか</div>
-          <div class="column-desc">株式投資におけるセクター分散の意味と重要性を解説。なぜ本サービスが同一セクター最大3銘柄のルールを設けているのかを説明します。</div>
-          <div class="column-date">2026年4月14日</div>
-        </div>
-      </a>
-      
-    </div>
-  </div>
-  
-  
-  <div style="margin-bottom:36px;">
-    <div style="font-size:.82rem;font-weight:700;color:var(--accent-dark);margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--accent);">
-      ファンダメンタル（4件）
-    </div>
-    <div class="column-grid">
-      
-      <a class="column-card" href="/column/revenue-growth-10pct/">
-        <div class="column-thumb">
-          <img src="/assets/img/col_default.png" alt="売上成長率+10%を重視する理由：なぜ「稼ぐ力」より「伸びる力」なのか" loading="lazy">
-          
-        </div>
-        <div class="column-body">
-          <div class="column-cat">ファンダメンタル</div>
-          <div class="column-title">売上成長率+10%を重視する理由：なぜ「稼ぐ力」より「伸びる力」なのか</div>
-          <div class="column-desc">売上高成長率がなぜ中長期投資で重要なのか、なぜ+10%を一つの目安にするのかを解説。成長株投資の基本的な考え方をわかりやすく説明します。</div>
-          <div class="column-date">2026年4月13日</div>
-        </div>
-      </a>
-      
-      <a class="column-card" href="/column/equity-ratio-30pct/">
-        <div class="column-thumb">
-          <img src="/assets/img/col_default.png" alt="自己資本比率30%を基準にする理由：財務の健全性をどう見るか" loading="lazy">
-          
-        </div>
-        <div class="column-body">
-          <div class="column-cat">ファンダメンタル</div>
-          <div class="column-title">自己資本比率30%を基準にする理由：財務の健全性をどう見るか</div>
-          <div class="column-desc">自己資本比率の意味と計算方法、なぜ30%を基準に設定しているのかを解説。企業の財務健全性と投資リスクの関係をわかりやすく説明します。</div>
-          <div class="column-date">2026年4月12日</div>
-        </div>
-      </a>
-      
-      <a class="column-card" href="/column/value-stock-pbr-per/">
-        <div class="column-thumb">
-          <img src="/assets/img/col_default.png" alt="割安株の見つけ方：PBRとPERを使いこなす" loading="lazy">
-          
-        </div>
-        <div class="column-body">
-          <div class="column-cat">ファンダメンタル</div>
-          <div class="column-title">割安株の見つけ方：PBRとPERを使いこなす</div>
-          <div class="column-desc">PBR（株価純資産倍率）とPER（株価収益率）の意味・計算方法・日本株での活用法を初心者向けにわかりやすく解説します。</div>
-          <div class="column-date">2026年4月6日</div>
-        </div>
-      </a>
-      
-      <a class="column-card" href="/column/fundamental-roe-peg-basics/">
-        <div class="column-thumb">
-          <img src="/assets/img/col_default.png" alt="ファンダメンタル分析入門：ROEとPEGレシオの見方" loading="lazy">
-          
-        </div>
-        <div class="column-body">
-          <div class="column-cat">ファンダメンタル</div>
-          <div class="column-title">ファンダメンタル分析入門：ROEとPEGレシオの見方</div>
-          <div class="column-desc">株式投資のファンダメンタル分析の基本。ROE（自己資本利益率）とPEGレシオの意味・計算方法・使い方をやさしく解説します。</div>
-          <div class="column-date">2026年4月4日</div>
-        </div>
-      </a>
-      
-    </div>
-  </div>
-  
-  
-  <div style="margin-bottom:36px;">
-    <div style="font-size:.82rem;font-weight:700;color:var(--accent-dark);margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--accent);">
-      テクニカル（3件）
-    </div>
-    <div class="column-grid">
-      
-      <a class="column-card" href="/column/volume-and-price/">
-        <div class="column-thumb">
-          <img src="/assets/img/col_default.png" alt="出来高と株価の関係：なぜ出来高増加が重要なのか" loading="lazy">
-          
-        </div>
-        <div class="column-body">
-          <div class="column-cat">テクニカル</div>
-          <div class="column-title">出来高と株価の関係：なぜ出来高増加が重要なのか</div>
-          <div class="column-desc">出来高（売買高）が株価に与える影響を解説。出来高を使ったトレンド確認方法と、なぜ本サービスのスコアリングに組み込まれているかを説明します。</div>
-          <div class="column-date">2026年4月11日</div>
-        </div>
-      </a>
-      
-      <a class="column-card" href="/column/ma25w-practical-guide/">
-        <div class="column-thumb">
-          <img src="/assets/img/col_default.png" alt="25週移動平均線の実践的な使い方：中長期投資で最も頼れる指標" loading="lazy">
-          
-        </div>
-        <div class="column-body">
-          <div class="column-cat">テクニカル</div>
-          <div class="column-title">25週移動平均線の実践的な使い方：中長期投資で最も頼れる指標</div>
-          <div class="column-desc">25週移動平均線（25週MA）の意味と実践的な使い方を解説。中長期トレードでの買いタイミングの見極め方を具体的に説明します。</div>
-          <div class="column-date">2026年4月10日</div>
-        </div>
-      </a>
-      
-      <a class="column-card" href="/column/technical-macd-ma-basics/">
-        <div class="column-thumb">
-          <img src="/assets/img/col_default.png" alt="テクニカル分析入門：MACDと移動平均線の使い方" loading="lazy">
-          
-        </div>
-        <div class="column-body">
-          <div class="column-cat">テクニカル</div>
-          <div class="column-title">テクニカル分析入門：MACDと移動平均線の使い方</div>
-          <div class="column-desc">株式投資のテクニカル分析の基本、MACD（マックディー）と移動平均線の仕組みと読み方をわかりやすく解説します。</div>
-          <div class="column-date">2026年4月3日</div>
-        </div>
-      </a>
-      
-    </div>
-  </div>
-  
-  
-  <div style="margin-bottom:36px;">
-    <div style="font-size:.82rem;font-weight:700;color:var(--accent-dark);margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--accent);">
-      ロジック解説（2件）
-    </div>
-    <div class="column-grid">
-      
-      <a class="column-card" href="/column/sentiment-analysis-news/">
-        <div class="column-thumb">
-          <img src="/assets/img/col_default.png" alt="センチメント分析とは？ニュースが株価に与える影響を読む" loading="lazy">
-          
-        </div>
-        <div class="column-body">
-          <div class="column-cat">ロジック解説</div>
-          <div class="column-title">センチメント分析とは？ニュースが株価に与える影響を読む</div>
-          <div class="column-desc">株式投資におけるセンチメント分析の意味と手法を解説。業績修正・ニュースのポジネガ判定がどのように銘柄評価に使われるかを説明します。</div>
-          <div class="column-date">2026年4月9日</div>
-        </div>
-      </a>
-      
-      <a class="column-card" href="/column/our-scoring-logic-explained/">
-        <div class="column-thumb">
-          <img src="/assets/img/col_default.png" alt="StockInsight AIの選定ロジック完全解説：100点満点の採点基準" loading="lazy">
-          
-        </div>
-        <div class="column-body">
-          <div class="column-cat">ロジック解説</div>
-          <div class="column-title">StockInsight AIの選定ロジック完全解説：100点満点の採点基準</div>
-          <div class="column-desc">AIが推奨銘柄を選ぶ具体的なスコアリング方法を全公開。テクニカル40点・ファンダメンタル40点・センチメント20点の詳細な採点基準を解説します。</div>
-          <div class="column-date">2026年4月7日</div>
-        </div>
-      </a>
-      
-    </div>
-  </div>
-  
-  
-  <div style="margin-bottom:36px;">
-    <div style="font-size:.82rem;font-weight:700;color:var(--accent-dark);margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--accent);">
-      入門（3件）
-    </div>
-    <div class="column-grid">
-      
-      <a class="column-card" href="/column/what-is-backtest/">
-        <div class="column-thumb">
-          <img src="/assets/img/col_default.png" alt="バックテストとは何か？投資戦略の過去成績を検証する方法" loading="lazy">
-          
-        </div>
-        <div class="column-body">
-          <div class="column-cat">入門</div>
-          <div class="column-title">バックテストとは何か？投資戦略の過去成績を検証する方法</div>
-          <div class="column-desc">バックテストの意味・やり方・限界について解説。過去データを使った戦略検証がなぜ重要で、どう読み解けばよいかをわかりやすく説明します。</div>
-          <div class="column-date">2026年4月8日</div>
-        </div>
-      </a>
-      
-      <a class="column-card" href="/column/what-is-screening/">
-        <div class="column-thumb">
-          <img src="/assets/img/col_default.png" alt="4,000銘柄を全部調べようとして、挫折した話" loading="lazy">
-          
-        </div>
-        <div class="column-body">
-          <div class="column-cat">入門</div>
-          <div class="column-title">4,000銘柄を全部調べようとして、挫折した話</div>
-          <div class="column-desc">スクリーニングとは何か、なぜ個人投資家に必要なのか。「全銘柄チェック」の限界から始まる、AI銘柄選定の入口となる記事。</div>
-          <div class="column-date">2026年4月5日</div>
-        </div>
-      </a>
-      
-      <a class="column-card" href="/column/intro-medium-term-investing/">
-        <div class="column-thumb">
-          <img src="/assets/img/col_default.png" alt="中長期投資とは何か？短期トレードとの違いとメリットを解説" loading="lazy">
-          
-        </div>
-        <div class="column-body">
-          <div class="column-cat">入門</div>
-          <div class="column-title">中長期投資とは何か？短期トレードとの違いとメリットを解説</div>
-          <div class="column-desc">中長期投資（1〜3ヶ月）の定義・特徴・短期トレードとの違いを解説。なぜStockInsight AIが中長期を対象にするのかも説明します。</div>
-          <div class="column-date">2026年4月1日</div>
-        </div>
-      </a>
-      
-    </div>
-  </div>
-  
 
   
 
 </div>
+
+<script>
+(function () {
+  var btns  = document.querySelectorAll('.col-filter-btn');
+  var cards = document.querySelectorAll('#col-grid .column-card');
+  var empty = document.getElementById('col-empty');
+
+  btns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var cat = btn.getAttribute('data-cat');
+
+      // ボタンのアクティブ状態
+      btns.forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+
+      // カードの表示切り替え
+      var visible = 0;
+      cards.forEach(function (card) {
+        if (cat === 'all' || card.getAttribute('data-cat') === cat) {
+          card.style.display = '';
+          visible++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      empty.style.display = visible === 0 ? 'block' : 'none';
+    });
+  });
+})();
+</script>
 
 </main>
 
