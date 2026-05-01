@@ -570,3 +570,14 @@ footer {
   .pt-label { font-size: .6rem; }
   .pt-val { font-size: .72rem; }
 }
+
+/* Yahoo Finance リンク */
+.yf-link {
+  color: inherit;
+  text-decoration: none;
+}
+.yf-link:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--accent-dark);
+  color: var(--accent-dark);
+}
