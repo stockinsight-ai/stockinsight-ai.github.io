@@ -97,7 +97,7 @@
   
   <div class="stat-grid-2col" style="margin-bottom:32px;">
     <div class="stat-card">
-      <span class="val">25</span>
+      <span class="val">30</span>
       <span class="lbl">累計推奨銘柄数</span>
     </div>
     <div class="stat-card">
@@ -128,12 +128,16 @@
   
   <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px;">
     <div class="section-title" style="margin-bottom:0;">週次推奨一覧</div>
-    <span style="font-size:.78rem;color:var(--muted);">過去3ヶ月 / 4週分</span>
+    <span style="font-size:.78rem;color:var(--muted);">過去3ヶ月 / 5週分</span>
   </div>
 
   <!-- 週フィルターバー -->
   <div class="week-filter-wrap" id="week-filter">
     <button class="week-filter-btn active" data-week="all">すべて</button>
+    
+    <button class="week-filter-btn" data-week="2026-05-04">
+      2026年5月4日
+    </button>
     
     <button class="week-filter-btn" data-week="2026-04-26">
       2026年4月26日
@@ -155,6 +159,315 @@
 
   <!-- 週カード -->
   <div style="display:flex;flex-direction:column;gap:24px;margin-bottom:40px;" id="weeks-container">
+    
+    <div class="card week-result-card" data-week="2026-05-04">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:8px;">
+        <div>
+          <div style="font-weight:700;color:var(--primary);">2026年5月4日〜</div>
+          <div style="font-size:.78rem;color:var(--muted);">5銘柄選定</div>
+        </div>
+        <a href="/report/2026-05-04/" style="font-size:.82rem;color:var(--accent-dark);font-weight:600;">レポートを見る →</a>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        
+        <div class="result-card">
+          <!-- 銘柄名・スコア -->
+          <div class="rc-head">
+            <div class="rc-name">
+              <strong><a class="yf-link" href="https://finance.yahoo.co.jp/quote/6264.T" target="_blank" rel="noopener noreferrer">マルマエ</a></strong>
+              <small><a class="yf-link" href="https://finance.yahoo.co.jp/quote/6264.T" target="_blank" rel="noopener noreferrer">6264</a> / 機械</small>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;flex-shrink:0;">
+              <div class="mini-score"><span class="val">72</span><span class="lbl">スコア</span></div>
+              <span class="status-badge status-watching">観察中</span>
+            </div>
+          </div>
+
+          <!-- 株価推移タイムライン -->
+          <div class="price-timeline">
+            <div class="pt-step pt-done">
+              <div class="pt-dot"></div>
+              <div class="pt-label">選定時</div>
+              <div class="pt-val">
+                —
+              </div>
+            </div>
+            <div class="pt-line"></div>
+
+            <div class="pt-step ">
+              <div class="pt-dot"></div>
+              <div class="pt-label">1ヶ月後</div>
+              <div class="pt-val">
+                
+                <span class="pt-watching">観察中</span>
+                
+              </div>
+            </div>
+            <div class="pt-line"></div>
+
+            <div class="pt-step ">
+              <div class="pt-dot"></div>
+              <div class="pt-label">2ヶ月後</div>
+              <div class="pt-val">
+                
+                <span class="pt-watching">観察中</span>
+                
+              </div>
+            </div>
+            <div class="pt-line"></div>
+
+            <div class="pt-step ">
+              <div class="pt-dot"></div>
+              <div class="pt-label">3ヶ月後</div>
+              <div class="pt-val">
+                
+                <span class="pt-watching">観察中</span>
+                
+              </div>
+            </div>
+          </div><!-- /price-timeline -->
+
+        </div><!-- /result-card -->
+        
+        <div class="result-card">
+          <!-- 銘柄名・スコア -->
+          <div class="rc-head">
+            <div class="rc-name">
+              <strong><a class="yf-link" href="https://finance.yahoo.co.jp/quote/7673.T" target="_blank" rel="noopener noreferrer">ダイコー通産</a></strong>
+              <small><a class="yf-link" href="https://finance.yahoo.co.jp/quote/7673.T" target="_blank" rel="noopener noreferrer">7673</a> / 卸売業</small>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;flex-shrink:0;">
+              <div class="mini-score"><span class="val">82</span><span class="lbl">スコア</span></div>
+              <span class="status-badge status-watching">観察中</span>
+            </div>
+          </div>
+
+          <!-- 株価推移タイムライン -->
+          <div class="price-timeline">
+            <div class="pt-step pt-done">
+              <div class="pt-dot"></div>
+              <div class="pt-label">選定時</div>
+              <div class="pt-val">
+                —
+              </div>
+            </div>
+            <div class="pt-line"></div>
+
+            <div class="pt-step ">
+              <div class="pt-dot"></div>
+              <div class="pt-label">1ヶ月後</div>
+              <div class="pt-val">
+                
+                <span class="pt-watching">観察中</span>
+                
+              </div>
+            </div>
+            <div class="pt-line"></div>
+
+            <div class="pt-step ">
+              <div class="pt-dot"></div>
+              <div class="pt-label">2ヶ月後</div>
+              <div class="pt-val">
+                
+                <span class="pt-watching">観察中</span>
+                
+              </div>
+            </div>
+            <div class="pt-line"></div>
+
+            <div class="pt-step ">
+              <div class="pt-dot"></div>
+              <div class="pt-label">3ヶ月後</div>
+              <div class="pt-val">
+                
+                <span class="pt-watching">観察中</span>
+                
+              </div>
+            </div>
+          </div><!-- /price-timeline -->
+
+        </div><!-- /result-card -->
+        
+        <div class="result-card">
+          <!-- 銘柄名・スコア -->
+          <div class="rc-head">
+            <div class="rc-name">
+              <strong><a class="yf-link" href="https://finance.yahoo.co.jp/quote/7419.T" target="_blank" rel="noopener noreferrer">ノジマ</a></strong>
+              <small><a class="yf-link" href="https://finance.yahoo.co.jp/quote/7419.T" target="_blank" rel="noopener noreferrer">7419</a> / 小売業</small>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;flex-shrink:0;">
+              <div class="mini-score"><span class="val">89</span><span class="lbl">スコア</span></div>
+              <span class="status-badge status-watching">観察中</span>
+            </div>
+          </div>
+
+          <!-- 株価推移タイムライン -->
+          <div class="price-timeline">
+            <div class="pt-step pt-done">
+              <div class="pt-dot"></div>
+              <div class="pt-label">選定時</div>
+              <div class="pt-val">
+                —
+              </div>
+            </div>
+            <div class="pt-line"></div>
+
+            <div class="pt-step ">
+              <div class="pt-dot"></div>
+              <div class="pt-label">1ヶ月後</div>
+              <div class="pt-val">
+                
+                <span class="pt-watching">観察中</span>
+                
+              </div>
+            </div>
+            <div class="pt-line"></div>
+
+            <div class="pt-step ">
+              <div class="pt-dot"></div>
+              <div class="pt-label">2ヶ月後</div>
+              <div class="pt-val">
+                
+                <span class="pt-watching">観察中</span>
+                
+              </div>
+            </div>
+            <div class="pt-line"></div>
+
+            <div class="pt-step ">
+              <div class="pt-dot"></div>
+              <div class="pt-label">3ヶ月後</div>
+              <div class="pt-val">
+                
+                <span class="pt-watching">観察中</span>
+                
+              </div>
+            </div>
+          </div><!-- /price-timeline -->
+
+        </div><!-- /result-card -->
+        
+        <div class="result-card">
+          <!-- 銘柄名・スコア -->
+          <div class="rc-head">
+            <div class="rc-name">
+              <strong><a class="yf-link" href="https://finance.yahoo.co.jp/quote/6248.T" target="_blank" rel="noopener noreferrer">横田製作所</a></strong>
+              <small><a class="yf-link" href="https://finance.yahoo.co.jp/quote/6248.T" target="_blank" rel="noopener noreferrer">6248</a> / 機械</small>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;flex-shrink:0;">
+              <div class="mini-score"><span class="val">91</span><span class="lbl">スコア</span></div>
+              <span class="status-badge status-watching">観察中</span>
+            </div>
+          </div>
+
+          <!-- 株価推移タイムライン -->
+          <div class="price-timeline">
+            <div class="pt-step pt-done">
+              <div class="pt-dot"></div>
+              <div class="pt-label">選定時</div>
+              <div class="pt-val">
+                —
+              </div>
+            </div>
+            <div class="pt-line"></div>
+
+            <div class="pt-step ">
+              <div class="pt-dot"></div>
+              <div class="pt-label">1ヶ月後</div>
+              <div class="pt-val">
+                
+                <span class="pt-watching">観察中</span>
+                
+              </div>
+            </div>
+            <div class="pt-line"></div>
+
+            <div class="pt-step ">
+              <div class="pt-dot"></div>
+              <div class="pt-label">2ヶ月後</div>
+              <div class="pt-val">
+                
+                <span class="pt-watching">観察中</span>
+                
+              </div>
+            </div>
+            <div class="pt-line"></div>
+
+            <div class="pt-step ">
+              <div class="pt-dot"></div>
+              <div class="pt-label">3ヶ月後</div>
+              <div class="pt-val">
+                
+                <span class="pt-watching">観察中</span>
+                
+              </div>
+            </div>
+          </div><!-- /price-timeline -->
+
+        </div><!-- /result-card -->
+        
+        <div class="result-card">
+          <!-- 銘柄名・スコア -->
+          <div class="rc-head">
+            <div class="rc-name">
+              <strong><a class="yf-link" href="https://finance.yahoo.co.jp/quote/1430.T" target="_blank" rel="noopener noreferrer">ファーストコーポレーション</a></strong>
+              <small><a class="yf-link" href="https://finance.yahoo.co.jp/quote/1430.T" target="_blank" rel="noopener noreferrer">1430</a> / 建設業</small>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;flex-shrink:0;">
+              <div class="mini-score"><span class="val">91</span><span class="lbl">スコア</span></div>
+              <span class="status-badge status-watching">観察中</span>
+            </div>
+          </div>
+
+          <!-- 株価推移タイムライン -->
+          <div class="price-timeline">
+            <div class="pt-step pt-done">
+              <div class="pt-dot"></div>
+              <div class="pt-label">選定時</div>
+              <div class="pt-val">
+                —
+              </div>
+            </div>
+            <div class="pt-line"></div>
+
+            <div class="pt-step ">
+              <div class="pt-dot"></div>
+              <div class="pt-label">1ヶ月後</div>
+              <div class="pt-val">
+                
+                <span class="pt-watching">観察中</span>
+                
+              </div>
+            </div>
+            <div class="pt-line"></div>
+
+            <div class="pt-step ">
+              <div class="pt-dot"></div>
+              <div class="pt-label">2ヶ月後</div>
+              <div class="pt-val">
+                
+                <span class="pt-watching">観察中</span>
+                
+              </div>
+            </div>
+            <div class="pt-line"></div>
+
+            <div class="pt-step ">
+              <div class="pt-dot"></div>
+              <div class="pt-label">3ヶ月後</div>
+              <div class="pt-val">
+                
+                <span class="pt-watching">観察中</span>
+                
+              </div>
+            </div>
+          </div><!-- /price-timeline -->
+
+        </div><!-- /result-card -->
+        
+      </div>
+    </div><!-- /week-result-card -->
     
     <div class="card week-result-card" data-week="2026-04-26">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:8px;">
@@ -1693,7 +2006,387 @@
 
   <!-- 全銘柄詳細テーブル -->
   
-  <div class="empty-state"><p>成績データを蓄積中です。毎週更新されます。</p></div>
+  <div class="section-title" style="margin-bottom:16px;">全銘柄詳細</div>
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>推奨日</th>
+          <th>銘柄</th>
+          <th>コード</th>
+          <th class="num">スコア</th>
+          <th class="num">推奨価格</th>
+          <th class="num">1ヶ月後</th>
+          <th class="num">2ヶ月後</th>
+          <th class="num">3ヶ月後</th>
+          <th>ステータス</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+          <td style="white-space:nowrap;">2026-05-04</td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/1430.T" target="_blank" rel="noopener noreferrer">ファーストコーポレーション</a></td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/1430.T" target="_blank" rel="noopener noreferrer">1430</a></td>
+          <td class="num">91</td>
+          <td class="num">0</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td><span class="status-badge status-watching">観察中</span></td>
+        </tr>
+        
+        <tr>
+          <td style="white-space:nowrap;">2026-05-04</td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/6248.T" target="_blank" rel="noopener noreferrer">横田製作所</a></td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/6248.T" target="_blank" rel="noopener noreferrer">6248</a></td>
+          <td class="num">91</td>
+          <td class="num">0</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td><span class="status-badge status-watching">観察中</span></td>
+        </tr>
+        
+        <tr>
+          <td style="white-space:nowrap;">2026-05-04</td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/7419.T" target="_blank" rel="noopener noreferrer">ノジマ</a></td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/7419.T" target="_blank" rel="noopener noreferrer">7419</a></td>
+          <td class="num">89</td>
+          <td class="num">0</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td><span class="status-badge status-watching">観察中</span></td>
+        </tr>
+        
+        <tr>
+          <td style="white-space:nowrap;">2026-05-04</td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/7673.T" target="_blank" rel="noopener noreferrer">ダイコー通産</a></td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/7673.T" target="_blank" rel="noopener noreferrer">7673</a></td>
+          <td class="num">82</td>
+          <td class="num">0</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td><span class="status-badge status-watching">観察中</span></td>
+        </tr>
+        
+        <tr>
+          <td style="white-space:nowrap;">2026-05-04</td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/6264.T" target="_blank" rel="noopener noreferrer">マルマエ</a></td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/6264.T" target="_blank" rel="noopener noreferrer">6264</a></td>
+          <td class="num">72</td>
+          <td class="num">0</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td><span class="status-badge status-watching">観察中</span></td>
+        </tr>
+        
+        <tr>
+          <td style="white-space:nowrap;">2026-04-26</td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/8115.T" target="_blank" rel="noopener noreferrer">ムーンバット</a></td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/8115.T" target="_blank" rel="noopener noreferrer">8115</a></td>
+          <td class="num">68</td>
+          <td class="num">1,512</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td><span class="status-badge status-watching">観察中</span></td>
+        </tr>
+        
+        <tr>
+          <td style="white-space:nowrap;">2026-04-26</td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/4673.T" target="_blank" rel="noopener noreferrer">川崎地質</a></td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/4673.T" target="_blank" rel="noopener noreferrer">4673</a></td>
+          <td class="num">70</td>
+          <td class="num">5,590</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td><span class="status-badge status-watching">観察中</span></td>
+        </tr>
+        
+        <tr>
+          <td style="white-space:nowrap;">2026-04-26</td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/3104.T" target="_blank" rel="noopener noreferrer">富士紡ホールディングス</a></td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/3104.T" target="_blank" rel="noopener noreferrer">3104</a></td>
+          <td class="num">70</td>
+          <td class="num">3,835</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td><span class="status-badge status-watching">観察中</span></td>
+        </tr>
+        
+        <tr>
+          <td style="white-space:nowrap;">2026-04-26</td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/7419.T" target="_blank" rel="noopener noreferrer">ノジマ</a></td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/7419.T" target="_blank" rel="noopener noreferrer">7419</a></td>
+          <td class="num">72</td>
+          <td class="num">1,251</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td><span class="status-badge status-watching">観察中</span></td>
+        </tr>
+        
+        <tr>
+          <td style="white-space:nowrap;">2026-04-26</td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/6248.T" target="_blank" rel="noopener noreferrer">横田製作所</a></td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/6248.T" target="_blank" rel="noopener noreferrer">6248</a></td>
+          <td class="num">75</td>
+          <td class="num">1,925</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td><span class="status-badge status-watching">観察中</span></td>
+        </tr>
+        
+        <tr>
+          <td style="white-space:nowrap;">2026-04-19</td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/5801.T" target="_blank" rel="noopener noreferrer">古河電気工業</a></td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/5801.T" target="_blank" rel="noopener noreferrer">5801</a></td>
+          <td class="num">64</td>
+          <td class="num">43,070</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td><span class="status-badge status-watching">観察中</span></td>
+        </tr>
+        
+        <tr>
+          <td style="white-space:nowrap;">2026-04-19</td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/6369.T" target="_blank" rel="noopener noreferrer">トーヨーカネツ</a></td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/6369.T" target="_blank" rel="noopener noreferrer">6369</a></td>
+          <td class="num">68</td>
+          <td class="num">2,828</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td><span class="status-badge status-watching">観察中</span></td>
+        </tr>
+        
+        <tr>
+          <td style="white-space:nowrap;">2026-04-19</td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/3104.T" target="_blank" rel="noopener noreferrer">富士紡ホールディングス</a></td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/3104.T" target="_blank" rel="noopener noreferrer">3104</a></td>
+          <td class="num">70</td>
+          <td class="num">3,675</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td><span class="status-badge status-watching">観察中</span></td>
+        </tr>
+        
+        <tr>
+          <td style="white-space:nowrap;">2026-04-19</td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/4673.T" target="_blank" rel="noopener noreferrer">川崎地質</a></td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/4673.T" target="_blank" rel="noopener noreferrer">4673</a></td>
+          <td class="num">73</td>
+          <td class="num">5,800</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td><span class="status-badge status-watching">観察中</span></td>
+        </tr>
+        
+        <tr>
+          <td style="white-space:nowrap;">2026-04-19</td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/3965.T" target="_blank" rel="noopener noreferrer">キャピタル・アセット・プランニング</a></td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/3965.T" target="_blank" rel="noopener noreferrer">3965</a></td>
+          <td class="num">81</td>
+          <td class="num">841</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td><span class="status-badge status-watching">観察中</span></td>
+        </tr>
+        
+        <tr>
+          <td style="white-space:nowrap;">2026-04-12</td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/6369.T" target="_blank" rel="noopener noreferrer">トーヨーカネツ</a></td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/6369.T" target="_blank" rel="noopener noreferrer">6369</a></td>
+          <td class="num">60</td>
+          <td class="num">2,988</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td><span class="status-badge status-watching">観察中</span></td>
+        </tr>
+        
+        <tr>
+          <td style="white-space:nowrap;">2026-04-12</td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/3104.T" target="_blank" rel="noopener noreferrer">富士紡ホールディングス</a></td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/3104.T" target="_blank" rel="noopener noreferrer">3104</a></td>
+          <td class="num">66</td>
+          <td class="num">4,190</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td><span class="status-badge status-watching">観察中</span></td>
+        </tr>
+        
+        <tr>
+          <td style="white-space:nowrap;">2026-04-12</td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/3150.T" target="_blank" rel="noopener noreferrer">グリムス</a></td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/3150.T" target="_blank" rel="noopener noreferrer">3150</a></td>
+          <td class="num">68</td>
+          <td class="num">2,898</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td><span class="status-badge status-watching">観察中</span></td>
+        </tr>
+        
+        <tr>
+          <td style="white-space:nowrap;">2026-04-12</td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/2970.T" target="_blank" rel="noopener noreferrer">ＧＬＣ　ＧＲＯＵＰ</a></td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/2970.T" target="_blank" rel="noopener noreferrer">2970</a></td>
+          <td class="num">69</td>
+          <td class="num">1,154</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td><span class="status-badge status-watching">観察中</span></td>
+        </tr>
+        
+        <tr>
+          <td style="white-space:nowrap;">2026-04-12</td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/4673.T" target="_blank" rel="noopener noreferrer">川崎地質</a></td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/4673.T" target="_blank" rel="noopener noreferrer">4673</a></td>
+          <td class="num">73</td>
+          <td class="num">5,600</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td><span class="status-badge status-watching">観察中</span></td>
+        </tr>
+        
+        <tr>
+          <td style="white-space:nowrap;">2026-04-12</td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/3965.T" target="_blank" rel="noopener noreferrer">キャピタル・アセット・プランニング</a></td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/3965.T" target="_blank" rel="noopener noreferrer">3965</a></td>
+          <td class="num">81</td>
+          <td class="num">846</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td><span class="status-badge status-watching">観察中</span></td>
+        </tr>
+        
+        <tr>
+          <td style="white-space:nowrap;">2026-04-12</td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/1450.T" target="_blank" rel="noopener noreferrer">ＴＡＮＡＫＥＮ</a></td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/1450.T" target="_blank" rel="noopener noreferrer">1450</a></td>
+          <td class="num">94</td>
+          <td class="num">1,505</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td><span class="status-badge status-watching">観察中</span></td>
+        </tr>
+        
+        <tr>
+          <td style="white-space:nowrap;">2026-04-04</td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/6369.T" target="_blank" rel="noopener noreferrer">トーヨーカネツ</a></td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/6369.T" target="_blank" rel="noopener noreferrer">6369</a></td>
+          <td class="num">64</td>
+          <td class="num">3,090</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td><span class="status-badge status-watching">観察中</span></td>
+        </tr>
+        
+        <tr>
+          <td style="white-space:nowrap;">2026-04-04</td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/6248.T" target="_blank" rel="noopener noreferrer">横田製作所</a></td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/6248.T" target="_blank" rel="noopener noreferrer">6248</a></td>
+          <td class="num">66</td>
+          <td class="num">1,962</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td><span class="status-badge status-watching">観察中</span></td>
+        </tr>
+        
+        <tr>
+          <td style="white-space:nowrap;">2026-04-04</td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/3104.T" target="_blank" rel="noopener noreferrer">富士紡ホールディングス</a></td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/3104.T" target="_blank" rel="noopener noreferrer">3104</a></td>
+          <td class="num">66</td>
+          <td class="num">3,565</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td><span class="status-badge status-watching">観察中</span></td>
+        </tr>
+        
+        <tr>
+          <td style="white-space:nowrap;">2026-04-04</td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/3964.T" target="_blank" rel="noopener noreferrer">オークネット</a></td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/3964.T" target="_blank" rel="noopener noreferrer">3964</a></td>
+          <td class="num">67</td>
+          <td class="num">1,262</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td><span class="status-badge status-watching">観察中</span></td>
+        </tr>
+        
+        <tr>
+          <td style="white-space:nowrap;">2026-04-04</td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/3150.T" target="_blank" rel="noopener noreferrer">グリムス</a></td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/3150.T" target="_blank" rel="noopener noreferrer">3150</a></td>
+          <td class="num">68</td>
+          <td class="num">2,954</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td><span class="status-badge status-watching">観察中</span></td>
+        </tr>
+        
+        <tr>
+          <td style="white-space:nowrap;">2026-04-04</td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/2970.T" target="_blank" rel="noopener noreferrer">ＧＬＣ　ＧＲＯＵＰ</a></td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/2970.T" target="_blank" rel="noopener noreferrer">2970</a></td>
+          <td class="num">80</td>
+          <td class="num">1,133</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td><span class="status-badge status-watching">観察中</span></td>
+        </tr>
+        
+        <tr>
+          <td style="white-space:nowrap;">2026-04-04</td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/3965.T" target="_blank" rel="noopener noreferrer">キャピタル・アセット・プランニング</a></td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/3965.T" target="_blank" rel="noopener noreferrer">3965</a></td>
+          <td class="num">81</td>
+          <td class="num">849</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td><span class="status-badge status-watching">観察中</span></td>
+        </tr>
+        
+        <tr>
+          <td style="white-space:nowrap;">2026-04-04</td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/1450.T" target="_blank" rel="noopener noreferrer">ＴＡＮＡＫＥＮ</a></td>
+          <td><a class="yf-link" href="https://finance.yahoo.co.jp/quote/1450.T" target="_blank" rel="noopener noreferrer">1450</a></td>
+          <td class="num">90</td>
+          <td class="num">1,504</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td class="num ">—</td>
+          <td><span class="status-badge status-watching">観察中</span></td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
   
 
 </div>
@@ -1759,7 +2452,7 @@
     </div>
     <div class="footer-bottom">
       <p>&copy; 2026 StockInsight AI</p>
-      <p style="font-size:.72rem;">最終更新: 2026-05-02</p>
+      <p style="font-size:.72rem;">最終更新: 2026-05-04</p>
     </div>
   </div>
 </footer>
