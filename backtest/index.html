@@ -23,16 +23,45 @@
   <meta name="twitter:description" content="AIが毎週選ぶ中長期有望日本株">
   <meta name="twitter:image" content="https://stockinsight-ai.github.io/assets/img/backtest_hero.png">
 
-  <!-- 構造化データ -->
+  <!-- 構造化データ：WebSite + SearchAction -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "StockInsight AI",
     "url": "https://stockinsight-ai.github.io/",
-    "description": "AIによる中長期日本株銘柄選定サービス"
+    "description": "AIが毎週選ぶ中長期有望日本株。テクニカル・ファンダメンタル・センチメント3軸スコアで厳選した銘柄と成績を完全公開。",
+    "inLanguage": "ja",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://stockinsight-ai.github.io/column/?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
   }
   </script>
+  <!-- 構造化データ：Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "StockInsight AI",
+    "url": "https://stockinsight-ai.github.io/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://stockinsight-ai.github.io/assets/img/ogp.png",
+      "width": 1200,
+      "height": 630
+    },
+    "description": "AIによる中長期日本株銘柄選定サービス。毎週日曜日に推奨銘柄を公開し、その後の成績を全件開示。",
+    "foundingDate": "2026",
+    "knowsAbout": ["日本株投資", "テクニカル分析", "ファンダメンタル分析", "株式スクリーニング", "中長期投資"],
+    "sameAs": []
+  }
+  </script>
+  
 
   <link rel="canonical" href="https://stockinsight-ai.github.io/backtest/">
   <link rel="stylesheet" href="/assets/css/style.css">
@@ -577,7 +606,7 @@
     </div>
     <div class="footer-bottom">
       <p>&copy; 2026 StockInsight AI</p>
-      <p style="font-size:.72rem;">最終更新: 2026-05-17</p>
+      <p style="font-size:.72rem;">最終更新: 2026-05-18</p>
     </div>
   </div>
 </footer>

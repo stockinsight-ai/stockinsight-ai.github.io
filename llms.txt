@@ -1,0 +1,50 @@
+# StockInsight AI
+
+> AIが毎週選ぶ中長期有望日本株。テクニカル・ファンダメンタル・センチメント3軸スコアで厳選した銘柄と成績を完全公開する無料サービス。
+
+## サービス概要
+
+- **サービス名**: StockInsight AI
+- **URL**: https://stockinsight-ai.github.io/
+- **提供内容**: 日本の個別株を対象とした中長期（1〜3ヶ月）の銘柄推奨・成績公開
+- **更新頻度**: 毎週日曜日 自動更新
+- **利用料**: 無料・会員登録不要
+- **対象市場**: 東証プライム・スタンダード・グロース
+
+## スコアリングロジック
+
+銘柄選定は3軸のスコアリングシステムで行われます：
+
+1. **テクニカルスコア（0〜40点）**: 移動平均線・MACD・出来高・RSI等
+2. **ファンダスコア（0〜40点）**: PER・PBR・ROE・自己資本比率・売上成長率
+3. **センチメントスコア（0〜20点）**: ニュース件数・注目度・市場センチメント
+
+合計100点満点のうち60点以上の銘柄を推奨候補とし、週5〜10銘柄を選定。
+
+## 主要ページ
+
+- **今週の推奨銘柄**: https://stockinsight-ai.github.io/picks/
+- **過去の成績（全件公開）**: https://stockinsight-ai.github.io/results/
+- **バックテスト結果**: https://stockinsight-ai.github.io/backtest/
+- **選定ロジック詳細**: https://stockinsight-ai.github.io/about/
+- **コラム一覧**: https://stockinsight-ai.github.io/column/
+
+## 最新情報
+
+- 最新推奨日: 2026-05-17
+- 最終更新: 2026-05-18
+
+## 最新コラム（投資教育コンテンツ）
+
+- [ゴールデンクロスは本当に使えるのか？成功例・失敗例を正直に検証](https://stockinsight-ai.github.io/column/moving-average-golden-cross/)
+- [DMM株（DMM.com証券）の口座開設ガイド｜手数料最安水準で始める株式投資](https://stockinsight-ai.github.io/column/dmm-securities-account/)
+- [【2026年版】ネット証券おすすめ比較｜中長期投資家向けに徹底解説](https://stockinsight-ai.github.io/column/best-online-brokerage-2026/)
+- [セクター分散の重要性：なぜ同一業種への集中投資を避けるのか](https://stockinsight-ai.github.io/column/sector-diversification/)
+- [StockInsight AIの選定ロジック完全解説：100点満点の採点基準](https://stockinsight-ai.github.io/column/our-scoring-logic-explained/)
+- [テクニカル分析入門：MACDと移動平均線の使い方](https://stockinsight-ai.github.io/column/technical-macd-ma-basics/)
+- [中長期投資とは何か？短期トレードとの違いとメリットを解説](https://stockinsight-ai.github.io/column/intro-medium-term-investing/)
+
+## 免責事項
+
+本サービスは投資助言業の登録を受けておらず、特定の有価証券の売買を推奨するものではありません。
+掲載情報の正確性を保証せず、投資判断はご自身の責任において行ってください。
