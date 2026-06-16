@@ -32,17 +32,20 @@
 ## 最新情報
 
 - 最新推奨日: 2026-06-14
-- 最終更新: 2026-06-14
+- 最終更新: 2026-06-16
 
 ## 最新コラム（投資教育コンテンツ）
 
 - [ゴールデンクロスは本当に使えるのか？成功例・失敗例を正直に検証](https://stockinsight-ai.github.io/column/moving-average-golden-cross/)
 - [DMM株（DMM.com証券）の口座開設ガイド｜手数料最安水準で始める株式投資](https://stockinsight-ai.github.io/column/dmm-securities-account/)
+- [AIが外した推奨を解剖する【2026年4月版】](https://stockinsight-ai.github.io/column/failure-autopsy-2026-04/)
+- [2026年4月の推奨銘柄成績レポート](https://stockinsight-ai.github.io/column/monthly-report-2026-04/)
+- [Claude Codeで株式分析システムを完全自動実装｜AIとペアプログラミングした開発体験記](https://stockinsight-ai.github.io/column/claude-code-auto-implementation/)
+- [3人の仮想投資家が激論：このロジックで本当に勝てるのか？](https://stockinsight-ai.github.io/column/ai-stock-screening-logic/)
+- [PEG比率とは？PERだけでは見えない「成長を考慮した割安感」を測る方法](https://stockinsight-ai.github.io/column/peg-ratio-explained/)
 - [【2026年版】ネット証券おすすめ比較｜中長期投資家向けに徹底解説](https://stockinsight-ai.github.io/column/best-online-brokerage-2026/)
-- [セクター分散の重要性：なぜ同一業種への集中投資を避けるのか](https://stockinsight-ai.github.io/column/sector-diversification/)
-- [StockInsight AIの選定ロジック完全解説：100点満点の採点基準](https://stockinsight-ai.github.io/column/our-scoring-logic-explained/)
-- [テクニカル分析入門：MACDと移動平均線の使い方](https://stockinsight-ai.github.io/column/technical-macd-ma-basics/)
-- [中長期投資とは何か？短期トレードとの違いとメリットを解説](https://stockinsight-ai.github.io/column/intro-medium-term-investing/)
+- [楽天証券の口座開設方法｜楽天ポイントで投資できる！スマホ完結手順を解説](https://stockinsight-ai.github.io/column/rakuten-securities-account/)
+- [SBI証券の口座開設方法｜スマホで最短10分・手順を画像付きで解説](https://stockinsight-ai.github.io/column/how-to-open-sbi-securities/)
 
 ## 免責事項
 
