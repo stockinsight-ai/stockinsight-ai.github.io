@@ -127,22 +127,22 @@
   
   <div class="stat-grid-2col" style="margin-bottom:32px;">
     <div class="stat-card">
-      <span class="val">134</span>
+      <span class="val">135</span>
       <span class="lbl">累計推奨銘柄数</span>
     </div>
     <div class="stat-card">
-      <span class="val">7</span>
+      <span class="val">1</span>
       <span class="lbl">今週の推奨数</span>
     </div>
     
     <div class="stat-card hit">
-      <span class="val">23.6%</span>
+      <span class="val">25.0%</span>
       <span class="lbl">勝率（3ヶ月後 +10%達成）</span>
     </div>
     
     
     <div class="stat-card accent">
-      <span class="val">+0.7%</span>
+      <span class="val">+0.4%</span>
       <span class="lbl">平均騰落率（3ヶ月後）</span>
     </div>
     
@@ -170,16 +170,16 @@
         
         <tr>
           <td>2026-03</td>
-          <td class="num">15</td>
-          <td class="num">2</td>
+          <td class="num">20</td>
+          <td class="num">3</td>
           <td class="num neg">
             <span style="display:inline-flex;align-items:center;gap:6px;">
-              13%
-              <span style="display:inline-block;height:6px;border-radius:3px;background:var(--miss);width:13px;max-width:60px;opacity:.7;"></span>
+              15%
+              <span style="display:inline-block;height:6px;border-radius:3px;background:var(--miss);width:15px;max-width:60px;opacity:.7;"></span>
             </span>
           </td>
           <td class="num neg">
-            ▼-3.3%
+            ▼-3.1%
           </td>
           <td class="num">—</td>
         </tr>
@@ -239,6 +239,10 @@
   <div class="week-filter-wrap" id="week-filter">
     <button class="week-filter-btn active" data-week="all">すべて</button>
     
+    <button class="week-filter-btn" data-week="2026-06-21">
+      2026年6月21日
+    </button>
+    
     <button class="week-filter-btn" data-week="2026-06-14">
       2026年6月14日
     </button>
@@ -295,14 +299,83 @@
       2026年3月15日
     </button>
     
-    <button class="week-filter-btn" data-week="2026-03-08">
-      2026年3月8日
-    </button>
-    
   </div>
 
   <!-- 週カード -->
   <div style="display:flex;flex-direction:column;gap:24px;margin-bottom:40px;" id="weeks-container">
+    
+    <div class="card week-result-card" data-week="2026-06-21">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:8px;">
+        <div>
+          <div style="font-weight:700;color:var(--primary);">2026年6月21日〜</div>
+          <div style="font-size:.78rem;color:var(--muted);">1銘柄選定</div>
+        </div>
+        <a href="/report/2026-06-21/" style="font-size:.82rem;color:var(--accent-dark);font-weight:600;">レポートを見る →</a>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        
+        <div class="result-card">
+          <!-- 銘柄名・スコア -->
+          <div class="rc-head">
+            <div class="rc-name">
+              <strong><a class="yf-link" href="https://finance.yahoo.co.jp/quote/2268.T" target="_blank" rel="noopener noreferrer">Ｂ－Ｒ　サーティワン　アイスクリーム</a></strong>
+              <small><a class="yf-link" href="https://finance.yahoo.co.jp/quote/2268.T" target="_blank" rel="noopener noreferrer">2268</a> / 食料品</small>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;flex-shrink:0;">
+              <div class="mini-score"><span class="val">72</span><span class="lbl">スコア</span></div>
+              <span class="status-badge status-watching">観察中</span>
+            </div>
+          </div>
+
+          <!-- 株価推移タイムライン -->
+          <div class="price-timeline">
+            <div class="pt-step pt-done">
+              <div class="pt-dot"></div>
+              <div class="pt-label">選定時</div>
+              <div class="pt-val">
+                —
+              </div>
+            </div>
+            <div class="pt-line"></div>
+
+            <div class="pt-step ">
+              <div class="pt-dot"></div>
+              <div class="pt-label">1ヶ月後</div>
+              <div class="pt-val">
+                
+                <span class="pt-watching">観察中</span>
+                
+              </div>
+            </div>
+            <div class="pt-line"></div>
+
+            <div class="pt-step ">
+              <div class="pt-dot"></div>
+              <div class="pt-label">2ヶ月後</div>
+              <div class="pt-val">
+                
+                <span class="pt-watching">観察中</span>
+                
+              </div>
+            </div>
+            <div class="pt-line"></div>
+
+            <div class="pt-step ">
+              <div class="pt-dot"></div>
+              <div class="pt-label">3ヶ月後</div>
+              <div class="pt-val">
+                
+                <span class="pt-watching">観察中</span>
+                
+              </div>
+            </div>
+          </div><!-- /price-timeline -->
+
+        </div><!-- /result-card -->
+        
+      </div>
+    </div><!-- /week-result-card -->
     
     <div class="card week-result-card" data-week="2026-06-14">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:8px;">
@@ -334,7 +407,7 @@
               <div class="pt-dot"></div>
               <div class="pt-label">選定時</div>
               <div class="pt-val">
-                —
+                4,265
               </div>
             </div>
             <div class="pt-line"></div>
@@ -393,7 +466,7 @@
               <div class="pt-dot"></div>
               <div class="pt-label">選定時</div>
               <div class="pt-val">
-                —
+                1,713
               </div>
             </div>
             <div class="pt-line"></div>
@@ -452,7 +525,7 @@
               <div class="pt-dot"></div>
               <div class="pt-label">選定時</div>
               <div class="pt-val">
-                —
+                5,190
               </div>
             </div>
             <div class="pt-line"></div>
@@ -511,7 +584,7 @@
               <div class="pt-dot"></div>
               <div class="pt-label">選定時</div>
               <div class="pt-val">
-                —
+                6,606
               </div>
             </div>
             <div class="pt-line"></div>
@@ -570,7 +643,7 @@
               <div class="pt-dot"></div>
               <div class="pt-label">選定時</div>
               <div class="pt-val">
-                —
+                3,840
               </div>
             </div>
             <div class="pt-line"></div>
@@ -629,7 +702,7 @@
               <div class="pt-dot"></div>
               <div class="pt-label">選定時</div>
               <div class="pt-val">
-                —
+                1,784
               </div>
             </div>
             <div class="pt-line"></div>
@@ -688,7 +761,7 @@
               <div class="pt-dot"></div>
               <div class="pt-label">選定時</div>
               <div class="pt-val">
-                —
+                786
               </div>
             </div>
             <div class="pt-line"></div>
@@ -2342,12 +2415,15 @@
             </div>
             <div class="pt-line"></div>
 
-            <div class="pt-step ">
+            <div class="pt-step pt-done">
               <div class="pt-dot"></div>
               <div class="pt-label">1ヶ月後</div>
               <div class="pt-val">
                 
-                <span class="pt-watching">観察中</span>
+                <span class="pos">
+                  +2.8%
+                </span>
+                <span class="pt-price">1,650</span>
                 
               </div>
             </div>
@@ -2401,12 +2477,15 @@
             </div>
             <div class="pt-line"></div>
 
-            <div class="pt-step ">
+            <div class="pt-step pt-done">
               <div class="pt-dot"></div>
               <div class="pt-label">1ヶ月後</div>
               <div class="pt-val">
                 
-                <span class="pt-watching">観察中</span>
+                <span class="neg">
+                  -0.3%
+                </span>
+                <span class="pt-price">68,900</span>
                 
               </div>
             </div>
@@ -2460,12 +2539,15 @@
             </div>
             <div class="pt-line"></div>
 
-            <div class="pt-step ">
+            <div class="pt-step pt-done">
               <div class="pt-dot"></div>
               <div class="pt-label">1ヶ月後</div>
               <div class="pt-val">
                 
-                <span class="pt-watching">観察中</span>
+                <span class="pos">
+                  +33.5%
+                </span>
+                <span class="pt-price">4,265</span>
                 
               </div>
             </div>
@@ -2519,12 +2601,15 @@
             </div>
             <div class="pt-line"></div>
 
-            <div class="pt-step ">
+            <div class="pt-step pt-done">
               <div class="pt-dot"></div>
               <div class="pt-label">1ヶ月後</div>
               <div class="pt-val">
                 
-                <span class="pt-watching">観察中</span>
+                <span class="pos">
+                  +5.0%
+                </span>
+                <span class="pt-price">1,067</span>
                 
               </div>
             </div>
@@ -2578,12 +2663,15 @@
             </div>
             <div class="pt-line"></div>
 
-            <div class="pt-step ">
+            <div class="pt-step pt-done">
               <div class="pt-dot"></div>
               <div class="pt-label">1ヶ月後</div>
               <div class="pt-val">
                 
-                <span class="pt-watching">観察中</span>
+                <span class="pos">
+                  +11.7%
+                </span>
+                <span class="pt-price">1,482</span>
                 
               </div>
             </div>
@@ -3389,12 +3477,15 @@
             </div>
             <div class="pt-line"></div>
 
-            <div class="pt-step ">
+            <div class="pt-step pt-done">
               <div class="pt-dot"></div>
               <div class="pt-label">2ヶ月後</div>
               <div class="pt-val">
                 
-                <span class="pt-watching">観察中</span>
+                <span class="pos">
+                  +2.1%
+                </span>
+                <span class="pt-price">43,970</span>
                 
               </div>
             </div>
@@ -3451,12 +3542,15 @@
             </div>
             <div class="pt-line"></div>
 
-            <div class="pt-step ">
+            <div class="pt-step pt-done">
               <div class="pt-dot"></div>
               <div class="pt-label">2ヶ月後</div>
               <div class="pt-val">
                 
-                <span class="pt-watching">観察中</span>
+                <span class="neg">
+                  -22.2%
+                </span>
+                <span class="pt-price">2,201</span>
                 
               </div>
             </div>
@@ -3513,12 +3607,15 @@
             </div>
             <div class="pt-line"></div>
 
-            <div class="pt-step ">
+            <div class="pt-step pt-done">
               <div class="pt-dot"></div>
               <div class="pt-label">2ヶ月後</div>
               <div class="pt-val">
                 
-                <span class="pt-watching">観察中</span>
+                <span class="pos">
+                  +4.9%
+                </span>
+                <span class="pt-price">3,855</span>
                 
               </div>
             </div>
@@ -3575,12 +3672,15 @@
             </div>
             <div class="pt-line"></div>
 
-            <div class="pt-step ">
+            <div class="pt-step pt-done">
               <div class="pt-dot"></div>
               <div class="pt-label">2ヶ月後</div>
               <div class="pt-val">
                 
-                <span class="pt-watching">観察中</span>
+                <span class="neg">
+                  -23.8%
+                </span>
+                <span class="pt-price">4,420</span>
                 
               </div>
             </div>
@@ -3637,12 +3737,15 @@
             </div>
             <div class="pt-line"></div>
 
-            <div class="pt-step ">
+            <div class="pt-step pt-done">
               <div class="pt-dot"></div>
               <div class="pt-label">2ヶ月後</div>
               <div class="pt-val">
                 
-                <span class="pt-watching">観察中</span>
+                <span class="neg">
+                  -1.4%
+                </span>
+                <span class="pt-price">829</span>
                 
               </div>
             </div>
@@ -5026,7 +5129,7 @@
             </div>
             <div style="display:flex;align-items:center;gap:8px;flex-shrink:0;">
               <div class="mini-score"><span class="val">75</span><span class="lbl">スコア</span></div>
-              <span class="status-badge status-watching">観察中</span>
+              <span class="status-badge status-miss">未達成</span>
             </div>
           </div>
 
@@ -5069,12 +5172,15 @@
             </div>
             <div class="pt-line"></div>
 
-            <div class="pt-step ">
+            <div class="pt-step pt-done">
               <div class="pt-dot"></div>
               <div class="pt-label">3ヶ月後</div>
               <div class="pt-val">
                 
-                <span class="pt-watching">観察中</span>
+                <span class="neg">
+                  -7.7%
+                </span>
+                <span class="pt-price">741</span>
                 
               </div>
             </div>
@@ -5091,7 +5197,7 @@
             </div>
             <div style="display:flex;align-items:center;gap:8px;flex-shrink:0;">
               <div class="mini-score"><span class="val">77</span><span class="lbl">スコア</span></div>
-              <span class="status-badge status-watching">観察中</span>
+              <span class="status-badge status-miss">未達成</span>
             </div>
           </div>
 
@@ -5134,12 +5240,15 @@
             </div>
             <div class="pt-line"></div>
 
-            <div class="pt-step ">
+            <div class="pt-step pt-done">
               <div class="pt-dot"></div>
               <div class="pt-label">3ヶ月後</div>
               <div class="pt-val">
                 
-                <span class="pt-watching">観察中</span>
+                <span class="neg">
+                  -17.8%
+                </span>
+                <span class="pt-price">281</span>
                 
               </div>
             </div>
@@ -5156,7 +5265,7 @@
             </div>
             <div style="display:flex;align-items:center;gap:8px;flex-shrink:0;">
               <div class="mini-score"><span class="val">78</span><span class="lbl">スコア</span></div>
-              <span class="status-badge status-watching">観察中</span>
+              <span class="status-badge status-miss">未達成</span>
             </div>
           </div>
 
@@ -5199,12 +5308,15 @@
             </div>
             <div class="pt-line"></div>
 
-            <div class="pt-step ">
+            <div class="pt-step pt-done">
               <div class="pt-dot"></div>
               <div class="pt-label">3ヶ月後</div>
               <div class="pt-val">
                 
-                <span class="pt-watching">観察中</span>
+                <span class="neg">
+                  -11.0%
+                </span>
+                <span class="pt-price">1,330</span>
                 
               </div>
             </div>
@@ -5221,7 +5333,7 @@
             </div>
             <div style="display:flex;align-items:center;gap:8px;flex-shrink:0;">
               <div class="mini-score"><span class="val">78</span><span class="lbl">スコア</span></div>
-              <span class="status-badge status-watching">観察中</span>
+              <span class="status-badge status-hit">達成</span>
             </div>
           </div>
 
@@ -5264,12 +5376,15 @@
             </div>
             <div class="pt-line"></div>
 
-            <div class="pt-step ">
+            <div class="pt-step pt-done">
               <div class="pt-dot"></div>
               <div class="pt-label">3ヶ月後</div>
               <div class="pt-val">
                 
-                <span class="pt-watching">観察中</span>
+                <span class="pos">
+                  +16.6%
+                </span>
+                <span class="pt-price">1,167</span>
                 
               </div>
             </div>
@@ -5286,7 +5401,7 @@
             </div>
             <div style="display:flex;align-items:center;gap:8px;flex-shrink:0;">
               <div class="mini-score"><span class="val">78</span><span class="lbl">スコア</span></div>
-              <span class="status-badge status-watching">観察中</span>
+              <span class="status-badge status-partial">部分達成</span>
             </div>
           </div>
 
@@ -5329,12 +5444,15 @@
             </div>
             <div class="pt-line"></div>
 
-            <div class="pt-step ">
+            <div class="pt-step pt-done">
               <div class="pt-dot"></div>
               <div class="pt-label">3ヶ月後</div>
               <div class="pt-val">
                 
-                <span class="pt-watching">観察中</span>
+                <span class="pos">
+                  +6.5%
+                </span>
+                <span class="pt-price">3,710</span>
                 
               </div>
             </div>
@@ -5699,360 +5817,6 @@
       </div>
     </div><!-- /week-result-card -->
     
-    <div class="card week-result-card" data-week="2026-03-08">
-      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:8px;">
-        <div>
-          <div style="font-weight:700;color:var(--primary);">2026年3月8日〜</div>
-          <div style="font-size:.78rem;color:var(--muted);">5銘柄選定</div>
-        </div>
-        <a href="/report/2026-03-08/" style="font-size:.82rem;color:var(--accent-dark);font-weight:600;">レポートを見る →</a>
-      </div>
-
-      <div style="display:flex;flex-direction:column;gap:12px;">
-        
-        <div class="result-card">
-          <!-- 銘柄名・スコア -->
-          <div class="rc-head">
-            <div class="rc-name">
-              <strong><a class="yf-link" href="https://finance.yahoo.co.jp/quote/2120.T" target="_blank" rel="noopener noreferrer">ＬＩＦＵＬＬ</a></strong>
-              <small><a class="yf-link" href="https://finance.yahoo.co.jp/quote/2120.T" target="_blank" rel="noopener noreferrer">2120</a> / サービス業</small>
-            </div>
-            <div style="display:flex;align-items:center;gap:8px;flex-shrink:0;">
-              <div class="mini-score"><span class="val">75</span><span class="lbl">スコア</span></div>
-              <span class="status-badge status-miss">未達成</span>
-            </div>
-          </div>
-
-          <!-- 株価推移タイムライン -->
-          <div class="price-timeline">
-            <div class="pt-step pt-done">
-              <div class="pt-dot"></div>
-              <div class="pt-label">選定時</div>
-              <div class="pt-val">
-                202
-              </div>
-            </div>
-            <div class="pt-line"></div>
-
-            <div class="pt-step pt-done">
-              <div class="pt-dot"></div>
-              <div class="pt-label">1ヶ月後</div>
-              <div class="pt-val">
-                
-                <span class="neg">
-                  -2.5%
-                </span>
-                <span class="pt-price">197</span>
-                
-              </div>
-            </div>
-            <div class="pt-line"></div>
-
-            <div class="pt-step pt-done">
-              <div class="pt-dot"></div>
-              <div class="pt-label">2ヶ月後</div>
-              <div class="pt-val">
-                
-                <span class="neg">
-                  -5.5%
-                </span>
-                <span class="pt-price">191</span>
-                
-              </div>
-            </div>
-            <div class="pt-line"></div>
-
-            <div class="pt-step pt-done">
-              <div class="pt-dot"></div>
-              <div class="pt-label">3ヶ月後</div>
-              <div class="pt-val">
-                
-                <span class="neg">
-                  -3.0%
-                </span>
-                <span class="pt-price">196</span>
-                
-              </div>
-            </div>
-          </div><!-- /price-timeline -->
-
-        </div><!-- /result-card -->
-        
-        <div class="result-card">
-          <!-- 銘柄名・スコア -->
-          <div class="rc-head">
-            <div class="rc-name">
-              <strong><a class="yf-link" href="https://finance.yahoo.co.jp/quote/5133.T" target="_blank" rel="noopener noreferrer">テリロジーホールディングス</a></strong>
-              <small><a class="yf-link" href="https://finance.yahoo.co.jp/quote/5133.T" target="_blank" rel="noopener noreferrer">5133</a> / 情報・通信業</small>
-            </div>
-            <div style="display:flex;align-items:center;gap:8px;flex-shrink:0;">
-              <div class="mini-score"><span class="val">77</span><span class="lbl">スコア</span></div>
-              <span class="status-badge status-miss">未達成</span>
-            </div>
-          </div>
-
-          <!-- 株価推移タイムライン -->
-          <div class="price-timeline">
-            <div class="pt-step pt-done">
-              <div class="pt-dot"></div>
-              <div class="pt-label">選定時</div>
-              <div class="pt-val">
-                336
-              </div>
-            </div>
-            <div class="pt-line"></div>
-
-            <div class="pt-step pt-done">
-              <div class="pt-dot"></div>
-              <div class="pt-label">1ヶ月後</div>
-              <div class="pt-val">
-                
-                <span class="neg">
-                  -1.5%
-                </span>
-                <span class="pt-price">331</span>
-                
-              </div>
-            </div>
-            <div class="pt-line"></div>
-
-            <div class="pt-step pt-done">
-              <div class="pt-dot"></div>
-              <div class="pt-label">2ヶ月後</div>
-              <div class="pt-val">
-                
-                <span class="neg">
-                  -2.1%
-                </span>
-                <span class="pt-price">329</span>
-                
-              </div>
-            </div>
-            <div class="pt-line"></div>
-
-            <div class="pt-step pt-done">
-              <div class="pt-dot"></div>
-              <div class="pt-label">3ヶ月後</div>
-              <div class="pt-val">
-                
-                <span class="neg">
-                  -10.4%
-                </span>
-                <span class="pt-price">301</span>
-                
-              </div>
-            </div>
-          </div><!-- /price-timeline -->
-
-        </div><!-- /result-card -->
-        
-        <div class="result-card">
-          <!-- 銘柄名・スコア -->
-          <div class="rc-head">
-            <div class="rc-name">
-              <strong><a class="yf-link" href="https://finance.yahoo.co.jp/quote/2970.T" target="_blank" rel="noopener noreferrer">ＧＬＣ　ＧＲＯＵＰ</a></strong>
-              <small><a class="yf-link" href="https://finance.yahoo.co.jp/quote/2970.T" target="_blank" rel="noopener noreferrer">2970</a> / 不動産業</small>
-            </div>
-            <div style="display:flex;align-items:center;gap:8px;flex-shrink:0;">
-              <div class="mini-score"><span class="val">79</span><span class="lbl">スコア</span></div>
-              <span class="status-badge status-partial">部分達成</span>
-            </div>
-          </div>
-
-          <!-- 株価推移タイムライン -->
-          <div class="price-timeline">
-            <div class="pt-step pt-done">
-              <div class="pt-dot"></div>
-              <div class="pt-label">選定時</div>
-              <div class="pt-val">
-                1,032
-              </div>
-            </div>
-            <div class="pt-line"></div>
-
-            <div class="pt-step pt-done">
-              <div class="pt-dot"></div>
-              <div class="pt-label">1ヶ月後</div>
-              <div class="pt-val">
-                
-                <span class="pos">
-                  +9.8%
-                </span>
-                <span class="pt-price">1,133</span>
-                
-              </div>
-            </div>
-            <div class="pt-line"></div>
-
-            <div class="pt-step pt-done">
-              <div class="pt-dot"></div>
-              <div class="pt-label">2ヶ月後</div>
-              <div class="pt-val">
-                
-                <span class="pos">
-                  +8.0%
-                </span>
-                <span class="pt-price">1,114</span>
-                
-              </div>
-            </div>
-            <div class="pt-line"></div>
-
-            <div class="pt-step pt-done">
-              <div class="pt-dot"></div>
-              <div class="pt-label">3ヶ月後</div>
-              <div class="pt-val">
-                
-                <span class="pos">
-                  +8.9%
-                </span>
-                <span class="pt-price">1,124</span>
-                
-              </div>
-            </div>
-          </div><!-- /price-timeline -->
-
-        </div><!-- /result-card -->
-        
-        <div class="result-card">
-          <!-- 銘柄名・スコア -->
-          <div class="rc-head">
-            <div class="rc-name">
-              <strong><a class="yf-link" href="https://finance.yahoo.co.jp/quote/3482.T" target="_blank" rel="noopener noreferrer">ロードスターキャピタル</a></strong>
-              <small><a class="yf-link" href="https://finance.yahoo.co.jp/quote/3482.T" target="_blank" rel="noopener noreferrer">3482</a> / 不動産業</small>
-            </div>
-            <div style="display:flex;align-items:center;gap:8px;flex-shrink:0;">
-              <div class="mini-score"><span class="val">79</span><span class="lbl">スコア</span></div>
-              <span class="status-badge status-miss">未達成</span>
-            </div>
-          </div>
-
-          <!-- 株価推移タイムライン -->
-          <div class="price-timeline">
-            <div class="pt-step pt-done">
-              <div class="pt-dot"></div>
-              <div class="pt-label">選定時</div>
-              <div class="pt-val">
-                3,295
-              </div>
-            </div>
-            <div class="pt-line"></div>
-
-            <div class="pt-step pt-done">
-              <div class="pt-dot"></div>
-              <div class="pt-label">1ヶ月後</div>
-              <div class="pt-val">
-                
-                <span class="neg">
-                  -10.3%
-                </span>
-                <span class="pt-price">2,956</span>
-                
-              </div>
-            </div>
-            <div class="pt-line"></div>
-
-            <div class="pt-step pt-done">
-              <div class="pt-dot"></div>
-              <div class="pt-label">2ヶ月後</div>
-              <div class="pt-val">
-                
-                <span class="neg">
-                  -9.6%
-                </span>
-                <span class="pt-price">2,980</span>
-                
-              </div>
-            </div>
-            <div class="pt-line"></div>
-
-            <div class="pt-step pt-done">
-              <div class="pt-dot"></div>
-              <div class="pt-label">3ヶ月後</div>
-              <div class="pt-val">
-                
-                <span class="neg">
-                  -16.0%
-                </span>
-                <span class="pt-price">2,768</span>
-                
-              </div>
-            </div>
-          </div><!-- /price-timeline -->
-
-        </div><!-- /result-card -->
-        
-        <div class="result-card">
-          <!-- 銘柄名・スコア -->
-          <div class="rc-head">
-            <div class="rc-name">
-              <strong><a class="yf-link" href="https://finance.yahoo.co.jp/quote/6658.T" target="_blank" rel="noopener noreferrer">シライ電子工業</a></strong>
-              <small><a class="yf-link" href="https://finance.yahoo.co.jp/quote/6658.T" target="_blank" rel="noopener noreferrer">6658</a> / 電気機器</small>
-            </div>
-            <div style="display:flex;align-items:center;gap:8px;flex-shrink:0;">
-              <div class="mini-score"><span class="val">79</span><span class="lbl">スコア</span></div>
-              <span class="status-badge status-miss">未達成</span>
-            </div>
-          </div>
-
-          <!-- 株価推移タイムライン -->
-          <div class="price-timeline">
-            <div class="pt-step pt-done">
-              <div class="pt-dot"></div>
-              <div class="pt-label">選定時</div>
-              <div class="pt-val">
-                725
-              </div>
-            </div>
-            <div class="pt-line"></div>
-
-            <div class="pt-step pt-done">
-              <div class="pt-dot"></div>
-              <div class="pt-label">1ヶ月後</div>
-              <div class="pt-val">
-                
-                <span class="neg">
-                  -2.7%
-                </span>
-                <span class="pt-price">705</span>
-                
-              </div>
-            </div>
-            <div class="pt-line"></div>
-
-            <div class="pt-step pt-done">
-              <div class="pt-dot"></div>
-              <div class="pt-label">2ヶ月後</div>
-              <div class="pt-val">
-                
-                <span class="neg">
-                  -4.0%
-                </span>
-                <span class="pt-price">696</span>
-                
-              </div>
-            </div>
-            <div class="pt-line"></div>
-
-            <div class="pt-step pt-done">
-              <div class="pt-dot"></div>
-              <div class="pt-label">3ヶ月後</div>
-              <div class="pt-val">
-                
-                <span class="neg">
-                  -37.2%
-                </span>
-                <span class="pt-price">455</span>
-                
-              </div>
-            </div>
-          </div><!-- /price-timeline -->
-
-        </div><!-- /result-card -->
-        
-      </div>
-    </div><!-- /week-result-card -->
-    
   </div>
   
   
@@ -6121,7 +5885,7 @@
     </div>
     <div class="footer-bottom">
       <p>&copy; 2026 StockInsight AI</p>
-      <p style="font-size:.72rem;">最終更新: 2026-06-16</p>
+      <p style="font-size:.72rem;">最終更新: 2026-06-21</p>
     </div>
   </div>
 </footer>
