@@ -202,6 +202,16 @@
         </div>
       </div>
 
+      <!-- 広告表記。全ページに広告枠があるため、本文の先頭に必ず出す。
+           人手で書く運用にすると必ず抜けるので、テンプレートで機械的に挿入する
+           （景品表示法のステマ規制／2023年10月〜への対応でもある）。 -->
+      <div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px 16px;font-size:.8rem;color:var(--muted);line-height:1.8;margin-bottom:16px;">
+        <strong>広告について</strong>：本記事にはアフィリエイト広告（証券会社・書籍）を含みます。
+        リンク経由で口座開設や購入があった場合、運営者に報酬が支払われることがあります。
+        報酬の有無は記事の内容に影響させていません。詳しくは<a href="/disclaimer/">免責事項</a>をご覧ください。
+        
+      </div>
+
       <div class="card" style="padding:28px 32px;">
         <div class="article-body">
           <h2>セクターとは</h2>
@@ -335,6 +345,25 @@
         </div>
       </div>
 
+      <!-- サイト固有の情報への導線。証券会社の解説だけでは公式サイトの焼き直しになるため、
+           このサイトでしか読めない実データ（推奨銘柄と成績）へ必ず繋ぐ。 -->
+      
+      <div class="card" style="margin-top:20px;">
+        <div class="section-title" style="margin-bottom:12px;">このサイトの実データ</div>
+        <p style="font-size:.9rem;line-height:2;margin:0 0 10px;">
+          StockInsight AI は毎週日曜に日本株を選定し、その後の成績を全件公開しています。
+          これまでに200銘柄を推奨し、12週後に+10%を達成したのは21.8%、
+          平均騰落率は-1.9%です。当たった銘柄も外した銘柄もそのまま残しています。
+        </p>
+        <ul style="font-size:.88rem;line-height:2;margin:0;padding-left:1.2em;">
+          <li><a href="/picks/">今週の推奨銘柄</a></li>
+          <li><a href="/results/">過去の成績（全200銘柄）</a></li>
+          <li><a href="/report/">週次レポート一覧（実際の推奨とその後）</a></li>
+          <li><a href="/about/">選定ロジックの解説</a></li>
+        </ul>
+      </div>
+      
+
       <!-- 関連書籍（Amazonアフィリエイト） -->
       
       <div class="book-section">
@@ -412,32 +441,44 @@
         <div style="display:flex;flex-direction:column;gap:10px;">
           
           
-          <a href="/column/moving-average-golden-cross/" style="display:block;text-decoration:none;">
-            <div style="font-size:.82rem;font-weight:600;color:var(--primary);line-height:1.4;margin-bottom:2px;">ゴールデンクロスは本当に使えるのか？成功例・失敗例を正直に検証</div>
-            <div style="font-size:.72rem;color:var(--muted);">分析手法</div>
+          <a href="/column/how-to-review-picks/" style="display:block;text-decoration:none;">
+            <div style="font-size:.82rem;font-weight:600;color:var(--primary);line-height:1.4;margin-bottom:2px;">推奨銘柄の成績を自分で振り返る方法：投資スキルを高めるレビュー術</div>
+            <div style="font-size:.72rem;color:var(--muted);">投資戦略</div>
           </a>
-          
-          
-          
-          <a href="/column/dmm-securities-account/" style="display:block;text-decoration:none;">
-            <div style="font-size:.82rem;font-weight:600;color:var(--primary);line-height:1.4;margin-bottom:2px;">DMM株（DMM.com証券）の口座開設ガイド｜手数料最安水準で始める株式投資</div>
-            <div style="font-size:.72rem;color:var(--muted);">証券・NISA</div>
-          </a>
-          
-          
-          
-          <a href="/column/failure-autopsy-2026-04/" style="display:block;text-decoration:none;">
-            <div style="font-size:.82rem;font-weight:600;color:var(--primary);line-height:1.4;margin-bottom:2px;">AIが外した推奨を解剖する【2026年4月版】</div>
-            <div style="font-size:.72rem;color:var(--muted);">成績レポート</div>
-          </a>
-          
-          
           
           
           
           <a href="/column/volume-and-price/" style="display:block;text-decoration:none;">
             <div style="font-size:.82rem;font-weight:600;color:var(--primary);line-height:1.4;margin-bottom:2px;">出来高と株価の関係：なぜ出来高増加が重要なのか</div>
             <div style="font-size:.72rem;color:var(--muted);">分析手法</div>
+          </a>
+          
+          
+          
+          <a href="/column/technical-macd-ma-basics/" style="display:block;text-decoration:none;">
+            <div style="font-size:.82rem;font-weight:600;color:var(--primary);line-height:1.4;margin-bottom:2px;">テクニカル分析入門：MACDと移動平均線の使い方</div>
+            <div style="font-size:.72rem;color:var(--muted);">分析手法</div>
+          </a>
+          
+          
+          
+          <a href="/column/rakuten-securities-account/" style="display:block;text-decoration:none;">
+            <div style="font-size:.82rem;font-weight:600;color:var(--primary);line-height:1.4;margin-bottom:2px;">楽天証券の口座開設方法｜楽天ポイントで投資できる！スマホ完結手順を解説</div>
+            <div style="font-size:.72rem;color:var(--muted);">証券・NISA</div>
+          </a>
+          
+          
+          
+          <a href="/column/swing-trade-entry-timing/" style="display:block;text-decoration:none;">
+            <div style="font-size:.82rem;font-weight:600;color:var(--primary);line-height:1.4;margin-bottom:2px;">スイングトレードのエントリータイミング｜移動平均線とMACDで見極める方法</div>
+            <div style="font-size:.72rem;color:var(--muted);">分析手法</div>
+          </a>
+          
+          
+          
+          <a href="/column/our-scoring-logic-explained/" style="display:block;text-decoration:none;">
+            <div style="font-size:.82rem;font-weight:600;color:var(--primary);line-height:1.4;margin-bottom:2px;">StockInsight AIの選定ロジック完全解説：100点満点の採点基準</div>
+            <div style="font-size:.72rem;color:var(--muted);">選定ロジック</div>
           </a>
           
           

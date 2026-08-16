@@ -37,7 +37,7 @@
 ## 最新コラム（投資教育コンテンツ）
 
 - [ゴールデンクロスは本当に使えるのか？成功例・失敗例を正直に検証](https://stockinsight-ai.github.io/column/moving-average-golden-cross/)
-- [DMM株（DMM.com証券）の口座開設ガイド｜手数料最安水準で始める株式投資](https://stockinsight-ai.github.io/column/dmm-securities-account/)
+- [DMM株（DMM.com証券）の口座開設ガイド｜手数料と特徴の整理](https://stockinsight-ai.github.io/column/dmm-securities-account/)
 - [AIが外した推奨を解剖する【2026年4月版】](https://stockinsight-ai.github.io/column/failure-autopsy-2026-04/)
 - [セクター分散の重要性：なぜ同一業種への集中投資を避けるのか](https://stockinsight-ai.github.io/column/sector-diversification/)
 - [出来高と株価の関係：なぜ出来高増加が重要なのか](https://stockinsight-ai.github.io/column/volume-and-price/)

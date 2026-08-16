@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>週次レポート一覧 | AI銘柄選定サービス</title>
+  <meta name="description" content="StockInsight AI が毎週選定した推奨銘柄の記録。33週分のレポートを、その後の成績とあわせて全件公開しています。">
+
+  <!-- OGP -->
+  <meta property="og:title" content="StockInsight AI | AI銘柄選定">
+  <meta property="og:description" content="AIが毎週選ぶ中長期有望日本株。成績を完全公開。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://stockinsight-ai.github.io/">
+  <meta property="og:image" content="https://stockinsight-ai.github.io/assets/img/ogp.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="StockInsight AI">
+  <meta property="og:locale" content="ja_JP">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="StockInsight AI">
+  <meta name="twitter:description" content="AIが毎週選ぶ中長期有望日本株">
+  <meta name="twitter:image" content="https://stockinsight-ai.github.io/assets/img/ogp.png">
+
+  <!-- 構造化データ：WebSite + SearchAction -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "StockInsight AI",
+    "url": "https://stockinsight-ai.github.io/",
+    "description": "AIが毎週選ぶ中長期有望日本株。テクニカル・ファンダメンタル・センチメント3軸スコアで厳選した銘柄と成績を完全公開。",
+    "inLanguage": "ja",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://stockinsight-ai.github.io/column/?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <!-- 構造化データ：Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "StockInsight AI",
+    "url": "https://stockinsight-ai.github.io/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://stockinsight-ai.github.io/assets/img/ogp.png",
+      "width": 1200,
+      "height": 630
+    },
+    "description": "AIによる中長期日本株銘柄選定サービス。毎週日曜日に推奨銘柄を公開し、その後の成績を全件開示。",
+    "foundingDate": "2026",
+    "knowsAbout": ["日本株投資", "テクニカル分析", "ファンダメンタル分析", "株式スクリーニング", "中長期投資"],
+    "sameAs": []
+  }
+  </script>
+  
+
+  <meta name="google-site-verification" content="jntYeujTZa7djhCeI4bXONFyIVFQTXFFajI_V447P28">
+  <link rel="canonical" href="https://stockinsight-ai.github.io/report/">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4265350416312017"
+       crossorigin="anonymous"></script>
+</head>
+<body>
+
+<a href="#main-content" style="position:absolute;left:-9999px;top:0;z-index:999;background:#fff;padding:8px 16px;color:var(--primary);font-weight:700;border-radius:0 0 8px 0;" onfocus="this.style.left='0'">本文へスキップ</a>
+
+<!-- ヘッダー -->
+<header>
+  <div class="header-inner">
+    <a class="logo" href="/">Stock<span>Insight</span> AI</a>
+    <nav>
+      <a href="/picks/">今週の推奨</a>
+      <a href="/results/">成績</a>
+      <a href="/backtest/">バックテスト</a>
+      <a href="/about/">選定ロジック</a>
+      <a href="/column/">コラム</a>
+    </nav>
+    <button class="hamburger" id="hamburger-btn" aria-label="メニューを開く">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="/">トップ</a>
+    <a href="/picks/">今週の推奨</a>
+    <a href="/results/">成績</a>
+    <a href="/backtest/">バックテスト</a>
+    <a href="/about/">選定ロジック</a>
+    <a href="/column/">コラム</a>
+    <a href="/contact/">お問い合わせ</a>
+  </div>
+</header>
+
+<!-- 信頼バー -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    
+    <div class="trust-item"><span>📊</span><span><strong>毎週日曜</strong>自動更新</span></div>
+    <div class="trust-item"><span>🤖</span><span>テクニカル・ファンダ・センチメント <strong>3軸スコアリング</strong></span></div>
+    <div class="trust-item"><span>📈</span><span>成績を<strong>全件公開</strong>（勝ち負け含む）</span></div>
+    <div class="trust-item"><span>🆓</span><span><strong>完全無料</strong>・登録不要</span></div>
+    
+  </div>
+</div>
+
+<main id="main-content">
+  
+<div class="container page-wrap">
+
+  <div class="breadcrumb">
+    <a href="/">トップ</a>
+    <span>›</span>
+    週次レポート
+  </div>
+
+  <div class="page-hd">
+    <h1>週次レポート一覧</h1>
+    <p>毎週日曜に選定した推奨銘柄を、33週分すべて残しています</p>
+  </div>
+
+  <div class="card" style="margin-bottom:28px;">
+    <p style="font-size:.9rem;line-height:2;margin:0;">
+      各レポートには、その週に選定した銘柄・3軸スコアの内訳・選定根拠を掲載しています。
+      選定から12週が経過した週は、<strong>実際にどうなったか</strong>（+10%達成数・平均騰落率・
+      最も上昇した銘柄と最も下落した銘柄）を同じページに追記しています。
+      当たった週だけを残すことはしていません。
+      
+      全期間では200銘柄を推奨し、12週後に+10%を達成したのは21.8%、
+      平均騰落率は-1.9%です（<a href="/results/">過去の成績</a>）。
+      
+    </p>
+  </div>
+
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>週</th>
+          <th class="num">推奨数</th>
+          <th class="num">+10%達成</th>
+          <th class="num">平均騰落率（12週後）</th>
+          <th>レポート</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        
+        
+        <tr>
+          <td><a href="/report/2026-08-16/">2026年8月16日〜</a></td>
+          <td class="num">10</td>
+          <td class="num">評価中</td>
+          <td class="num">—</td>
+          <td><a href="/report/2026-08-16/">詳細を見る →</a></td>
+        </tr>
+        
+        
+        
+        <tr>
+          <td><a href="/report/2026-08-09/">2026年8月9日〜</a></td>
+          <td class="num">10</td>
+          <td class="num">評価中</td>
+          <td class="num">—</td>
+          <td><a href="/report/2026-08-09/">詳細を見る →</a></td>
+        </tr>
+        
+        
+        
+        <tr>
+          <td><a href="/report/2026-08-02/">2026年8月2日〜</a></td>
+          <td class="num">10</td>
+          <td class="num">評価中</td>
+          <td class="num">—</td>
+          <td><a href="/report/2026-08-02/">詳細を見る →</a></td>
+        </tr>
+        
+        
+        
+        <tr>
+          <td><a href="/report/2026-07-26/">2026年7月26日〜</a></td>
+          <td class="num">8</td>
+          <td class="num">評価中</td>
+          <td class="num">—</td>
+          <td><a href="/report/2026-07-26/">詳細を見る →</a></td>
+        </tr>
+        
+        
+        
+        <tr>
+          <td><a href="/report/2026-07-19/">2026年7月19日〜</a></td>
+          <td class="num">8</td>
+          <td class="num">評価中</td>
+          <td class="num">—</td>
+          <td><a href="/report/2026-07-19/">詳細を見る →</a></td>
+        </tr>
+        
+        
+        
+        <tr>
+          <td><a href="/report/2026-07-17/">2026年7月17日〜</a></td>
+          <td class="num">7</td>
+          <td class="num">評価中</td>
+          <td class="num">—</td>
+          <td><a href="/report/2026-07-17/">詳細を見る →</a></td>
+        </tr>
+        
+        
+        
+        <tr>
+          <td><a href="/report/2026-07-12/">2026年7月12日〜</a></td>
+          <td class="num">7</td>
+          <td class="num">評価中</td>
+          <td class="num">—</td>
+          <td><a href="/report/2026-07-12/">詳細を見る →</a></td>
+        </tr>
+        
+        
+        
+        <tr>
+          <td><a href="/report/2026-06-28/">2026年6月28日〜</a></td>
+          <td class="num">5</td>
+          <td class="num">評価中</td>
+          <td class="num">—</td>
+          <td><a href="/report/2026-06-28/">詳細を見る →</a></td>
+        </tr>
+        
+        
+        
+        <tr>
+          <td><a href="/report/2026-06-21/">2026年6月21日〜</a></td>
+          <td class="num">1</td>
+          <td class="num">評価中</td>
+          <td class="num">—</td>
+          <td><a href="/report/2026-06-21/">詳細を見る →</a></td>
+        </tr>
+        
+        
+        
+        <tr>
+          <td><a href="/report/2026-06-14/">2026年6月14日〜</a></td>
+          <td class="num">7</td>
+          <td class="num">評価中</td>
+          <td class="num">—</td>
+          <td><a href="/report/2026-06-14/">詳細を見る →</a></td>
+        </tr>
+        
+        
+        
+        <tr>
+          <td><a href="/report/2026-06-07/">2026年6月7日〜</a></td>
+          <td class="num">10</td>
+          <td class="num">評価中</td>
+          <td class="num">—</td>
+          <td><a href="/report/2026-06-07/">詳細を見る →</a></td>
+        </tr>
+        
+        
+        
+        <tr>
+          <td><a href="/report/2026-05-31/">2026年5月31日〜</a></td>
+          <td class="num">9</td>
+          <td class="num">評価中</td>
+          <td class="num">—</td>
+          <td><a href="/report/2026-05-31/">詳細を見る →</a></td>
+        </tr>
+        
+        
+        
+        <tr>
+          <td><a href="/report/2026-05-24/">2026年5月24日〜</a></td>
+          <td class="num">7</td>
+          <td class="num">評価中</td>
+          <td class="num">—</td>
+          <td><a href="/report/2026-05-24/">詳細を見る →</a></td>
+        </tr>
+        
+        
+        
+        <tr>
+          <td><a href="/report/2026-05-17/">2026年5月17日〜</a></td>
+          <td class="num">5</td>
+          <td class="num">2/5</td>
+          <td class="num"><span class="pos">+14.4%</span></td>
+          <td><a href="/report/2026-05-17/">詳細を見る →</a></td>
+        </tr>
+        
+        
+        
+        <tr>
+          <td><a href="/report/2026-05-10/">2026年5月10日〜</a></td>
+          <td class="num">1</td>
+          <td class="num">0/1</td>
+          <td class="num"><span class="pos">+2.9%</span></td>
+          <td><a href="/report/2026-05-10/">詳細を見る →</a></td>
+        </tr>
+        
+        
+        
+        <tr>
+          <td><a href="/report/2026-05-04/">2026年5月4日〜</a></td>
+          <td class="num">5</td>
+          <td class="num">1/5</td>
+          <td class="num"><span class="neg">-4.3%</span></td>
+          <td><a href="/report/2026-05-04/">詳細を見る →</a></td>
+        </tr>
+        
+        
+        
+        <tr>
+          <td><a href="/report/2026-04-26/">2026年4月26日〜</a></td>
+          <td class="num">5</td>
+          <td class="num">2/5</td>
+          <td class="num"><span class="neg">-2.1%</span></td>
+          <td><a href="/report/2026-04-26/">詳細を見る →</a></td>
+        </tr>
+        
+        
+        
+        <tr>
+          <td><a href="/report/2026-04-19/">2026年4月19日〜</a></td>
+          <td class="num">5</td>
+          <td class="num">0/5</td>
+          <td class="num"><span class="neg">-22.7%</span></td>
+          <td><a href="/report/2026-04-19/">詳細を見る →</a></td>
+        </tr>
+        
+        
+        
+        <tr>
+          <td><a href="/report/2026-04-12/">2026年4月12日〜</a></td>
+          <td class="num">7</td>
+          <td class="num">0/7</td>
+          <td class="num"><span class="neg">-9.3%</span></td>
+          <td><a href="/report/2026-04-12/">詳細を見る →</a></td>
+        </tr>
+        
+        
+        
+        <tr>
+          <td><a href="/report/2026-04-04/">2026年4月4日〜</a></td>
+          <td class="num">8</td>
+          <td class="num">評価中</td>
+          <td class="num">—</td>
+          <td><a href="/report/2026-04-04/">詳細を見る →</a></td>
+        </tr>
+        
+        
+        
+        <tr>
+          <td><a href="/report/2026-03-29/">2026年3月29日〜</a></td>
+          <td class="num">5</td>
+          <td class="num">0/5</td>
+          <td class="num"><span class="neg">-11.9%</span></td>
+          <td><a href="/report/2026-03-29/">詳細を見る →</a></td>
+        </tr>
+        
+        
+        
+        <tr>
+          <td><a href="/report/2026-03-22/">2026年3月22日〜</a></td>
+          <td class="num">5</td>
+          <td class="num">1/5</td>
+          <td class="num"><span class="neg">-2.7%</span></td>
+          <td><a href="/report/2026-03-22/">詳細を見る →</a></td>
+        </tr>
+        
+        
+        
+        <tr>
+          <td><a href="/report/2026-03-15/">2026年3月15日〜</a></td>
+          <td class="num">5</td>
+          <td class="num">1/5</td>
+          <td class="num"><span class="pos">+11.6%</span></td>
+          <td><a href="/report/2026-03-15/">詳細を見る →</a></td>
+        </tr>
+        
+        
+        
+        <tr>
+          <td><a href="/report/2026-03-08/">2026年3月8日〜</a></td>
+          <td class="num">5</td>
+          <td class="num">0/5</td>
+          <td class="num"><span class="neg">-11.5%</span></td>
+          <td><a href="/report/2026-03-08/">詳細を見る →</a></td>
+        </tr>
+        
+        
+        
+        <tr>
+          <td><a href="/report/2026-03-01/">2026年3月1日〜</a></td>
+          <td class="num">5</td>
+          <td class="num">1/5</td>
+          <td class="num"><span class="neg">-10.0%</span></td>
+          <td><a href="/report/2026-03-01/">詳細を見る →</a></td>
+        </tr>
+        
+        
+        
+        <tr>
+          <td><a href="/report/2026-02-22/">2026年2月22日〜</a></td>
+          <td class="num">5</td>
+          <td class="num">1/5</td>
+          <td class="num"><span class="neg">-10.3%</span></td>
+          <td><a href="/report/2026-02-22/">詳細を見る →</a></td>
+        </tr>
+        
+        
+        
+        <tr>
+          <td><a href="/report/2026-02-15/">2026年2月15日〜</a></td>
+          <td class="num">5</td>
+          <td class="num">0/5</td>
+          <td class="num"><span class="neg">-2.8%</span></td>
+          <td><a href="/report/2026-02-15/">詳細を見る →</a></td>
+        </tr>
+        
+        
+        
+        <tr>
+          <td><a href="/report/2026-02-08/">2026年2月8日〜</a></td>
+          <td class="num">5</td>
+          <td class="num">1/5</td>
+          <td class="num"><span class="neg">-0.5%</span></td>
+          <td><a href="/report/2026-02-08/">詳細を見る →</a></td>
+        </tr>
+        
+        
+        
+        <tr>
+          <td><a href="/report/2026-02-01/">2026年2月1日〜</a></td>
+          <td class="num">5</td>
+          <td class="num">0/5</td>
+          <td class="num"><span class="neg">-4.5%</span></td>
+          <td><a href="/report/2026-02-01/">詳細を見る →</a></td>
+        </tr>
+        
+        
+        
+        <tr>
+          <td><a href="/report/2026-01-25/">2026年1月25日〜</a></td>
+          <td class="num">5</td>
+          <td class="num">1/5</td>
+          <td class="num"><span class="pos">+1.4%</span></td>
+          <td><a href="/report/2026-01-25/">詳細を見る →</a></td>
+        </tr>
+        
+        
+        
+        <tr>
+          <td><a href="/report/2026-01-18/">2026年1月18日〜</a></td>
+          <td class="num">5</td>
+          <td class="num">1/5</td>
+          <td class="num"><span class="pos">+0.0%</span></td>
+          <td><a href="/report/2026-01-18/">詳細を見る →</a></td>
+        </tr>
+        
+        
+        
+        <tr>
+          <td><a href="/report/2026-01-11/">2026年1月11日〜</a></td>
+          <td class="num">5</td>
+          <td class="num">2/5</td>
+          <td class="num"><span class="pos">+7.4%</span></td>
+          <td><a href="/report/2026-01-11/">詳細を見る →</a></td>
+        </tr>
+        
+        
+        
+        <tr>
+          <td><a href="/report/2026-01-04/">2026年1月4日〜</a></td>
+          <td class="num">5</td>
+          <td class="num">3/5</td>
+          <td class="num"><span class="pos">+26.5%</span></td>
+          <td><a href="/report/2026-01-04/">詳細を見る →</a></td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card" style="margin-top:28px;">
+    <div class="section-title" style="margin-bottom:12px;">あわせて読む</div>
+    <ul style="font-size:.9rem;line-height:2.1;margin:0;padding-left:1.2em;">
+      <li><a href="/picks/">今週の推奨銘柄</a> — 最新週の選定結果</li>
+      <li><a href="/results/">過去の成績</a> — 全銘柄の結果を一覧で確認できます</li>
+      <li><a href="/about/">選定ロジック</a> — テクニカル・ファンダメンタル・センチメントの3軸で何を見ているか</li>
+      <li><a href="/backtest/">バックテスト結果</a> — 同じ条件で過去に運用した場合の試算</li>
+      <li><a href="/column/how-to-review-picks/">推奨銘柄の見方</a> — スコアの読み解き方</li>
+      <li><a href="/disclaimer/">免責事項</a> — 本サイトは投資助言業の登録を受けていません</li>
+    </ul>
+  </div>
+
+</div>
+
+</main>
+
+<!-- フッター -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>StockInsight AI</h4>
+        <p style="font-size:.8rem;color:rgba(255,255,255,.55);line-height:1.7;">
+          AIが毎週選ぶ中長期有望日本株。<br>
+          選定根拠・成績を完全公開。
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>メニュー</h4>
+        <a href="/picks/">今週の推奨銘柄</a>
+        <a href="/results/">過去の成績</a>
+        <a href="/backtest/">バックテスト</a>
+        <a href="/about/">選定ロジック</a>
+      </div>
+      <div class="footer-col">
+        <h4>コンテンツ</h4>
+        <a href="/column/">コラム一覧</a>
+        <a href="/contact/">お問い合わせ</a>
+        <a href="/about-site/">運営者情報</a>
+      </div>
+      <div class="footer-col">
+        <h4>ポリシー</h4>
+        <a href="/disclaimer/">免責事項</a>
+        <a href="/privacy/">プライバシーポリシー</a>
+      </div>
+    </div>
+    <div class="footer-disclaimer">
+      本サービスは投資助言業の登録を受けておらず、特定の有価証券の売買を推奨するものではありません。
+      掲載情報の正確性を保証せず、投資判断はご自身の責任において行ってください。
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 StockInsight AI</p>
+      <p style="font-size:.72rem;">最終更新: 2026-08-17</p>
+    </div>
+  </div>
+</footer>
+
+<!-- 指標説明ツールチップ モーダル -->
+<div class="tip-overlay" id="tip-overlay" role="dialog" aria-modal="true">
+  <div class="tip-modal">
+    <button class="tip-modal-close" id="tip-close" aria-label="閉じる">×</button>
+    <div class="tip-modal-title"></div>
+    <div class="tip-modal-body"></div>
+  </div>
+</div>
+
+<script src="/assets/js/main.js"></script>
+
+</body>
+</html>
