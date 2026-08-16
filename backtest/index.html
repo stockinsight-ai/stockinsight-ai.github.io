@@ -130,27 +130,27 @@
   <!-- サマリーカード -->
   <div class="bt-summary">
     <div class="bt-card">
-      <div class="val pos">75.0%</div>
+      <div class="val neg">31.4%</div>
       <div class="lbl">勝率（12週後+10%）<button class="tip-icon" data-tip="win_rate" aria-label="勝率の説明">?</button></div>
     </div>
     <div class="bt-card highlight">
-      <div class="val">+4.99%</div>
-      <div class="lbl">平均騰落率<button class="tip-icon" data-tip="avg_return" aria-label="平均騰落率の説明">?</button></div>
+      <div class="val">+5.0%</div>
+      <div class="lbl">平均騰落率（12週後）<button class="tip-icon" data-tip="avg_return" aria-label="平均騰落率の説明">?</button></div>
     </div>
     <div class="bt-card">
-      <div class="val">+436.73%</div>
+      <div class="val">+75.7%</div>
       <div class="lbl">累計リターン<button class="tip-icon" data-tip="total_return" aria-label="累計リターンの説明">?</button></div>
     </div>
     <div class="bt-card">
-      <div class="val">+604.34%</div>
+      <div class="val">+92.0%</div>
       <div class="lbl">TOPIX累計（同期間）<button class="tip-icon" data-tip="benchmark" aria-label="TOPIX累計の説明">?</button></div>
     </div>
     <div class="bt-card">
-      <div class="val">2.57</div>
+      <div class="val">1.49</div>
       <div class="lbl">シャープレシオ<button class="tip-icon" data-tip="sharpe" aria-label="シャープレシオの説明">?</button></div>
     </div>
     <div class="bt-card">
-      <div class="val neg">-12.17%</div>
+      <div class="val neg">-7.39%</div>
       <div class="lbl">最大ドローダウン<button class="tip-icon" data-tip="drawdown" aria-label="最大ドローダウンの説明">?</button></div>
     </div>
   </div>
@@ -159,12 +159,23 @@
   <div style="background:rgba(232,160,32,.08);border:1px solid rgba(232,160,32,.3);border-radius:8px;padding:14px 18px;font-size:.8rem;color:var(--muted);margin-bottom:32px;">
     ※ バックテストは過去のデータに基づくシミュレーションです。将来の運用成果を保証するものではありません。
     取引コスト・スリッページは考慮していません。
+    <br>
+    ※ 各月の数値は「その月に買って12週間保有した」結果です。保有期間が重なるため、
+    累計リターン・シャープレシオ・最大ドローダウンは<strong>重複しないよう12週ごとに乗り換えた場合</strong>で計算しています。
+    
+    開始月によって結果が変わるため、累計リターンは3通りの開始月の平均値です
+    （幅: +57.0% 〜 +91.2%、
+    TOPIX +82.0% 〜 +105.7%）。
+    
+    <br>
+    ※ 実際に公開した推奨銘柄の成績は<a href="/results/">過去の成績</a>をご覧ください。
+    バックテストは同じ条件で運用できた場合の試算であり、実績とは一致しません。
   </div>
 
   <!-- 月次チャート -->
   
   <div class="card" style="margin-bottom:24px;">
-    <div class="section-title" style="margin-bottom:4px;">月次リターン</div>
+    <div class="section-title" style="margin-bottom:4px;">買い付け月ごとの12週リターン</div>
     <div style="font-size:.8rem;color:var(--muted);margin-bottom:16px;">StockInsight AI vs TOPIX</div>
     <div class="chart-wrap">
       <canvas id="monthly-chart"></canvas>
@@ -175,7 +186,7 @@
   <!-- 累積チャート -->
   
   <div class="card" style="margin-bottom:32px;">
-    <div class="section-title" style="margin-bottom:4px;">累積リターン推移</div>
+    <div class="section-title" style="margin-bottom:4px;">累積リターン推移（12週ごとに乗り換え）</div>
     <div style="font-size:.8rem;color:var(--muted);margin-bottom:16px;">累積騰落率（%）</div>
     <div class="chart-wrap">
       <canvas id="cumulative-chart"></canvas>
@@ -185,13 +196,13 @@
 
   <!-- 月次テーブル -->
   
-  <div class="section-title" style="margin-bottom:16px;">月次成績詳細</div>
+  <div class="section-title" style="margin-bottom:16px;">買い付け月ごとの成績（各行は12週保有）</div>
   <div class="table-wrap">
     <table class="data-table">
       <thead>
         <tr>
-          <th>月</th>
-          <th class="num">月次リターン</th>
+          <th>買い付け月</th>
+          <th class="num">12週リターン</th>
           <th class="num">TOPIX</th>
           <th class="num">推奨数</th>
           <th class="num">達成数</th>
@@ -607,7 +618,7 @@
     </div>
     <div class="footer-bottom">
       <p>&copy; 2026 StockInsight AI</p>
-      <p style="font-size:.72rem;">最終更新: 2026-08-16</p>
+      <p style="font-size:.72rem;">最終更新: 2026-08-17</p>
     </div>
   </div>
 </footer>
@@ -627,7 +638,7 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js"></script>
 <script>
 var monthlyData = [{"benchmark_return_pct": 3.47, "n_hit": 2, "n_picks": 10, "return_pct": 4.89, "year_month": "2023-01"}, {"benchmark_return_pct": 5.79, "n_hit": 4, "n_picks": 10, "return_pct": 6.62, "year_month": "2023-02"}, {"benchmark_return_pct": 7.57, "n_hit": 8, "n_picks": 10, "return_pct": 15.14, "year_month": "2023-03"}, {"benchmark_return_pct": 12.86, "n_hit": 6, "n_picks": 10, "return_pct": 20.04, "year_month": "2023-04"}, {"benchmark_return_pct": 10.56, "n_hit": 4, "n_picks": 10, "return_pct": 7.82, "year_month": "2023-05"}, {"benchmark_return_pct": 3.99, "n_hit": 5, "n_picks": 10, "return_pct": 5.32, "year_month": "2023-06"}, {"benchmark_return_pct": 3.99, "n_hit": 1, "n_picks": 10, "return_pct": -0.07, "year_month": "2023-07"}, {"benchmark_return_pct": 0.23, "n_hit": 1, "n_picks": 10, "return_pct": -2.04, "year_month": "2023-08"}, {"benchmark_return_pct": 2.8, "n_hit": 2, "n_picks": 10, "return_pct": -2.18, "year_month": "2023-09"}, {"benchmark_return_pct": 0.58, "n_hit": 0, "n_picks": 10, "return_pct": -4.91, "year_month": "2023-10"}, {"benchmark_return_pct": 7.69, "n_hit": 3, "n_picks": 10, "return_pct": 7.91, "year_month": "2023-11"}, {"benchmark_return_pct": 11.89, "n_hit": 5, "n_picks": 10, "return_pct": 16.29, "year_month": "2023-12"}, {"benchmark_return_pct": 16.85, "n_hit": 5, "n_picks": 10, "return_pct": 13.86, "year_month": "2024-01"}, {"benchmark_return_pct": 6.6, "n_hit": 2, "n_picks": 10, "return_pct": 1.79, "year_month": "2024-02"}, {"benchmark_return_pct": 2.19, "n_hit": 3, "n_picks": 10, "return_pct": 1.53, "year_month": "2024-03"}, {"benchmark_return_pct": 4.01, "n_hit": 3, "n_picks": 10, "return_pct": 4.4, "year_month": "2024-04"}, {"benchmark_return_pct": 0.06, "n_hit": 2, "n_picks": 10, "return_pct": -1.39, "year_month": "2024-05"}, {"benchmark_return_pct": -3.6, "n_hit": 0, "n_picks": 10, "return_pct": -4.87, "year_month": "2024-06"}, {"benchmark_return_pct": -4.18, "n_hit": 2, "n_picks": 10, "return_pct": -2.95, "year_month": "2024-07"}, {"benchmark_return_pct": 4.19, "n_hit": 3, "n_picks": 10, "return_pct": 9.56, "year_month": "2024-08"}, {"benchmark_return_pct": 0.48, "n_hit": 2, "n_picks": 10, "return_pct": 0.44, "year_month": "2024-09"}, {"benchmark_return_pct": 4.31, "n_hit": 2, "n_picks": 10, "return_pct": 2.83, "year_month": "2024-10"}, {"benchmark_return_pct": 4.06, "n_hit": 4, "n_picks": 10, "return_pct": 3.97, "year_month": "2024-11"}, {"benchmark_return_pct": 2.42, "n_hit": 2, "n_picks": 10, "return_pct": 2.88, "year_month": "2024-12"}, {"benchmark_return_pct": 0.26, "n_hit": 1, "n_picks": 10, "return_pct": -5.16, "year_month": "2025-01"}, {"benchmark_return_pct": -4.62, "n_hit": 0, "n_picks": 10, "return_pct": -7.39, "year_month": "2025-02"}, {"benchmark_return_pct": 3.29, "n_hit": 1, "n_picks": 10, "return_pct": 1.42, "year_month": "2025-03"}, {"benchmark_return_pct": 14.74, "n_hit": 4, "n_picks": 10, "return_pct": 12.89, "year_month": "2025-04"}, {"benchmark_return_pct": 7.64, "n_hit": 2, "n_picks": 10, "return_pct": 5.48, "year_month": "2025-05"}, {"benchmark_return_pct": 8.58, "n_hit": 5, "n_picks": 10, "return_pct": 9.34, "year_month": "2025-06"}, {"benchmark_return_pct": 10.17, "n_hit": 7, "n_picks": 10, "return_pct": 15.69, "year_month": "2025-07"}, {"benchmark_return_pct": 11.19, "n_hit": 5, "n_picks": 10, "return_pct": 8.53, "year_month": "2025-08"}, {"benchmark_return_pct": 9.66, "n_hit": 2, "n_picks": 10, "return_pct": 6.42, "year_month": "2025-09"}, {"benchmark_return_pct": 9.39, "n_hit": 6, "n_picks": 10, "return_pct": 8.76, "year_month": "2025-10"}, {"benchmark_return_pct": 9.19, "n_hit": 4, "n_picks": 10, "return_pct": 6.61, "year_month": "2025-11"}, {"benchmark_return_pct": 17.29, "n_hit": 5, "n_picks": 10, "return_pct": 10.02, "year_month": "2025-12"}];
-var cumulativeData = [{"benchmark": 3.47, "date": "2023-01-01", "strategy": 4.89}, {"benchmark": 9.46, "date": "2023-02-01", "strategy": 11.83}, {"benchmark": 17.75, "date": "2023-03-01", "strategy": 28.77}, {"benchmark": 32.89, "date": "2023-04-01", "strategy": 54.57}, {"benchmark": 46.92, "date": "2023-05-01", "strategy": 66.66}, {"benchmark": 52.78, "date": "2023-06-01", "strategy": 75.52}, {"benchmark": 58.88, "date": "2023-07-01", "strategy": 75.4}, {"benchmark": 59.25, "date": "2023-08-01", "strategy": 71.82}, {"benchmark": 63.71, "date": "2023-09-01", "strategy": 68.08}, {"benchmark": 64.65, "date": "2023-10-01", "strategy": 59.82}, {"benchmark": 77.32, "date": "2023-11-01", "strategy": 72.47}, {"benchmark": 98.4, "date": "2023-12-01", "strategy": 100.56}, {"benchmark": 131.83, "date": "2024-01-01", "strategy": 128.36}, {"benchmark": 147.13, "date": "2024-02-01", "strategy": 132.45}, {"benchmark": 152.54, "date": "2024-03-01", "strategy": 136.0}, {"benchmark": 162.67, "date": "2024-04-01", "strategy": 146.39}, {"benchmark": 162.83, "date": "2024-05-01", "strategy": 142.96}, {"benchmark": 153.37, "date": "2024-06-01", "strategy": 131.13}, {"benchmark": 142.77, "date": "2024-07-01", "strategy": 124.31}, {"benchmark": 152.95, "date": "2024-08-01", "strategy": 145.76}, {"benchmark": 154.16, "date": "2024-09-01", "strategy": 146.84}, {"benchmark": 165.12, "date": "2024-10-01", "strategy": 153.82}, {"benchmark": 175.88, "date": "2024-11-01", "strategy": 163.9}, {"benchmark": 182.56, "date": "2024-12-01", "strategy": 171.5}, {"benchmark": 183.29, "date": "2025-01-01", "strategy": 157.49}, {"benchmark": 170.2, "date": "2025-02-01", "strategy": 138.46}, {"benchmark": 179.09, "date": "2025-03-01", "strategy": 141.85}, {"benchmark": 220.23, "date": "2025-04-01", "strategy": 173.02}, {"benchmark": 244.7, "date": "2025-05-01", "strategy": 187.98}, {"benchmark": 274.27, "date": "2025-06-01", "strategy": 214.88}, {"benchmark": 312.33, "date": "2025-07-01", "strategy": 264.29}, {"benchmark": 358.47, "date": "2025-08-01", "strategy": 295.36}, {"benchmark": 402.76, "date": "2025-09-01", "strategy": 320.74}, {"benchmark": 449.97, "date": "2025-10-01", "strategy": 357.6}, {"benchmark": 500.51, "date": "2025-11-01", "strategy": 387.85}, {"benchmark": 604.34, "date": "2025-12-01", "strategy": 436.73}];
+var cumulativeData = [{"benchmark": 3.47, "date": "2023-03-26", "strategy": 4.89}, {"benchmark": 16.78, "date": "2023-06-24", "strategy": 25.91}, {"benchmark": 21.44, "date": "2023-09-23", "strategy": 25.82}, {"benchmark": 22.14, "date": "2023-12-24", "strategy": 19.64}, {"benchmark": 42.72, "date": "2024-03-25", "strategy": 36.23}, {"benchmark": 48.44, "date": "2024-06-24", "strategy": 42.22}, {"benchmark": 42.24, "date": "2024-09-23", "strategy": 38.03}, {"benchmark": 48.37, "date": "2024-12-24", "strategy": 41.93}, {"benchmark": 48.75, "date": "2025-03-26", "strategy": 34.61}, {"benchmark": 70.68, "date": "2025-06-24", "strategy": 51.96}, {"benchmark": 88.04, "date": "2025-09-23", "strategy": 75.8}, {"benchmark": 105.7, "date": "2025-12-24", "strategy": 91.2}];
 window.initBacktestCharts(monthlyData, cumulativeData);
 </script>
 
