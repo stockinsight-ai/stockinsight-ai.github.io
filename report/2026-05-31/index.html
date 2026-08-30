@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>週次レポート 2026年5月31日〜 | AI銘柄選定サービス</title>
-  <meta name="description" content="2026年5月31日〜にAIが選定した9銘柄と、そのスコア内訳・選定根拠。">
+  <meta name="description" content="2026年5月31日〜にAIが選定した9銘柄と、そのスコア内訳・選定根拠・12週後の実績（3/9銘柄が+10%達成、平均+13.8%）。">
 
   <!-- OGP -->
   <meta property="og:title" content="StockInsight AI | AI銘柄選定">
@@ -133,9 +133,30 @@
 
   <!-- この週の結果（12週経過した週のみ） -->
   
-  <div style="background:rgba(232,160,32,.08);border:1px solid rgba(232,160,32,.3);border-radius:8px;padding:14px 18px;font-size:.85rem;color:var(--muted);margin-bottom:24px;">
-    この週の推奨は選定から12週が経過していないため、結果は未確定です。
-    12週経過後にこのページへ実績を追記します（9銘柄）。
+  <div class="card" style="margin-bottom:24px;">
+    <div class="section-title" style="margin-bottom:12px;">この週の推奨はどうなったか</div>
+    <div class="bt-summary" style="margin-bottom:12px;">
+      <div class="bt-card">
+        <div class="val pos">3/9</div>
+        <div class="lbl">12週後に+10%達成</div>
+      </div>
+      <div class="bt-card">
+        <div class="val pos">+13.8%</div>
+        <div class="lbl">平均騰落率（12週後）</div>
+      </div>
+      <div class="bt-card">
+        <div class="val pos">+153.3%</div>
+        <div class="lbl">最も上昇：共和コーポレーション</div>
+      </div>
+      <div class="bt-card">
+        <div class="val neg">-32.1%</div>
+        <div class="lbl">最も下落：扶桑化学工業</div>
+      </div>
+    </div>
+    <p style="font-size:.85rem;color:var(--muted);line-height:1.9;margin:0;">
+      当たった週も外した週も、そのまま公開しています。全期間の集計は<a href="/results/">過去の成績</a>、
+      選定の仕組みは<a href="/about/">選定ロジック</a>をご覧ください。
+    </p>
   </div>
   
 
@@ -159,7 +180,7 @@
   <div class="card" style="margin-bottom:32px;">
     <div class="section-title" style="margin-bottom:12px;">この週のデータから読み取れること</div>
     <ul style="font-size:.9rem;line-height:2;margin:0;padding-left:1.2em;">
-      <li>7業種に分散したが、サービス業が3銘柄と最も多く、この週は同業種への偏りがある。</li><li>総合スコアは68〜87点（平均77.0点）の範囲に収まっている。</li><li>この週の推奨は、選定から12週が経過していないため結果は未確定。</li>
+      <li>7業種に分散したが、サービス業が3銘柄と最も多く、この週は同業種への偏りがある。</li><li>総合スコアは68〜87点（平均77.0点）の範囲に収まっている。</li><li>平均騰落率は4週+3.0% / 8週+0.1% / 12週+13.8%で推移した。</li><li>12週後にプラスだったのは9銘柄中4銘柄。+10%以上の達成は3銘柄（33.3%）だった。</li><li>達成率33.3%は、全期間の平均23.9%を9.4ポイント上回った。</li><li>この週に限れば、スコアが週平均以上の5銘柄の平均は+4.6%、平均未満の4銘柄は+25.3%で、上位群のほうが低かった（1週分の観察であり、傾向を示すものではない）。</li>
     </ul>
     <p style="font-size:.8rem;color:var(--muted);margin:12px 0 0;">
       いずれもこの週の推奨データを集計した事実の記述で、今後の値動きを示すものではありません。
@@ -189,7 +210,7 @@
           <div class="score-total">68<small>/100</small></div>
           <!-- 成績 -->
           <div style="margin-top:8px;">
-            <span class="status-badge status-watching">観察中</span>
+            <span class="status-badge status-miss">未達成</span>
           </div>
         </div>
       </div>
@@ -224,15 +245,20 @@
         
         <div>
           <span style="color:var(--muted);">4週後</span>
-          <strong class="pos" style="margin-left:4px;">+19.0%</strong>
+          <strong class="pos" style="margin-left:4px;">+17.6%</strong>
         </div>
         
         
         <div>
           <span style="color:var(--muted);">8週後</span>
-          <strong class="neg" style="margin-left:4px;">-10.6%</strong>
+          <strong class="neg" style="margin-left:4px;">-11.7%</strong>
         </div>
         
+        
+        <div>
+          <span style="color:var(--muted);">12週後</span>
+          <strong class="neg" style="margin-left:4px;">-7.7%</strong>
+        </div>
         
       </div>
 
@@ -265,7 +291,7 @@
           <div class="score-total">68<small>/100</small></div>
           <!-- 成績 -->
           <div style="margin-top:8px;">
-            <span class="status-badge status-watching">観察中</span>
+            <span class="status-badge status-miss">未達成</span>
           </div>
         </div>
       </div>
@@ -310,6 +336,11 @@
         </div>
         
         
+        <div>
+          <span style="color:var(--muted);">12週後</span>
+          <strong class="neg" style="margin-left:4px;">-12.3%</strong>
+        </div>
+        
       </div>
 
       <!-- 詳細（最新週のみ） -->
@@ -341,7 +372,7 @@
           <div class="score-total">69<small>/100</small></div>
           <!-- 成績 -->
           <div style="margin-top:8px;">
-            <span class="status-badge status-watching">観察中</span>
+            <span class="status-badge status-miss">未達成</span>
           </div>
         </div>
       </div>
@@ -386,6 +417,11 @@
         </div>
         
         
+        <div>
+          <span style="color:var(--muted);">12週後</span>
+          <strong class="neg" style="margin-left:4px;">-32.1%</strong>
+        </div>
+        
       </div>
 
       <!-- 詳細（最新週のみ） -->
@@ -417,7 +453,7 @@
           <div class="score-total">75<small>/100</small></div>
           <!-- 成績 -->
           <div style="margin-top:8px;">
-            <span class="status-badge status-watching">観察中</span>
+            <span class="status-badge status-hit">達成</span>
           </div>
         </div>
       </div>
@@ -462,6 +498,11 @@
         </div>
         
         
+        <div>
+          <span style="color:var(--muted);">12週後</span>
+          <strong class="pos" style="margin-left:4px;">+153.3%</strong>
+        </div>
+        
       </div>
 
       <!-- 詳細（最新週のみ） -->
@@ -493,7 +534,7 @@
           <div class="score-total">78<small>/100</small></div>
           <!-- 成績 -->
           <div style="margin-top:8px;">
-            <span class="status-badge status-watching">観察中</span>
+            <span class="status-badge status-miss">未達成</span>
           </div>
         </div>
       </div>
@@ -538,6 +579,11 @@
         </div>
         
         
+        <div>
+          <span style="color:var(--muted);">12週後</span>
+          <strong class="neg" style="margin-left:4px;">-0.6%</strong>
+        </div>
+        
       </div>
 
       <!-- 詳細（最新週のみ） -->
@@ -569,7 +615,7 @@
           <div class="score-total">81<small>/100</small></div>
           <!-- 成績 -->
           <div style="margin-top:8px;">
-            <span class="status-badge status-watching">観察中</span>
+            <span class="status-badge status-hit">達成</span>
           </div>
         </div>
       </div>
@@ -614,6 +660,11 @@
         </div>
         
         
+        <div>
+          <span style="color:var(--muted);">12週後</span>
+          <strong class="pos" style="margin-left:4px;">+17.5%</strong>
+        </div>
+        
       </div>
 
       <!-- 詳細（最新週のみ） -->
@@ -645,7 +696,7 @@
           <div class="score-total">82<small>/100</small></div>
           <!-- 成績 -->
           <div style="margin-top:8px;">
-            <span class="status-badge status-watching">観察中</span>
+            <span class="status-badge status-miss">未達成</span>
           </div>
         </div>
       </div>
@@ -690,6 +741,11 @@
         </div>
         
         
+        <div>
+          <span style="color:var(--muted);">12週後</span>
+          <strong class="pos" style="margin-left:4px;">+4.8%</strong>
+        </div>
+        
       </div>
 
       <!-- 詳細（最新週のみ） -->
@@ -721,7 +777,7 @@
           <div class="score-total">85<small>/100</small></div>
           <!-- 成績 -->
           <div style="margin-top:8px;">
-            <span class="status-badge status-watching">観察中</span>
+            <span class="status-badge status-hit">達成</span>
           </div>
         </div>
       </div>
@@ -766,6 +822,11 @@
         </div>
         
         
+        <div>
+          <span style="color:var(--muted);">12週後</span>
+          <strong class="pos" style="margin-left:4px;">+14.4%</strong>
+        </div>
+        
       </div>
 
       <!-- 詳細（最新週のみ） -->
@@ -797,7 +858,7 @@
           <div class="score-total">87<small>/100</small></div>
           <!-- 成績 -->
           <div style="margin-top:8px;">
-            <span class="status-badge status-watching">観察中</span>
+            <span class="status-badge status-miss">未達成</span>
           </div>
         </div>
       </div>
@@ -842,6 +903,11 @@
         </div>
         
         
+        <div>
+          <span style="color:var(--muted);">12週後</span>
+          <strong class="neg" style="margin-left:4px;">-13.2%</strong>
+        </div>
+        
       </div>
 
       <!-- 詳細（最新週のみ） -->
@@ -869,6 +935,11 @@
   
   <div class="section-title" style="margin-bottom:12px;">最近の週次レポート</div>
   <div class="report-week-nav" style="margin-bottom:16px;">
+    
+    <a href="/report/2026-08-30/"
+       class="week-link">
+      2026年8月30日〜
+    </a>
     
     <a href="/report/2026-08-23/"
        class="week-link">
@@ -905,14 +976,9 @@
       2026年7月17日〜
     </a>
     
-    <a href="/report/2026-07-12/"
-       class="week-link">
-      2026年7月12日〜
-    </a>
-    
   </div>
   <div style="margin-bottom:24px;">
-    <a href="/report/" style="font-size:.88rem;color:var(--accent-dark);font-weight:700;">週次レポートの一覧（34週分）→</a>
+    <a href="/report/" style="font-size:.88rem;color:var(--accent-dark);font-weight:700;">週次レポートの一覧（35週分）→</a>
   </div>
   
 
@@ -968,7 +1034,7 @@
     </div>
     <div class="footer-bottom">
       <p>&copy; 2026 StockInsight AI</p>
-      <p style="font-size:.72rem;">最終更新: 2026-08-23</p>
+      <p style="font-size:.72rem;">最終更新: 2026-08-30</p>
     </div>
   </div>
 </footer>
